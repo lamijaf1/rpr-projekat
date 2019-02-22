@@ -1,5 +1,7 @@
 package ba.unsa.etf.rpr.projekat;
 
+import java.util.Objects;
+
 public class Person {
     private  int id;
     private String username;
@@ -53,5 +55,22 @@ public class Person {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return id == person.id &&
+                isProfessor == person.isProfessor &&
+                Objects.equals(username, person.username) &&
+                Objects.equals(password, person.password) &&
+                Objects.equals(fullName, person.fullName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, username, password, fullName, isProfessor);
     }
 }
