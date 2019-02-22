@@ -1,14 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="fxml.CourseList"
-            prefHeight="400.0" prefWidth="600.0">
+<?import javafx.scene.layout.StackPane?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <MenuBar fx:id="menuBar" prefHeight="25.0" prefWidth="606.0">
+        <menus>
+            <Menu fx:id="menuFile" text="_File">
+                <items>
+                    <MenuItem styleClass="menuItem" text="_New...">
+                        <accelerator>
+                            <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                        </accelerator>
+                    </MenuItem>
+                    <MenuItem id="menuOpen" fx:id="open" text="_Open">
+                        <accelerator>
+                            <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                        </accelerator>
+                    </MenuItem>
+                    <MenuItem fx:id="save" styleClass="menuItem" text="_Save" />
+                    <MenuItem fx:id="print" styleClass="menuItem" text="Print" />
+                    <SeparatorMenuItem mnemonicParsing="false" />
+                    <MenuItem styleClass="menuItem" text="_Exit" />
+                </items>
+            </Menu>
+            <Menu text="_Edit">
+                <items>
+                    <MenuItem text="_Add" />
+                    <MenuItem text="_Change" />
+                    <MenuItem text="_Delete" />
+                </items>
+            </Menu>
+            <Menu text="_Help">
+                <items>
+                    <MenuItem text="_About" />
+                </items>
+            </Menu>
+        </menus>
+        <effect>
+            <SepiaTone level="0.24" />
+        </effect>
+    </MenuBar>
+    <TreeView fx:id="undergraduateTree" layoutX="0" layoutY="0" prefHeight="100.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="30.0" />
+   <TreeView fx:id="masterTree" prefHeight="100.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="150.0" />
+   <TreeView fx:id="phdTree" prefHeight="100.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="270.0" />
+   <children>
+      <StackPane layoutX="59.0" layoutY="48.0" prefHeight="352.0" prefWidth="413.0" />
 
+   </children>
 </AnchorPane>
