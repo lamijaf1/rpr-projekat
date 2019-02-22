@@ -1,12 +1,14 @@
 package ba.unsa.etf.rpr.projekat;
 
 public class Person {
+    private  int id;
     private String username;
     private String password;
     private String fullName;
     private boolean isProfessor;
 
-    public Person(String username, String password, String fullName, boolean isProfessor) {
+    public Person(int id,String username, String password, String fullName, boolean isProfessor) {
+        this.id=id;
         this.username = username;
         this.password = password;
         this.fullName = fullName;
@@ -43,5 +45,13 @@ public class Person {
 
     public void setProfessor(boolean professor) {
         isProfessor = professor;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
