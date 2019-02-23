@@ -3,7 +3,6 @@
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
@@ -65,12 +64,12 @@
             <ToolBar prefHeight="40.0" prefWidth="200.0">
                 <items>
                     <Button id="tbAdd" fx:id="tbAdd" mnemonicParsing="false" onAction="#saveMaterials" pickOnBounds="true" styleClass="tbButton" />
-                    <Button id="tbChange" fx:id="tbChange" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" styleClass="tbButton" />
-                    <Button id="tbSave" fx:id="tbDelete" mnemonicParsing="false" prefHeight="25.0" prefWidth="23.0" styleClass="tbButton" />
+                    <Button id="tbChange" fx:id="tbHide" mnemonicParsing="false" onAction="#hideMaterial" prefHeight="25.0" prefWidth="0.0" styleClass="tbButton" />
+                    <Button id="tbOpen" fx:id="tbOpen" mnemonicParsing="false" onAction="#openMaterial" prefHeight="25.0" prefWidth="23.0" styleClass="tbButton" />
+                    <Button fx:id="tbDelete" mnemonicParsing="false" prefHeight="25.0" prefWidth="23.0" styleClass="tbButton" />
                     <Button fx:id="tbClear" mnemonicParsing="false" onAction="#clearNotification" pickOnBounds="true" styleClass="tbButton" text="Clear notification" />
                     <Button id="tbBack" fx:id="tbBack" mnemonicParsing="false" onAction="#back" pickOnBounds="true" styleClass="tbButton" />
                     <Button id="tbHome" fx:id="tbSignOut" mnemonicParsing="false" onAction="#signOut" pickOnBounds="true" styleClass="tbButton" />
-               <CheckBox fx:id="editMode" mnemonicParsing="false" text="Edit" />
                 </items>
                 <effect>
                     <SepiaTone level="0.17" />

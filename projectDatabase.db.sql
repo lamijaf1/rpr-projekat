@@ -30,12 +30,12 @@ CREATE TABLE IF NOT EXISTS "person" (
 	"is_professor"	INTEGER,
 	PRIMARY KEY("id")
 );
-INSERT INTO "materials" VALUES (1,'lab1','math','lab',NULL);
-INSERT INTO "materials" VALUES (2,'lab2','math','lab',NULL);
-INSERT INTO "materials" VALUES (3,'lecture1','math','lecture',NULL);
-INSERT INTO "materials" VALUES (4,'group1','math','group',NULL);
-INSERT INTO "materials" VALUES (5,'otk.pdf','Physics','lectures',NULL);
-INSERT INTO "materials" VALUES (6,'otk.pdf','Physics','labs',NULL);
+INSERT INTO "materials" VALUES (1,'lab1','math','lab',1);
+INSERT INTO "materials" VALUES (2,'lab2','math','lab',1);
+INSERT INTO "materials" VALUES (3,'lecture1','math','lecture',1);
+INSERT INTO "materials" VALUES (4,'group1','math','group',1);
+INSERT INTO "materials" VALUES (5,'otk.pdf','Physics','lectures',1);
+INSERT INTO "materials" VALUES (6,'otk.pdf','Physics','labs',1);
 INSERT INTO "notifications" VALUES (1,1,'no class today','22.10.2012.');
 INSERT INTO "notifications" VALUES (3,1,'notification','11.1.2011.');
 INSERT INTO "subjects" VALUES (1,'Physics','undergraduate',1);

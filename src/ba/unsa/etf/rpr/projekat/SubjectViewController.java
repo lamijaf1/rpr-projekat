@@ -1,7 +1,9 @@
 package ba.unsa.etf.rpr.projekat;
 
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,6 +12,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import javax.swing.*;
@@ -19,6 +23,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.*;
 import java.sql.SQLException;
+import javafx.scene.control.CheckBox;
 
 public class SubjectViewController {
 
@@ -29,7 +34,6 @@ public class SubjectViewController {
     public Label statusMsg;
     private static String subjectName;
     private static String subjectType;
-    public Checkbox editMode;
 
     @FXML
     public void initialize() {
@@ -46,9 +50,7 @@ public class SubjectViewController {
             statusMsg.setText("Welcome to " + subjectName);
         }
 
-        fillLectureTable();
-        fillLabTable();
-        fillGroupTable();
+        refillTables();
 
 
     }
@@ -58,6 +60,7 @@ public class SubjectViewController {
         tableOfGroups.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             if (newSelection != null) {
                 currentMaterial = newSelection;
+
             }
         });
         currentMaterial = tableOfGroups.getSelectionModel().getSelectedItem();
@@ -69,17 +72,15 @@ public class SubjectViewController {
         );
         tableOfGroups.setItems(groups);
 
+
+
+
     }
 
     private void fillLabTable() {
         tableOfLabs.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             if (newSelection != null) {
                 currentMaterial = newSelection;
-                try {
-                    openMaterials(currentMaterial.getNameMaterial());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
             }
         });
         currentMaterial = tableOfLabs.getSelectionModel().getSelectedItem();
@@ -94,11 +95,6 @@ public class SubjectViewController {
         tableOfLectures.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             if (newSelection != null) {
                 currentMaterial = newSelection;
-                try {
-                    openMaterials(currentMaterial.getNameMaterial());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
             }
         });
         currentMaterial = tableOfLectures.getSelectionModel().getSelectedItem();
@@ -134,13 +130,17 @@ public class SubjectViewController {
 
     }
 
-    public void openMaterials(String nameOfMaterial) throws IOException {
-        if (editMode.getState()==true){
+    public void openMaterial(ActionEvent actionEvent) throws IOException {
+            File file = new File("./resources/pdfs/" + currentMaterial.getNameMaterial() + ".pdf");
+            Desktop.getDesktop().open(file);
 
-        }
-        File file = new File("./resources/pdfs/" + nameOfMaterial + ".pdf");
-        Desktop.getDesktop().open(file);
     }
+
+    public void hideMaterial(ActionEvent actionEvent) throws IOException, SQLException {
+        currentMaterial.setVisible(0);
+        refillTables();
+    }
+
 
 
     public void saveMaterials(ActionEvent actionEvent) throws IOException, SQLException {
@@ -154,7 +154,6 @@ public class SubjectViewController {
         primaryStage.setResizable(false);
 
     }
-
 
     public static void setSubjectType(String subject) {
           subjectType = subject;
@@ -183,4 +182,64 @@ public class SubjectViewController {
 
         }
     }
+
+    public void refillTables(){
+        ObservableList<Material> groups = FXCollections.observableArrayList();
+        ObservableList<Material> labs = FXCollections.observableArrayList();
+        ObservableList<Material> lectures = FXCollections.observableArrayList();
+        tableOfGroups.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            if (newSelection != null) {
+                currentMaterial = newSelection;
+            }
+        });
+        currentMaterial = tableOfGroups.getSelectionModel().getSelectedItem();
+
+        for(Material m:database.getGroups(subjectName)){
+            if (m.isVisible()==1){
+                groups.add(m);
+            }
+        }
+
+
+        columnNameGroup.setCellValueFactory(
+                new PropertyValueFactory<Material, String>("nameMaterial")
+        );
+        tableOfGroups.setItems(groups);
+
+        tableOfLabs.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            if (newSelection != null) {
+                currentMaterial = newSelection;
+            }
+        });
+        currentMaterial = tableOfLabs.getSelectionModel().getSelectedItem();
+        for(Material m:database.getLabs(subjectName)){
+            if (m.isVisible()==1){
+                labs.add(m);
+            }
+        }
+
+        columnNameLab.setCellValueFactory(new PropertyValueFactory<Material, String>("nameMaterial"));
+
+        tableOfLabs.setItems(labs);
+
+        tableOfLectures.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            if (newSelection != null) {
+                currentMaterial = newSelection;
+            }
+        });
+        currentMaterial = tableOfLectures.getSelectionModel().getSelectedItem();
+
+        for(Material m:database.getLectures(subjectName)){
+            if (m.isVisible()==1){
+                lectures.add(m);
+            }
+        }
+        columnName.setCellValueFactory(
+                new PropertyValueFactory<Material, String>("nameMaterial")
+        );
+        tableOfLectures.setItems(lectures);
+
+    }
+
+
 }
