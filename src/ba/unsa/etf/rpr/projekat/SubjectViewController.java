@@ -137,8 +137,10 @@ public class SubjectViewController {
     }
 
     public void hideMaterial(ActionEvent actionEvent) throws IOException, SQLException {
-        currentMaterial.setVisible(0);
+        if(currentMaterial!=null) currentMaterial.setVisible(0);
+        database.changeMaterial(currentMaterial);
         refillTables();
+        if(currentMaterial!=null) System.out.println(currentMaterial.isVisible());
     }
 
 
