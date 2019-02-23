@@ -18,9 +18,19 @@ public class SubjectViewController {
     private String subjectName;
     @FXML
     public void initialize() {
-        subjectName = CourseListController.getSubjectTitle();
-        statusMsg.setText("Welcome to "+ subjectName);
         database=database.getInstance();
+        subjectName = CourseListController.getSubjectTitle();
+        String notificationString="";
+        if (database.getNotification(subjectName)!=null){
+            ObservableList<Notification> notifications = database.getNotification(subjectName);
+            for (Notification notification:notifications) {
+                notificationString = notificationString + "\n";
+            }
+            statusMsg.setText(notificationString);
+        } else {
+            statusMsg.setText("Welcome to "+subjectName);
+        }
+
         fillLectureTable();
         fillLabTable();
         fillGroupTable();

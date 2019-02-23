@@ -13,7 +13,7 @@ public class Database {
     private Connection conn;
     private static Database instance;
     private PreparedStatement getAllPersons, getAllMaterials, getAllSubjects, getAllNotifications;
-    private PreparedStatement getProfessorById;
+    private PreparedStatement getProfessorById,getSubjectById;
 
     public static Database getInstance() {
         if (instance == null) instance = new Database();
@@ -68,7 +68,8 @@ public class Database {
             getAllMaterials = conn.prepareStatement("SELECT  * FROM materials ORDER BY id");
             getAllSubjects = conn.prepareStatement("SELECT  * FROM subjects ORDER BY id");
             getProfessorById=conn.prepareStatement("SELECT * FROM person WHERE id=?");
-            getAllNotifications=conn.prepareStatement("SELECT * FROM notification ORDER BY id");
+            getAllNotifications=conn.prepareStatement("SELECT * FROM notifications ORDER BY id");
+            getSubjectById=conn.prepareStatement("SELECT * FROM subjects WHERE id=?");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -235,10 +236,21 @@ public class Database {
 
         return notifications;
     }
+    private Subject getSubject(int id) {
+        try {
+            getSubjectById.setInt(1,id);
+            ResultSet rs = getSubjectById.executeQuery();
+            if (!rs.next()) return null;
+            return getSubjectFromResultSet(rs);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 
     private Notification getNotificationFromResultSet(ResultSet rs) throws SQLException {
         Notification notification=  new Notification(rs.getInt(1), null, rs.getString(3));
-        notification.setSubject(getSubjectFromResultSet(rs));
+        notification.setSubject(getSubject(rs.getInt(2)));
         return notification;
     }
 
