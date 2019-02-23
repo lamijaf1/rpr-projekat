@@ -5,12 +5,14 @@ import javafx.collections.ObservableList;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.lang.reflect.Field;
 import java.sql.*;
 import java.util.Scanner;
 
 public class Database {
     private Connection conn;
-    private PreparedStatement getAllPersons, getAllMaterials;
+    private PreparedStatement getAllPersons, getAllMaterials, getAllSubjects;
+    private PreparedStatement getProfessorById;
 
     private void regenerateDatabase() {
         Scanner input = null;
@@ -41,18 +43,14 @@ public class Database {
 
         try {
             conn = DriverManager.getConnection("jdbc:sqlite:projectDatabase.db");
-            System.out.println("CONNECTED");
         } catch (SQLException e) {
             e.printStackTrace();
-            System.out.println("NOT CONNECTED");
         }
 
         try {
             getAllPersons = conn.prepareStatement("SELECT * FROM person ORDER BY id");
-            System.out.println("GOT ALL PERSONS QUERY");
         } catch (Exception e) {
             regenerateDatabase();
-            System.out.println("REGENERATED DB");
             try {
                 getAllPersons = conn.prepareStatement("SELECT * FROM person ORDER BY id");
             } catch (SQLException e1) {
@@ -62,9 +60,12 @@ public class Database {
 
         try {
             getAllMaterials = conn.prepareStatement("SELECT  * FROM person ORDER BY id");
+            getAllSubjects = conn.prepareStatement("SELECT  * FROM subjects ORDER BY id");
+            getProfessorById=conn.prepareStatement("SELECT * FROM person WHERE id=?");
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
     }
 
     public ObservableList<Person> getPersons() {
@@ -88,6 +89,44 @@ public class Database {
     private Person getPersonFromResultSet(ResultSet rs) throws SQLException {
         return new Person(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getBoolean(5));
 
+    }
+
+    public ObservableList<Subject> getSubjects() {
+        ObservableList<Subject> subjects = FXCollections.observableArrayList();
+        try {
+            ResultSet rs = getAllSubjects.executeQuery();
+
+            while (rs.next()) {
+                Subject subject = getSubjectFromResultSet(rs);
+                subjects.add(subject);
+            }
+            //conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+
+        return subjects;
+    }
+
+    private Subject getSubjectFromResultSet(ResultSet rs) throws SQLException {
+        Subject subject = new Subject(rs.getInt(1), rs.getString(2), rs.getString(3), null);
+        subject.setProfessor(getProfessor(rs.getInt(4)));
+
+        return subject;
+
+    }
+
+    private Person getProfessor(int id) {
+        try {
+            getProfessorById.setInt(1,id);
+            ResultSet rs = getProfessorById.executeQuery();
+            if (!rs.next()) return null;
+            return getPersonFromResultSet(rs);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
 }

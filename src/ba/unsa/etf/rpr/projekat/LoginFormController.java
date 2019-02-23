@@ -23,6 +23,7 @@ public class LoginFormController {
     public Button guestBtn;
     private Database database;
     public TextField statusMsg;
+    private static Person currentUser;
 
 
     @FXML
@@ -39,6 +40,7 @@ public class LoginFormController {
         for (Person p : persons) {
             if (p.getFullName().equals(username)) {
                 if (p.getPassword().equals(password)) {
+                    currentUser = p;
                     courseList();
                     statusMsg.setVisible(true);
                     statusMsg.setText("Please wait...");
@@ -69,5 +71,9 @@ public class LoginFormController {
     }
 
     public void LoginGuest(ActionEvent actionEvent) {
+    }
+
+    public static Person getCurrentUser(){
+        return currentUser;
     }
 }
