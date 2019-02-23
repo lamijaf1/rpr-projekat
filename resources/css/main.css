@@ -19,9 +19,7 @@
 #tbSave {
     -fx-graphic: url("/img/delete.png");
 }
-#interesantnaSlicica{
-    -fx-graphic: url("/img/img.png");
-}
+
 
 .tbButton{
     -fx-border-color: transparent;
@@ -32,13 +30,8 @@
     -fx-text-fill: #828282;
 }
 
-.tbButton:focused {
-    -fx-border-color: transparent, black;
-    -fx-border-width: 1, 1;
-    -fx-border-style: solid, segments(1, 2);
-    -fx-border-radius: 0, 0;
-    -fx-border-insets: 1 1 1 1, 0;
-}
+
+
 
 .tbButton:pressed {
     -fx-background-color: black;
