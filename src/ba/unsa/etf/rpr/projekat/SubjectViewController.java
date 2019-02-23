@@ -1,5 +1,6 @@
 package ba.unsa.etf.rpr.projekat;
 
+import javafx.application.HostServices;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -13,6 +14,12 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.*;
 import java.sql.SQLException;
 
 import static javafx.scene.layout.Region.USE_COMPUTED_SIZE;
@@ -20,24 +27,25 @@ import static javafx.scene.layout.Region.USE_COMPUTED_SIZE;
 public class SubjectViewController {
 
     public TableView<Material> tableOfLectures, tableOfLabs, tableOfGroups;
-    public TableColumn<Material,String> columnName, columnNameLab, columnNameGroup;
-    public  Database database;
+    public TableColumn<Material, String> columnName, columnNameLab, columnNameGroup;
+    public Database database;
     public Material currentMaterial;
     public Label statusMsg;
     private String subjectName;
+
     @FXML
     public void initialize() {
-        database=database.getInstance();
+        database = database.getInstance();
         subjectName = CourseListController.getSubjectTitle();
-        String notificationString="";
-        if (database.getNotification(subjectName)!=null){
+        String notificationString = "";
+        if (database.getNotification(subjectName) != null) {
             ObservableList<Notification> notifications = database.getNotification(subjectName);
-            for (Notification notification:notifications) {
-                notificationString += (notification.getDate()+"-> "+ notification.getText() + "\n");
+            for (Notification notification : notifications) {
+                notificationString += (notification.getDate() + "-> " + notification.getText() + "\n");
             }
             statusMsg.setText(notificationString);
         } else {
-            statusMsg.setText("Welcome to "+subjectName);
+            statusMsg.setText("Welcome to " + subjectName);
         }
 
         fillLectureTable();
@@ -51,14 +59,15 @@ public class SubjectViewController {
 
         tableOfGroups.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             if (newSelection != null) {
-                currentMaterial=newSelection;        }
+                currentMaterial = newSelection;
+            }
         });
-        currentMaterial=tableOfGroups.getSelectionModel().getSelectedItem();
-        ObservableList<Material> groups=database.getGroups(subjectName);
+        currentMaterial = tableOfGroups.getSelectionModel().getSelectedItem();
+        ObservableList<Material> groups = database.getGroups(subjectName);
 
 
         columnNameGroup.setCellValueFactory(
-                new PropertyValueFactory<Material,String>("nameMaterial")
+                new PropertyValueFactory<Material, String>("nameMaterial")
         );
         tableOfGroups.setItems(groups);
 
@@ -67,12 +76,18 @@ public class SubjectViewController {
     private void fillLabTable() {
         tableOfLabs.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             if (newSelection != null) {
-                currentMaterial=newSelection;        }
+                currentMaterial = newSelection;
+                try {
+                    openMaterials(currentMaterial.getNameMaterial());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         });
-        currentMaterial=tableOfLabs.getSelectionModel().getSelectedItem();
-        ObservableList<Material> labs=database.getLabs(subjectName);
+        currentMaterial = tableOfLabs.getSelectionModel().getSelectedItem();
+        ObservableList<Material> labs = database.getLabs(subjectName);
 
-        columnNameLab.setCellValueFactory(new PropertyValueFactory<Material,String>("nameMaterial"));
+        columnNameLab.setCellValueFactory(new PropertyValueFactory<Material, String>("nameMaterial"));
 
         tableOfLabs.setItems(labs);
     }
@@ -80,22 +95,29 @@ public class SubjectViewController {
     private void fillLectureTable() {
         tableOfLectures.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             if (newSelection != null) {
-                currentMaterial=newSelection;        }
+                currentMaterial = newSelection;
+                try {
+                    openMaterials(currentMaterial.getNameMaterial());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         });
-        currentMaterial=tableOfLectures.getSelectionModel().getSelectedItem();
-        ObservableList<Material> lectures=database.getLectures(subjectName);
+        currentMaterial = tableOfLectures.getSelectionModel().getSelectedItem();
+        ObservableList<Material> lectures = database.getLectures(subjectName);
 
         columnName.setCellValueFactory(
-                new PropertyValueFactory<Material,String>("nameMaterial")
+                new PropertyValueFactory<Material, String>("nameMaterial")
         );
         tableOfLectures.setItems(lectures);
     }
 
     public void clearNotification(ActionEvent actionEvent) throws SQLException {
-        statusMsg.setText("Welcome to "+subjectName);
+        statusMsg.setText("Welcome to " + subjectName);
         database.deleteNotification(subjectName);
     }
-    public void back(ActionEvent actionEvent) throws Exception  {
+
+    public void back(ActionEvent actionEvent) throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/courseList.fxml"));
         CourseListController controller = new CourseListController();
         loader.setController(controller);
@@ -104,12 +126,41 @@ public class SubjectViewController {
         primaryStage.setTitle("Course List");
         primaryStage.setScene(new Scene(root, 600, 400));
     }
-    public void signOut(ActionEvent actionEvent)  throws Exception{
-       // FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/loginForm.fxml"));
-        Main main=new Main();
+
+    public void signOut(ActionEvent actionEvent) throws Exception {
+        // FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/loginForm.fxml"));
+        Main main = new Main();
 
         Stage primaryStage = (Stage) statusMsg.getScene().getWindow();
         main.start(primaryStage);
+
+    }
+
+    public void openMaterials(String nameOfMaterial) throws IOException {
+        File file = new File("./resources/pdfs/" + nameOfMaterial + ".pdf");
+        Desktop.getDesktop().open(file);
+    }
+
+
+    public void saveMaterials(ActionEvent actionEvent) throws IOException {
+        JFileChooser chooser = new JFileChooser();
+        chooser.setDialogType(JFileChooser.OPEN_DIALOG);
+        chooser.setFileFilter(new FileNameExtensionFilter("pdf file", "pdf"));
+        if (chooser.showSaveDialog(chooser) == JFileChooser.APPROVE_OPTION) {
+            String filename = chooser.getSelectedFile().getName();
+            if (!filename.endsWith(".pdf"))
+                filename += ".pdf";
+
+            Path from = Paths.get(chooser.getSelectedFile().toURI());
+            Path to = Paths.get("./resources/pdfs"+filename);
+            CopyOption[] options = new CopyOption[]{
+                    StandardCopyOption.REPLACE_EXISTING,
+                    StandardCopyOption.COPY_ATTRIBUTES
+            };
+            Files.copy(from, to, options);
+
+
+        }
 
     }
 

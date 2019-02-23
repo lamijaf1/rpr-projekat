@@ -63,7 +63,7 @@
             </MenuBar>
             <ToolBar prefHeight="40.0" prefWidth="200.0">
                 <items>
-                    <Button id="tbAdd" fx:id="tbAdd" mnemonicParsing="false" pickOnBounds="true" styleClass="tbButton" />
+                    <Button id="tbAdd" fx:id="tbAdd" mnemonicParsing="false" onAction="#saveMaterials" pickOnBounds="true" styleClass="tbButton" />
                     <Button id="tbChange" fx:id="tbChange" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" styleClass="tbButton" />
                     <Button id="tbSave" fx:id="tbDelete" mnemonicParsing="false" prefHeight="25.0" prefWidth="23.0" styleClass="tbButton" />
                     <Button fx:id="tbClear" mnemonicParsing="false" onAction="#clearNotification" pickOnBounds="true" styleClass="tbButton" text="Clear notification" />
