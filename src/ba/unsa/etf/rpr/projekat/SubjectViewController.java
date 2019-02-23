@@ -8,9 +8,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
@@ -23,7 +22,6 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.*;
 import java.sql.SQLException;
-import javafx.scene.control.CheckBox;
 
 public class SubjectViewController {
 
@@ -34,6 +32,9 @@ public class SubjectViewController {
     public Label statusMsg;
     private static String subjectName;
     private static String subjectType;
+    ObservableList<Material> groupsForGuest = FXCollections.observableArrayList();
+    ObservableList<Material> labsForGuest = FXCollections.observableArrayList();
+    ObservableList<Material> lecturesForGuest = FXCollections.observableArrayList();
 
     @FXML
     public void initialize() {
@@ -50,7 +51,9 @@ public class SubjectViewController {
             statusMsg.setText("Welcome to " + subjectName);
         }
 
-        refillTables();
+        fillGroupTable();
+        fillLectureTable();
+        fillLabTable();
 
 
     }
@@ -139,10 +142,15 @@ public class SubjectViewController {
     public void hideMaterial(ActionEvent actionEvent) throws IOException, SQLException {
         if(currentMaterial!=null) currentMaterial.setVisible(0);
         database.changeMaterial(currentMaterial);
-        refillTables();
+        //refillTables();
         if(currentMaterial!=null) System.out.println(currentMaterial.isVisible());
     }
-
+    public void unhideMaterial(ActionEvent actionEvent) throws IOException, SQLException {
+        if(currentMaterial!=null) currentMaterial.setVisible(1);
+        database.changeMaterial(currentMaterial);
+        //refillTables();
+        if(currentMaterial!=null) System.out.println(currentMaterial.isVisible());
+    }
 
 
     public void saveMaterials(ActionEvent actionEvent) throws IOException, SQLException {
@@ -184,6 +192,19 @@ public class SubjectViewController {
 
         }
     }
+    public void deleteMaterial(ActionEvent actionEvent) throws IOException {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Delete material");
+        alert.setHeaderText("Are you sure you want delete "+ currentMaterial.getNameMaterial());
+        alert.showAndWait();
+        if (alert.getResult() == ButtonType.OK) {
+            //database delete material
+
+
+        }else{
+
+        }
+    }
 
     public void refillTables(){
         ObservableList<Material> groups = FXCollections.observableArrayList();
@@ -198,7 +219,7 @@ public class SubjectViewController {
 
         for(Material m:database.getGroups(subjectName)){
             if (m.isVisible()==1){
-                groups.add(m);
+                groupsForGuest.add(m);
             }
         }
 
@@ -206,7 +227,7 @@ public class SubjectViewController {
         columnNameGroup.setCellValueFactory(
                 new PropertyValueFactory<Material, String>("nameMaterial")
         );
-        tableOfGroups.setItems(groups);
+        tableOfGroups.setItems(groupsForGuest);
 
         tableOfLabs.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             if (newSelection != null) {
@@ -216,13 +237,13 @@ public class SubjectViewController {
         currentMaterial = tableOfLabs.getSelectionModel().getSelectedItem();
         for(Material m:database.getLabs(subjectName)){
             if (m.isVisible()==1){
-                labs.add(m);
+                labsForGuest.add(m);
             }
         }
 
         columnNameLab.setCellValueFactory(new PropertyValueFactory<Material, String>("nameMaterial"));
 
-        tableOfLabs.setItems(labs);
+        tableOfLabs.setItems(labsForGuest);
 
         tableOfLectures.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             if (newSelection != null) {
@@ -233,13 +254,13 @@ public class SubjectViewController {
 
         for(Material m:database.getLectures(subjectName)){
             if (m.isVisible()==1){
-                lectures.add(m);
+                lecturesForGuest.add(m);
             }
         }
         columnName.setCellValueFactory(
                 new PropertyValueFactory<Material, String>("nameMaterial")
         );
-        tableOfLectures.setItems(lectures);
+        tableOfLectures.setItems(lecturesForGuest);
 
     }
 

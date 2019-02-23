@@ -17,9 +17,17 @@
 #tbHome {
     -fx-graphic: url("/img/home.jpg");
 }
-
-#tbChange {
-    -fx-graphic: url("/img/ll.png");
+#tbOpen {
+    -fx-graphic: url("/img/open.png");
+}
+#tbHide {
+    -fx-graphic: url("/img/hide.png");
+}
+#tbUnhide {
+    -fx-graphic: url("/img/unhide.png");
+}
+#tbDelete {
+    -fx-graphic: url("/img/delete.png");
 }
 
 #tbSave {
@@ -40,7 +48,7 @@
 
 
 .tbButton:pressed {
-    -fx-background-color: black;
+    -fx-background-color: white;
     -fx-text-fill: white;
 }
 
