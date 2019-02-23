@@ -2,11 +2,20 @@ package ba.unsa.etf.rpr.projekat;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
+
+import java.sql.SQLException;
+
+import static javafx.scene.layout.Region.USE_COMPUTED_SIZE;
 
 public class SubjectViewController {
 
@@ -24,7 +33,7 @@ public class SubjectViewController {
         if (database.getNotification(subjectName)!=null){
             ObservableList<Notification> notifications = database.getNotification(subjectName);
             for (Notification notification:notifications) {
-                notificationString = notificationString + "\n";
+                notificationString += (notification.getDate()+"-> "+ notification.getText() + "\n");
             }
             statusMsg.setText(notificationString);
         } else {
@@ -81,5 +90,28 @@ public class SubjectViewController {
         );
         tableOfLectures.setItems(lectures);
     }
+
+    public void clearNotification(ActionEvent actionEvent) throws SQLException {
+        statusMsg.setText("Welcome to "+subjectName);
+        database.deleteNotification(subjectName);
+    }
+    public void back(ActionEvent actionEvent) throws Exception  {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/courseList.fxml"));
+        CourseListController controller = new CourseListController();
+        loader.setController(controller);
+        Parent root = loader.load();
+        Stage primaryStage = (Stage) statusMsg.getScene().getWindow();
+        primaryStage.setTitle("Course List");
+        primaryStage.setScene(new Scene(root, 600, 400));
+    }
+    public void signOut(ActionEvent actionEvent)  throws Exception{
+       // FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/loginForm.fxml"));
+        Main main=new Main();
+
+        Stage primaryStage = (Stage) statusMsg.getScene().getWindow();
+        main.start(primaryStage);
+
+    }
+
 
 }

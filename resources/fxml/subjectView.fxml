@@ -22,8 +22,8 @@
     <stylesheets>
         <URL value="@/css/main.css" />
     </stylesheets>
-    <center>
-        <VBox>
+   <bottom>
+        <VBox BorderPane.alignment="CENTER">
             <MenuBar fx:id="menuBar">
                 <menus>
                     <Menu fx:id="menuFile" text="_File">
@@ -66,6 +66,9 @@
                     <Button id="tbAdd" fx:id="tbAdd" mnemonicParsing="false" pickOnBounds="true" styleClass="tbButton" />
                     <Button id="tbChange" fx:id="tbChange" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" styleClass="tbButton" />
                     <Button id="tbSave" fx:id="tbDelete" mnemonicParsing="false" prefHeight="25.0" prefWidth="23.0" styleClass="tbButton" />
+                    <Button fx:id="tbClear" mnemonicParsing="false" onAction="#clearNotification" pickOnBounds="true" styleClass="tbButton" text="Clear notification" />
+                    <Button fx:id="tbBack" mnemonicParsing="false" onAction="#back" pickOnBounds="true" styleClass="tbButton" id="tbBack" />
+                    <Button fx:id="tbSignOut" mnemonicParsing="false" onAction="#signOut" pickOnBounds="true" styleClass="tbButton" id="tbHome" />
                 </items>
                 <effect>
                     <SepiaTone level="0.17" />
@@ -105,7 +108,7 @@
                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                 </padding>
             </HBox>
-            <Label fx:id="statusMsg" prefHeight="81.0" prefWidth="600.0" styleClass="statusBar" text="" />
+            <Label fx:id="statusMsg" prefHeight="66.0" prefWidth="599.0" styleClass="statusBar" text="" />
         </VBox>
-    </center>
+   </bottom>
 </BorderPane>

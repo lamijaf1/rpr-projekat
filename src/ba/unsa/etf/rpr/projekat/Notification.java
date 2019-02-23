@@ -1,14 +1,19 @@
 package ba.unsa.etf.rpr.projekat;
 
+import java.time.LocalDate;
+
 public class Notification {
     private int id;
     private Subject subject;
     private String text;
+    private String date;
 
-    public Notification(int id, Subject subject, String text) {
+
+    public Notification(int id, Subject subject, String text, String date) {
         this.id = id;
         this.subject = subject;
         this.text = text;
+        this.date=date;
     }
 
     public int getId() {
@@ -34,5 +39,14 @@ public class Notification {
 
     public void setSubject(Subject subject) {
         this.subject = subject;
+    }
+
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 }

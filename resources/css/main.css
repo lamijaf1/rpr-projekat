@@ -9,7 +9,13 @@
     -fx-graphic: none;
 }
 #tbAdd {
-    -fx-graphic: url("/img/document-new.png");
+     -fx-graphic: url("/img/document-new.png");
+ }
+#tbBack {
+    -fx-graphic: url("/img/back.jpg");
+}
+#tbHome {
+    -fx-graphic: url("/img/home.jpg");
 }
 
 #tbChange {

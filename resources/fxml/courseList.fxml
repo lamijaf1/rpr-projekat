@@ -37,7 +37,7 @@
                     <MenuItem fx:id="save" styleClass="menuItem" text="_Save" />
                     <MenuItem fx:id="print" styleClass="menuItem" text="Print" />
                     <SeparatorMenuItem mnemonicParsing="false" />
-                    <MenuItem styleClass="menuItem" text="_Exit" />
+                    <MenuItem styleClass="menuItem" text="_Exit" onAction="#signOut" />
                 </items>
             </Menu>
             <Menu text="_Edit">

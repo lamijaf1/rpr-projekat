@@ -139,6 +139,14 @@ public class CourseListController {
             }
         });
     }
+    public void signOut(ActionEvent actionEvent)  throws Exception{
+        // FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/loginForm.fxml"));
+        Main main=new Main();
+
+        Stage primaryStage = (Stage) textDate.getScene().getWindow();
+        main.start(primaryStage);
+
+    }
 
 
     public static String getSubjectTitle(){

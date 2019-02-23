@@ -13,7 +13,7 @@ public class Database {
     private Connection conn;
     private static Database instance;
     private PreparedStatement getAllPersons, getAllMaterials, getAllSubjects, getAllNotifications;
-    private PreparedStatement getProfessorById,getSubjectById;
+    private PreparedStatement getProfessorById,getSubjectById,deleteNotifications;
 
     public static Database getInstance() {
         if (instance == null) instance = new Database();
@@ -70,6 +70,7 @@ public class Database {
             getProfessorById=conn.prepareStatement("SELECT * FROM person WHERE id=?");
             getAllNotifications=conn.prepareStatement("SELECT * FROM notifications ORDER BY id");
             getSubjectById=conn.prepareStatement("SELECT * FROM subjects WHERE id=?");
+            deleteNotifications=conn.prepareStatement("DELETE FROM notifications WHERE id=?");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -224,7 +225,7 @@ public class Database {
 
             while (rs.next()) {
                 Notification notification = getNotificationFromResultSet(rs);
-                if (notification.getSubject().getSubjectName().equals(subjectName)){
+                if (notification.getSubject().getSubjectName().toLowerCase().equals(subjectName.toLowerCase())){
                     notifications.add(notification);
                 }
             }
@@ -249,9 +250,18 @@ public class Database {
     }
 
     private Notification getNotificationFromResultSet(ResultSet rs) throws SQLException {
-        Notification notification=  new Notification(rs.getInt(1), null, rs.getString(3));
+        Notification notification=  new Notification(rs.getInt(1), null, rs.getString(3),rs.getString(4));
         notification.setSubject(getSubject(rs.getInt(2)));
         return notification;
+    }
+
+    public void deleteNotification(String subjectName) throws SQLException {
+        ObservableList<Notification> notifications = getNotification(subjectName);
+        for(Notification notification:notifications){
+            deleteNotifications.setInt(1, notification.getId());
+            deleteNotifications.executeUpdate();
+        }
+
     }
 
 
