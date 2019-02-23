@@ -5,14 +5,25 @@ public class Material {
     private String nameMaterial;
     private String subject;
     private String type;
+    private int visible;
 
 
-    public Material(int id, String nameMaterial, String subject, String type) {
+    public Material(int id, String nameMaterial, String subject, String type, int visible) {
         this.id = id;
         this.nameMaterial = nameMaterial;
         this.subject = subject;
         this.type = type;
+        this.visible=visible;
     }
+
+    public int isVisible() {
+        return visible;
+    }
+
+    public void setVisible(int visible) {
+        this.visible = visible;
+    }
+
 
     public int getId() {
         return id;

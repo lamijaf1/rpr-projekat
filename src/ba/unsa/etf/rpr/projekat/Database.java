@@ -13,7 +13,7 @@ public class Database {
     private Connection conn;
     private static Database instance;
     private PreparedStatement getAllPersons, getAllMaterials, getAllSubjects, getAllNotifications;
-    private PreparedStatement getProfessorById,getSubjectById,deleteNotifications;
+    private PreparedStatement getProfessorById,getSubjectById,deleteNotifications,findMaxIdOfMaterials,addNewMaterial;
 
     public static Database getInstance() {
         if (instance == null) instance = new Database();
@@ -71,6 +71,8 @@ public class Database {
             getAllNotifications=conn.prepareStatement("SELECT * FROM notifications ORDER BY id");
             getSubjectById=conn.prepareStatement("SELECT * FROM subjects WHERE id=?");
             deleteNotifications=conn.prepareStatement("DELETE FROM notifications WHERE id=?");
+            findMaxIdOfMaterials=conn.prepareStatement("SELECT MAX(id)+1 FROM materials");
+            addNewMaterial=conn.prepareStatement( "INSERT INTO materials(id, name_material,subject,type) VALUES (?,?,?,?)");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -176,7 +178,7 @@ public class Database {
     }
 
     private Material getMaterialFromResultSet(ResultSet rs) throws SQLException {
-        return new Material(rs.getInt(1),rs.getString(2),rs.getString(3), rs.getString(4));
+        return new Material(rs.getInt(1),rs.getString(2),rs.getString(3), rs.getString(4),rs.getInt(5));
     }
 
     public ObservableList<Material> getLectures(String subjectName){
@@ -262,6 +264,21 @@ public class Database {
             deleteNotifications.executeUpdate();
         }
 
+    }
+    public int getMaxIdOfMaterials() throws SQLException {
+        int id = 1;
+        ResultSet rs = findMaxIdOfMaterials.executeQuery();
+        if (rs.next()) {
+            id = rs.getInt(1);
+        }
+        return id;
+    }
+    public void addNewMaterial(Material material) throws SQLException {
+        addNewMaterial.setInt(1,material.getId());
+        addNewMaterial.setString(2,material.getNameMaterial());
+        addNewMaterial.setString(3,material.getSubject());
+        addNewMaterial.setString(4,material.getType());
+        addNewMaterial.executeUpdate();
     }
 
 

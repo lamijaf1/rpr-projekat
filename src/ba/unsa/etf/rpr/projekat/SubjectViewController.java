@@ -1,7 +1,5 @@
 package ba.unsa.etf.rpr.projekat;
 
-import javafx.application.HostServices;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -22,16 +20,16 @@ import java.io.IOException;
 import java.nio.file.*;
 import java.sql.SQLException;
 
-import static javafx.scene.layout.Region.USE_COMPUTED_SIZE;
-
 public class SubjectViewController {
 
     public TableView<Material> tableOfLectures, tableOfLabs, tableOfGroups;
     public TableColumn<Material, String> columnName, columnNameLab, columnNameGroup;
-    public Database database;
+    public static Database database;
     public Material currentMaterial;
     public Label statusMsg;
-    private String subjectName;
+    private static String subjectName;
+    private static String subjectType;
+    public Checkbox editMode;
 
     @FXML
     public void initialize() {
@@ -137,32 +135,52 @@ public class SubjectViewController {
     }
 
     public void openMaterials(String nameOfMaterial) throws IOException {
+        if (editMode.getState()==true){
+
+        }
         File file = new File("./resources/pdfs/" + nameOfMaterial + ".pdf");
         Desktop.getDesktop().open(file);
     }
 
 
-    public void saveMaterials(ActionEvent actionEvent) throws IOException {
+    public void saveMaterials(ActionEvent actionEvent) throws IOException, SQLException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/typeOfMaterial.fxml"));
+        TypeOfMaterialController controller = new TypeOfMaterialController();
+        loader.setController(controller);
+        Parent root = loader.load();
+        Stage primaryStage = (Stage) statusMsg.getScene().getWindow();
+        primaryStage.setTitle("Type of material");
+        primaryStage.setScene(new Scene(root, 400, 140));
+        primaryStage.setResizable(false);
+
+    }
+
+
+    public static void setSubjectType(String subject) {
+          subjectType = subject;
+    }
+
+    public static void openChooser() throws SQLException, IOException {
         JFileChooser chooser = new JFileChooser();
         chooser.setDialogType(JFileChooser.OPEN_DIALOG);
-        chooser.setFileFilter(new FileNameExtensionFilter("pdf file", "pdf"));
+        chooser.setFileFilter(new FileNameExtensionFilter("", "pdf"));
         if (chooser.showSaveDialog(chooser) == JFileChooser.APPROVE_OPTION) {
             String filename = chooser.getSelectedFile().getName();
+            String currFIle=filename;
             if (!filename.endsWith(".pdf"))
                 filename += ".pdf";
 
             Path from = Paths.get(chooser.getSelectedFile().toURI());
-            Path to = Paths.get("./resources/pdfs"+filename);
+            Path to = Paths.get("./resources/pdfs/"+filename);
             CopyOption[] options = new CopyOption[]{
                     StandardCopyOption.REPLACE_EXISTING,
                     StandardCopyOption.COPY_ATTRIBUTES
             };
             Files.copy(from, to, options);
-
+            int id=database.getMaxIdOfMaterials();
+            Material material=new Material(id, currFIle,subjectName,subjectType, 1);
+            database.addNewMaterial(material);
 
         }
-
     }
-
-
 }
