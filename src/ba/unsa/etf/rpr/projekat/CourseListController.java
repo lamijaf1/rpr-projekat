@@ -40,6 +40,7 @@ public class CourseListController {
     private String[] undergraduateSubjects = new String[100];
     private String[] masterSubjects = new String[100];
     private String[] phdSubjects = new String[100];
+    private String value;
 
     public void initialize() {
         database = new Database();
@@ -61,45 +62,9 @@ public class CourseListController {
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
 
-        undergraduateTree.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<TreeItem<String>>() {
-            @Override
-            public void changed(ObservableValue<? extends TreeItem<String>> observable, TreeItem<String> oldValue, TreeItem<String> newValue) {
-                TreeItem<String> selectedItem = (TreeItem<String>) newValue;
-                // NEW ACTION with selectedItem.getValue()
-                System.out.println(selectedItem.getChildren().get(0).getValue());
-                Platform.runLater(() -> {
-                    try {
-                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/subjectView.fxml"));
-                        SubjectViewController controller = new SubjectViewController();
-                        loader.setController(controller);
-                        Parent root = loader.load();
-                        Stage primaryStage = (Stage) textDate.getScene().getWindow();
-                       // primaryStage.setTitle(.getValue());
-                        primaryStage.setScene(new Scene(root, 600, 400));
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                });
-            }
-        });
-
-
-        masterTree.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<TreeItem<String>>() {
-            @Override
-            public void changed(ObservableValue<? extends TreeItem<String>> observable, TreeItem<String> oldValue, TreeItem<String> newValue) {
-                TreeItem<String> selectedItem = (TreeItem<String>) newValue;
-                // NEW ACTION with selectedItem.getValue()
-
-            }
-        });
-
-        phdTree.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<TreeItem<String>>() {
-            @Override
-            public void changed(ObservableValue<? extends TreeItem<String>> observable, TreeItem<String> oldValue, TreeItem<String> newValue) {
-                TreeItem<String> selectedItem = (TreeItem<String>) newValue;
-                // NEW ACTION with selectedItem.getValue()
-            }
-        });
+        onItemClickListener(undergraduateTree);
+        onItemClickListener(masterTree);
+        onItemClickListener(phdTree);
 
         loadUndergraduateItems(undergraduateSubjects);
         loadMasterItems(masterSubjects);
@@ -148,6 +113,31 @@ public class CourseListController {
         }
 
         phdTree.setRoot(root);
+    }
+
+    public void onItemClickListener(TreeView<String> tree){
+        tree.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<TreeItem<String>>() {
+            @Override
+            public void changed(ObservableValue<? extends TreeItem<String>> observable, TreeItem<String> oldValue, TreeItem<String> newValue) {
+
+                value = observable.getValue().toString();
+                value =value.substring(value.indexOf(":")+1, value.indexOf("]")).trim();
+
+                Platform.runLater(() -> {
+                    try {
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/subjectView.fxml"));
+                        SubjectViewController controller = new SubjectViewController();
+                        loader.setController(controller);
+                        Parent root = loader.load();
+                        Stage primaryStage = (Stage) textDate.getScene().getWindow();
+                        primaryStage.setTitle(value);
+                        primaryStage.setScene(new Scene(root, 600, 400));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                });
+            }
+        });
     }
 }
 

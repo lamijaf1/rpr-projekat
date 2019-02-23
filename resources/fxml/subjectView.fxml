@@ -18,13 +18,15 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="260.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
-
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@/css/main.css" />
+    </stylesheets>
     <center>
         <VBox>
             <MenuBar fx:id="menuBar">
                 <menus>
-                    <Menu text="_File" fx:id="menuFile">
+                    <Menu fx:id="menuFile" text="_File">
                         <items>
                             <MenuItem styleClass="menuItem" text="_New...">
                                 <accelerator>
@@ -36,51 +38,49 @@
                                     <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
                                 </accelerator>
                             </MenuItem>
-                            <MenuItem fx:id="save"  styleClass="menuItem" text="_Save"/>
-                            <MenuItem fx:id="print"  styleClass="menuItem" text="Print"/>
+                            <MenuItem fx:id="save" styleClass="menuItem" text="_Save" />
+                            <MenuItem fx:id="print" styleClass="menuItem" text="Print" />
                             <SeparatorMenuItem mnemonicParsing="false" />
-                            <MenuItem  styleClass="menuItem" text="_Exit"/>
+                            <MenuItem styleClass="menuItem" text="_Exit" />
                         </items>
                     </Menu>
                     <Menu text="_Edit">
                         <items>
-                            <MenuItem  text="_Add"/>
-                            <MenuItem  text="_Change"/>
-                            <MenuItem text="_Delete"/>
+                            <MenuItem text="_Add" />
+                            <MenuItem text="_Change" />
+                            <MenuItem text="_Delete" />
                         </items>
                     </Menu>
                     <Menu text="_Help">
                         <items>
-                            <MenuItem  text="_About" />
+                            <MenuItem text="_About" />
                         </items>
                     </Menu>
                 </menus>
                 <effect>
-                    <SepiaTone level="0.24"/>
+                    <SepiaTone level="0.24" />
                 </effect>
             </MenuBar>
             <ToolBar prefHeight="40.0" prefWidth="200.0">
                 <items>
-                    <Button id="tbAdd" fx:id="tbAdd" mnemonicParsing="false"  pickOnBounds="true"
-                            styleClass="tbButton"/>
-                    <Button id="tbChange" fx:id="tbChange" mnemonicParsing="false"
-                            prefHeight="25.0" prefWidth="0.0" styleClass="tbButton"/>
-                    <Button id="tbSave" fx:id="tbDelete" mnemonicParsing="false"  prefHeight="25.0" prefWidth="23.0" styleClass="tbButton" />
+                    <Button id="tbAdd" fx:id="tbAdd" mnemonicParsing="false" pickOnBounds="true" styleClass="tbButton" />
+                    <Button id="tbChange" fx:id="tbChange" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" styleClass="tbButton" />
+                    <Button id="tbSave" fx:id="tbDelete" mnemonicParsing="false" prefHeight="25.0" prefWidth="23.0" styleClass="tbButton" />
                 </items>
                 <effect>
-                    <SepiaTone level="0.17"/>
+                    <SepiaTone level="0.17" />
                 </effect>
             </ToolBar>
-            <HBox prefHeight="195.0" prefWidth="260.0" BorderPane.alignment="CENTER">
+            <HBox prefHeight="254.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                 <children>
-                    <TableView fx:id="tabelaKnjiga" prefHeight="185.0" prefWidth="270.0">
+                    <TableView fx:id="tabelaKnjiga" prefHeight="260.0" prefWidth="590.0">
                         <columns>
-                            <TableColumn fx:id="knjigaAutor1" prefWidth="75.0" text="Lecture" />
-                            <TableColumn fx:id="knjigaNaslov1" prefWidth="75.0" text="Labs" />
-                            <TableColumn fx:id="knjigaDatum1" prefWidth="99.0" text="Groups" />
+                            <TableColumn fx:id="knjigaAutor1" prefWidth="232.0" text="Lecture" />
+                            <TableColumn fx:id="knjigaNaslov1" prefWidth="225.0" text="Labs" />
+                            <TableColumn fx:id="knjigaDatum1" prefWidth="132.0" text="Groups" />
                         </columns>
                         <effect>
-                            <DropShadow/>
+                            <DropShadow />
                         </effect>
                     </TableView>
                 </children>
@@ -88,7 +88,7 @@
                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                 </padding>
             </HBox>
-            <Label fx:id="statusMsg" prefHeight="28.0" prefWidth="260.0" styleClass="statusBar" text="Important notices" />
+            <Label fx:id="statusMsg" prefHeight="81.0" prefWidth="600.0" styleClass="statusBar" text="Important notices" />
         </VBox>
     </center>
 </BorderPane>
