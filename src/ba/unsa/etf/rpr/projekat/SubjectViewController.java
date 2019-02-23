@@ -10,38 +10,66 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 public class SubjectViewController {
 
-    public TableView<Material> tableOfMaterials;
-    public TableColumn<Material,String> tableLecture;
-    public TableColumn<Material,String> tableLab;
-    public TableColumn<Material, String> tableGroup;
+    public TableView<Material> tableOfLectures, tableOfLabs, tableOfGroups;
+    public TableColumn<Material,String> columnName, columnNameLab, columnNameGroup;
     public  Database database;
     public Material currentMaterial;
     public Label statusMsg;
+    private String subjectName;
     @FXML
     public void initialize() {
+        subjectName = CourseListController.getSubjectTitle();
+        statusMsg.setText("Welcome to "+ subjectName);
         database=database.getInstance();
-        tableOfMaterials.setItems(database.getInstance().getMaterials());
-        tableOfMaterials.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+        fillLectureTable();
+        fillLabTable();
+        fillGroupTable();
+
+
+    }
+
+    private void fillGroupTable() {
+
+        tableOfGroups.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             if (newSelection != null) {
                 currentMaterial=newSelection;        }
         });
-        currentMaterial=tableOfMaterials.getSelectionModel().getSelectedItem();
-        ObservableList<Material> materials=database.getMaterials();
-        System.out.println(materials.size());
+        currentMaterial=tableOfGroups.getSelectionModel().getSelectedItem();
+        ObservableList<Material> groups=database.getGroups(subjectName);
 
-        tableLecture.setText("Lectures");
-        tableLab.setText("Labs");
-        tableGroup.setText("Groups");
-        final ObservableList<Material> data = FXCollections.observableArrayList(materials);
-        tableOfMaterials.setItems(materials);
-        tableLecture.setCellValueFactory(
+
+        columnNameGroup.setCellValueFactory(
                 new PropertyValueFactory<Material,String>("nameMaterial")
         );
+        tableOfGroups.setItems(groups);
 
-        if (materials.size() != 0) {
-            currentMaterial=materials.get(0);
-            tableOfMaterials.getSelectionModel().select(0);
-        }
+    }
+
+    private void fillLabTable() {
+        tableOfLabs.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            if (newSelection != null) {
+                currentMaterial=newSelection;        }
+        });
+        currentMaterial=tableOfLabs.getSelectionModel().getSelectedItem();
+        ObservableList<Material> labs=database.getLabs(subjectName);
+
+        columnNameLab.setCellValueFactory(new PropertyValueFactory<Material,String>("nameMaterial"));
+
+        tableOfLabs.setItems(labs);
+    }
+
+    private void fillLectureTable() {
+        tableOfLectures.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            if (newSelection != null) {
+                currentMaterial=newSelection;        }
+        });
+        currentMaterial=tableOfLectures.getSelectionModel().getSelectedItem();
+        ObservableList<Material> lectures=database.getLectures(subjectName);
+
+        columnName.setCellValueFactory(
+                new PropertyValueFactory<Material,String>("nameMaterial")
+        );
+        tableOfLectures.setItems(lectures);
     }
 
 }

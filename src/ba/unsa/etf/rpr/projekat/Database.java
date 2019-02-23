@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class Database {
     private Connection conn;
     private static Database instance;
-    private PreparedStatement getAllPersons, getAllMaterials, getAllSubjects;
+    private PreparedStatement getAllPersons, getAllMaterials, getAllSubjects, getAllNotifications;
     private PreparedStatement getProfessorById;
 
     public static Database getInstance() {
@@ -68,6 +68,7 @@ public class Database {
             getAllMaterials = conn.prepareStatement("SELECT  * FROM materials ORDER BY id");
             getAllSubjects = conn.prepareStatement("SELECT  * FROM subjects ORDER BY id");
             getProfessorById=conn.prepareStatement("SELECT * FROM person WHERE id=?");
+            getAllNotifications=conn.prepareStatement("SELECT * FROM notification ORDER BY id");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -152,8 +153,94 @@ public class Database {
         return materials;
     }
 
+    public ObservableList<Material> getMaterialsBySubject(String subjectName) {
+        ObservableList<Material> materials = FXCollections.observableArrayList();
+        try {
+            ResultSet rs = getAllMaterials.executeQuery();
+
+            while (rs.next()) {
+                Material material= getMaterialFromResultSet(rs);
+                if (material.getSubject().equals(subjectName)){
+                    materials.add(material);
+                }
+            }
+            //conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+
+        return materials;
+    }
+
     private Material getMaterialFromResultSet(ResultSet rs) throws SQLException {
         return new Material(rs.getInt(1),rs.getString(2),rs.getString(3), rs.getString(4));
     }
+
+    public ObservableList<Material> getLectures(String subjectName){
+
+        ObservableList<Material> materials = getMaterialsBySubject(subjectName);
+        ObservableList<Material> lectures=FXCollections.observableArrayList();;
+
+        for (Material material:materials) {
+            if (material.getType().equals("lecture")){
+                lectures.add(material);
+            }
+        }
+        return lectures;
+    }
+
+    public ObservableList<Material> getLabs(String subjectName){
+
+        ObservableList<Material> materials = getMaterialsBySubject(subjectName);
+        ObservableList<Material> labs=FXCollections.observableArrayList();;
+
+        for (Material material:materials) {
+            if (material.getType().equals("lab")){
+                labs.add(material);
+            }
+        }
+        return labs;
+    }
+
+    public ObservableList<Material> getGroups(String subjectName){
+
+        ObservableList<Material> materials = getMaterialsBySubject(subjectName);
+        ObservableList<Material> groups=FXCollections.observableArrayList();;
+
+        for (Material material:materials) {
+            if (material.getType().equals("group")){
+                groups.add(material);
+            }
+        }
+        return groups;
+    }
+
+    public ObservableList<Notification> getNotification(String subjectName) {
+        ObservableList<Notification> notifications = FXCollections.observableArrayList();
+        try {
+            ResultSet rs = getAllNotifications.executeQuery();
+
+            while (rs.next()) {
+                Notification notification = getNotificationFromResultSet(rs);
+                if (notification.getSubject().getSubjectName().equals(subjectName)){
+                    notifications.add(notification);
+                }
+            }
+            //conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+
+        return notifications;
+    }
+
+    private Notification getNotificationFromResultSet(ResultSet rs) throws SQLException {
+        Notification notification=  new Notification(rs.getInt(1), null, rs.getString(3));
+        notification.setSubject(getSubjectFromResultSet(rs));
+        return notification;
+    }
+
 
 }

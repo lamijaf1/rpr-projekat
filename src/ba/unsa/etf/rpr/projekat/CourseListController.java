@@ -40,7 +40,7 @@ public class CourseListController {
     private String[] undergraduateSubjects = new String[100];
     private String[] masterSubjects = new String[100];
     private String[] phdSubjects = new String[100];
-    private String value;
+    private static String value;
 
     public void initialize() {
         database=database.getInstance();
@@ -139,6 +139,12 @@ public class CourseListController {
             }
         });
     }
+
+
+    public static String getSubjectTitle(){
+        return value;
+    }
+
 }
 
 

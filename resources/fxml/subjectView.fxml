@@ -73,11 +73,28 @@
             </ToolBar>
             <HBox prefHeight="254.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                 <children>
-                    <TableView fx:id="tableOfMaterials" prefHeight="260.0" prefWidth="590.0">
+                    <TableView fx:id="tableOfLectures" prefHeight="260.0" prefWidth="200.0">
                         <columns>
-                            <TableColumn fx:id="tableLecture" prefWidth="232.0" text="Lecture" />
-                            <TableColumn fx:id="tableLab" prefWidth="225.0" text="Labs" />
-                            <TableColumn fx:id="tableGroup" prefWidth="132.0" text="Groups" />
+                            <TableColumn fx:id="columnName" prefWidth="200.0" text="Lecture" />
+
+                        </columns>
+                        <effect>
+                            <DropShadow />
+                        </effect>
+                    </TableView>
+                    <TableView fx:id="tableOfLabs" prefHeight="260.0" prefWidth="200.0">
+                        <columns>
+                            <TableColumn fx:id="columnNameLab" prefWidth="200.0" text="Labs" />
+
+                        </columns>
+                        <effect>
+                            <DropShadow />
+                        </effect>
+                    </TableView>
+                    <TableView fx:id="tableOfGroups" prefHeight="260.0" prefWidth="200.0">
+                        <columns>
+                            <TableColumn fx:id="columnNameGroup" prefWidth="200.0" text="Groups" />
+
                         </columns>
                         <effect>
                             <DropShadow />
@@ -88,7 +105,7 @@
                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                 </padding>
             </HBox>
-            <Label fx:id="statusMsg" prefHeight="81.0" prefWidth="600.0" styleClass="statusBar" text="Important notices" />
+            <Label fx:id="statusMsg" prefHeight="81.0" prefWidth="600.0" styleClass="statusBar" text="" />
         </VBox>
     </center>
 </BorderPane>
