@@ -11,8 +11,14 @@ import java.util.Scanner;
 
 public class Database {
     private Connection conn;
+    private static Database instance;
     private PreparedStatement getAllPersons, getAllMaterials, getAllSubjects;
     private PreparedStatement getProfessorById;
+
+    public static Database getInstance() {
+        if (instance == null) instance = new Database();
+        return instance;
+    }
 
     private void regenerateDatabase() {
         Scanner input = null;
@@ -39,7 +45,7 @@ public class Database {
         input.close();
     }
 
-    public Database() {
+    private Database() {
 
         try {
             conn = DriverManager.getConnection("jdbc:sqlite:projectDatabase.db");
@@ -59,7 +65,7 @@ public class Database {
         }
 
         try {
-            getAllMaterials = conn.prepareStatement("SELECT  * FROM person ORDER BY id");
+            getAllMaterials = conn.prepareStatement("SELECT  * FROM materials ORDER BY id");
             getAllSubjects = conn.prepareStatement("SELECT  * FROM subjects ORDER BY id");
             getProfessorById=conn.prepareStatement("SELECT * FROM person WHERE id=?");
         } catch (SQLException e) {
@@ -127,6 +133,27 @@ public class Database {
             e.printStackTrace();
             return null;
         }
+    }
+    public ObservableList<Material> getMaterials() {
+        ObservableList<Material> materials = FXCollections.observableArrayList();
+        try {
+            ResultSet rs = getAllMaterials.executeQuery();
+
+            while (rs.next()) {
+                Material material= getMaterialFromResultSet(rs);
+                materials.add(material);
+            }
+            //conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+
+        return materials;
+    }
+
+    private Material getMaterialFromResultSet(ResultSet rs) throws SQLException {
+        return new Material(rs.getInt(1),rs.getString(2),rs.getString(3), rs.getString(4));
     }
 
 }

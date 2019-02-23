@@ -43,7 +43,7 @@ public class CourseListController {
     private String value;
 
     public void initialize() {
-        database = new Database();
+        database=database.getInstance();
         sortSubjects();
         textWelcome.setText("Welcome, " + LoginFormController.getCurrentUser().getFullName());
         Timeline timeline = new Timeline(

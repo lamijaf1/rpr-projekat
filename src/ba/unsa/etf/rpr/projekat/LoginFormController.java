@@ -29,7 +29,7 @@ public class LoginFormController {
     @FXML
     public void initialize() {
 
-        database = new Database();
+        database=database.getInstance();
         statusMsg.setVisible(false);
     }
 

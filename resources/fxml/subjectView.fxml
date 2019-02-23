@@ -73,11 +73,11 @@
             </ToolBar>
             <HBox prefHeight="254.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                 <children>
-                    <TableView fx:id="tabelaKnjiga" prefHeight="260.0" prefWidth="590.0">
+                    <TableView fx:id="tableOfMaterials" prefHeight="260.0" prefWidth="590.0">
                         <columns>
-                            <TableColumn fx:id="knjigaAutor1" prefWidth="232.0" text="Lecture" />
-                            <TableColumn fx:id="knjigaNaslov1" prefWidth="225.0" text="Labs" />
-                            <TableColumn fx:id="knjigaDatum1" prefWidth="132.0" text="Groups" />
+                            <TableColumn fx:id="tableLecture" prefWidth="232.0" text="Lecture" />
+                            <TableColumn fx:id="tableLab" prefWidth="225.0" text="Labs" />
+                            <TableColumn fx:id="tableGroup" prefWidth="132.0" text="Groups" />
                         </columns>
                         <effect>
                             <DropShadow />
