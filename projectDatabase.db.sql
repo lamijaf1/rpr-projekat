@@ -31,14 +31,12 @@ CREATE TABLE IF NOT EXISTS "person" (
 	"is_professor"	INTEGER,
 	PRIMARY KEY("id")
 );
-INSERT INTO "materials" VALUES (0,NULL,NULL,NULL,NULL);
-INSERT INTO "materials" VALUES (2,'lecture1','math','lecture',1);
+INSERT INTO "materials" VALUES (2,'lecture1','math','lecture',0);
 INSERT INTO "materials" VALUES (3,'group1','math','groups',1);
-INSERT INTO "materials" VALUES (4,'lab1','math','lab',1);
-INSERT INTO "materials" VALUES (5,'lab2','math','lab',1);
 INSERT INTO "materials" VALUES (6,'Mis druga parc.pdf','Physics','labs',1);
 INSERT INTO "materials" VALUES (7,'group2','Physics','group',1);
 INSERT INTO "materials" VALUES (8,'lab1','Physics','lab',1);
+INSERT INTO "materials" VALUES (9,'124408359-Impulsna-Elektronika-Zbirka-Zadataka-z-Pasic-1979.pdf','math','groups',NULL);
 INSERT INTO "notifications" VALUES (1,2,'No class today','24.2.2019.');
 INSERT INTO "notifications" VALUES (2,2,'On monday quiz','24.2.2019.');
 INSERT INTO "notifications" VALUES (3,1,'Dobrodošli, nema novih obavijesti','02.02.2019.');
@@ -48,4 +46,5 @@ INSERT INTO "subjects" VALUES (3,'CHP','master',1);
 INSERT INTO "subjects" VALUES (4,'Machine Learning','master',1);
 INSERT INTO "subjects" VALUES (5,'PHD thesis','phd',1);
 INSERT INTO "person" VALUES (1,'lamija','lamija','lamija',0);
+INSERT INTO "person" VALUES (15,'benjo','benjo','benjo',0);
 COMMIT;

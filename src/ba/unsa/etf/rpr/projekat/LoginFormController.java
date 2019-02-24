@@ -24,7 +24,7 @@ public class LoginFormController {
     private Database database;
     public TextField statusMsg;
     private static Person currentUser;
-    private static boolean isProfessor;
+    private static boolean isGuest;
 
 
     @FXML
@@ -41,12 +41,13 @@ public class LoginFormController {
         String password = passwordField.getText();
         ObservableList<Person> persons = database.getPersons();
         for (Person p : persons) {
-            if (p.getFullName().equals(username)) {
+            if ( p.getFullName().equals(username)) {
                 if (p.getPassword().equals(password)) {
                     currentUser = p;
                     courseList();
                     statusMsg.setVisible(true);
                     statusMsg.setText("Please wait...");
+                    isGuest=false;
                 } else {
                     statusMsg.setVisible(true);
                     statusMsg.setText("Incorrect password. Try again.");
@@ -62,6 +63,7 @@ public class LoginFormController {
             }
         }
 
+
     }
 
     private void courseList() throws IOException {
@@ -75,7 +77,7 @@ public class LoginFormController {
     }
 
     public void LoginGuest(ActionEvent actionEvent) throws IOException {
-        isProfessor=false;
+        isGuest=true;
         courseList();
     }
 
@@ -83,7 +85,7 @@ public class LoginFormController {
         return currentUser;
     }
 
-    public static boolean isProfessor() {
-        return isProfessor;
+    public static boolean isGuest() {
+        return isGuest;
     }
 }

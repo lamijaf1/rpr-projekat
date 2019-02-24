@@ -63,10 +63,10 @@
             </MenuBar>
             <ToolBar prefHeight="40.0" prefWidth="200.0">
                 <items>
+                    <Button id="tbOpen" fx:id="tbOpen" mnemonicParsing="false" onAction="#openMaterial" prefHeight="25.0" prefWidth="23.0" styleClass="tbButton" />
                     <Button id="tbAdd" fx:id="tbAdd" mnemonicParsing="false" onAction="#saveMaterials" pickOnBounds="true" styleClass="tbButton" />
                     <Button id="tbHide" fx:id="tbHide" mnemonicParsing="false" onAction="#hideMaterial" prefHeight="25.0" prefWidth="0.0" styleClass="tbButton" />
                     <Button id="tbUnhide" fx:id="tbUnhide" mnemonicParsing="false" onAction="#unhideMaterial" prefHeight="25.0" prefWidth="0.0" styleClass="tbButton" />
-                    <Button id="tbOpen" fx:id="tbOpen" mnemonicParsing="false" onAction="#openMaterial" prefHeight="25.0" prefWidth="23.0" styleClass="tbButton" />
                     <Button id="tbDelete" fx:id="tbDelete" onAction="#deleteMaterial" mnemonicParsing="false" prefHeight="25.0" prefWidth="23.0" styleClass="tbButton" />
                     <Button fx:id="tbClear" mnemonicParsing="false" onAction="#clearNotification" pickOnBounds="true" styleClass="tbButton" text="Clear notification" />
                     <Button id="tbBack" fx:id="tbBack" mnemonicParsing="false" onAction="#back" pickOnBounds="true" styleClass="tbButton" />

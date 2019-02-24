@@ -47,7 +47,8 @@ public class CourseListController {
     public void initialize() {
         database = database.getInstance();
         sortSubjects();
-        if(LoginFormController.isProfessor()) textWelcome.setText("Welcome, " + LoginFormController.getCurrentUser().getFullName());
+        if(!LoginFormController.isGuest()) textWelcome.setText("Welcome, " + LoginFormController.getCurrentUser().getFullName());
+       //else if(!database.getProfessor1(LoginFormController.getCurrentUser()).isProfessor())
         else textWelcome.setText("Welcome on coursware,\n you are signed as guest. ");
         Timeline timeline = new Timeline(
                 new KeyFrame(Duration.seconds(0),
