@@ -41,19 +41,19 @@
                             <MenuItem fx:id="save" styleClass="menuItem" text="_Save" onAction="#doSave"/>
                             <MenuItem fx:id="print" styleClass="menuItem" text="Print" />
                             <SeparatorMenuItem mnemonicParsing="false" />
-                            <MenuItem styleClass="menuItem" text="_Exit" />
+                            <MenuItem styleClass="menuItem" text="_Exit" onAction="#signOut"/>
                         </items>
                     </Menu>
                     <Menu text="_Edit">
                         <items>
                             <MenuItem text="_Add" />
-                            <MenuItem text="_Change" />
-                            <MenuItem text="_Delete" />
+                            <MenuItem text="_Change" onAction="#hideMaterial"/>
+                            <MenuItem text="_Delete" onAction="#deleteMaterial"/>
                         </items>
                     </Menu>
                     <Menu text="_Help">
                         <items>
-                            <MenuItem text="_About" />
+                            <MenuItem text="_About" onAction="#about"/>
                         </items>
                     </Menu>
                 </menus>

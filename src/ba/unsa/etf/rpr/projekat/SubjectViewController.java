@@ -34,6 +34,8 @@ import java.net.*;
 import java.nio.file.*;
 import java.sql.SQLException;
 
+import static javafx.scene.layout.Region.USE_COMPUTED_SIZE;
+
 public class SubjectViewController {
 
     public TableView<Material> tableOfLectures, tableOfLabs, tableOfGroups;
@@ -335,8 +337,8 @@ public class SubjectViewController {
     }
 
     public void browser(ActionEvent actionEvent) throws IOException, URISyntaxException {
-        int courseId = 1; //main page of c2 courseware
-        if (LoginFormController.getCurrentUser().getId() != 1) courseId = LoginFormController.getCurrentUser().getId();
+        int courseId = database.getSubjectByName(subjectName).getId(); //main page of c2 courseware
+        //if (database.getSubjectByName(subjectName).getId()!=1) courseId = LoginFormController.getCurrentUser().getId();
         //   if(LoginFormController.getCurrentUser().getId())
         //  if(CourseListController.getSubjectTitle().toLowerCase().equals("rpr"))courseId=49;
 
@@ -487,5 +489,18 @@ public class SubjectViewController {
         });
     }
 
+    public void about(ActionEvent actionEvent) {
+        try {
+            Stage newStage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/about.fxml"));
+            Parent root = loader.load();
+            newStage.setTitle("Something about aplication");
+            newStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+            newStage.setResizable(false);
+            newStage.show();
+        } catch (Exception e) {
+            e.getMessage();
+        }
+    }
 
 }

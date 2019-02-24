@@ -44,15 +44,17 @@ public class CourseListController {
     private String[] phdSubjects = new String[100];
     private static String value;
     public static boolean editOnSelectSubject;
-    public  boolean professor;
+    public boolean professor;
     int idOfSubject;
 
     public void initialize() {
         database = database.getInstance();
         sortSubjects();
-        if(!LoginFormController.getCurrentUser().isProfessor())editOnSelectSubject=false; //if isProfessor is false immediately he cant edit on subjects
-        if(!LoginFormController.isGuest()) textWelcome.setText("Welcome, " + LoginFormController.getCurrentUser().getFullName());
-       //else if(!database.getProfessor1(LoginFormController.getCurrentUser()).isProfessor())
+        if (!LoginFormController.getCurrentUser().isProfessor())
+            editOnSelectSubject = false; //if isProfessor is false immediately he cant edit on subjects
+        if (!LoginFormController.isGuest())
+            textWelcome.setText("Welcome, " + LoginFormController.getCurrentUser().getFullName());
+            //else if(!database.getProfessor1(LoginFormController.getCurrentUser()).isProfessor())
         else textWelcome.setText("Welcome on coursware,\n you are signed as guest. ");
         Timeline timeline = new Timeline(
                 new KeyFrame(Duration.seconds(0),
@@ -131,9 +133,9 @@ public class CourseListController {
                 value = observable.getValue().toString();
                 // System.out.println(value);
                 value = value.substring(value.indexOf(":") + 1, value.indexOf("]")).trim();
-                int currentId=-1;
+                int currentId = -1;
                 if (LoginFormController.getCurrentUser() != null) {
-                     currentId = LoginFormController.getCurrentUser().getId();
+                    currentId = LoginFormController.getCurrentUser().getId();
                 }
 
                 Subject subject = database.getSubjectByName(value);
@@ -143,7 +145,7 @@ public class CourseListController {
                     editOnSelectSubject = true;
                 } else {
                     editOnSelectSubject = false;
-                    if(!LoginFormController.getCurrentUser().isProfessor()) {
+                    if (!LoginFormController.getCurrentUser().isProfessor()) {
                         Platform.runLater(() -> {
                             Alert alert = new Alert(Alert.AlertType.WARNING);
                             alert.setTitle("Warning Dialog");
@@ -188,6 +190,7 @@ public class CourseListController {
     public static boolean isEditOnSelectSubject() {
         return editOnSelectSubject;
     }
+
     public void about(ActionEvent actionEvent) {
         try {
             Stage newStage = new Stage();
@@ -197,11 +200,12 @@ public class CourseListController {
             newStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
             newStage.setResizable(false);
             newStage.show();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.getMessage();
         }
     }
-    public void print (ActionEvent actionEvent) {
+
+    public void print(ActionEvent actionEvent) {
         Platform.runLater(() -> {
             try {
                 new CourswareReport().showReport(Database.getInstance().getConn());
@@ -210,7 +214,8 @@ public class CourseListController {
             }
         });
     }
-    public void saveAs(ActionEvent actionEvent){
+
+    public void saveAs(ActionEvent actionEvent) {
         FileChooser fileChooser = new FileChooser();
         FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("XML File (*.xml)", "*.xml");
         fileChooser.getExtensionFilters().add(extFilter);
@@ -225,11 +230,10 @@ public class CourseListController {
                 String name = file.getName();
                 int lastIndexOf = name.lastIndexOf(".");
                 if (lastIndexOf == -1) {
-                    name=""; // empty extension
+                    name = ""; // empty extension
                 }
-                gradoviReport.saveAs(database.getInstance().getConn(),name, file.getCanonicalPath());
-            }
-            catch (Exception ex) {
+                gradoviReport.saveAs(database.getInstance().getConn(), name, file.getCanonicalPath());
+            } catch (Exception ex) {
                 ex.printStackTrace();
             }
         }

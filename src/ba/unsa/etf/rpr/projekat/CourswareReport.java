@@ -5,13 +5,14 @@ import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.HashMap;
 import javax.swing.JFrame;
+
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.export.ooxml.JRDocxExporter;
 import net.sf.jasperreports.export.SimpleExporterInput;
 import net.sf.jasperreports.export.SimpleOutputStreamExporterOutput;
 import net.sf.jasperreports.swing.JRViewer;
 
-public class CourswareReport extends JFrame{
+public class CourswareReport extends JFrame {
     public void showReport(Connection conn) throws JRException {
         String reportSrcFile = getClass().getResource("/reports/courseware.jrxml").getFile();
         String reportsDir = getClass().getResource("/reports/").getFile();

@@ -31,7 +31,7 @@ public class LoginFormController {
     public void initialize() {
         usernameField.setEditable(true);
         //usernameField.selectHome();
-       //usernameField.setFocusTraversable(true);
+        //usernameField.setFocusTraversable(true);
         database = database.getInstance();
         statusMsg.setVisible(false);
     }
@@ -41,13 +41,13 @@ public class LoginFormController {
         String password = passwordField.getText();
         ObservableList<Person> persons = database.getPersons();
         for (Person p : persons) {
-            if ( p.getFullName().equals(username)) {
+            if (p.getFullName().equals(username)) {
                 if (p.getPassword().equals(password)) {
                     currentUser = p;
                     courseList();
                     statusMsg.setVisible(true);
                     statusMsg.setText("Please wait...");
-                    isGuest=false;
+                    isGuest = false;
                 } else {
                     statusMsg.setVisible(true);
                     statusMsg.setText("Incorrect password. Try again.");
@@ -77,7 +77,7 @@ public class LoginFormController {
     }
 
     public void LoginGuest(ActionEvent actionEvent) throws IOException {
-        isGuest=true;
+        isGuest = true;
         courseList();
     }
 
