@@ -358,11 +358,11 @@ public class SubjectViewController {
             DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder documentBuilder = documentFactory.newDocumentBuilder();
             Document document = documentBuilder.newDocument();
-            Element root = ((org.w3c.dom.Document) document).createElement("biblioteka");
+            Element root = ((org.w3c.dom.Document) document).createElement(CourseListController.getSubjectTitle());
             ((org.w3c.dom.Document) document).appendChild(root);
             Element izdvojeni = null;
             Element elementi = null;
-            for (Material m : database.getMaterials()) {
+            for (Material m : database.getMaterialsBySubject(CourseListController.getSubjectTitle())) {
                 elementi = document.createElement("id");
                 root.appendChild(elementi);
                 Attr attr = document.createAttribute("nameMaterial");
@@ -414,17 +414,17 @@ public class SubjectViewController {
 
     public void doSave(ActionEvent actionEvent) {
         Platform.runLater(() -> {
+           // JFileChooser chooser= new JFileChooser();
             JFileChooser chooser = new JFileChooser(this.getClass().getClassLoader().getResource("").getPath()+"/xml");
             chooser.setDialogType(JFileChooser.OPEN_DIALOG);
-
             chooser.setSelectedFile(new File(CourseListController.getSubjectTitle()+".xml"));
             chooser.setFileFilter(new FileNameExtensionFilter("xml file", "xml"));
-            chooser.setCurrentDirectory(new File(String.valueOf(getClass().getResource("xml"))));
+            //chooser.setCurrentDirectory(new File(String.valueOf(getClass().getResource("xml"))));
             if (chooser.showSaveDialog(chooser) == JFileChooser.APPROVE_OPTION) {
                 String filename = chooser.getSelectedFile().toString();
                 if (!filename.endsWith(".xml"))
                     filename += ".xml";
-                saveXml(chooser.getSelectedFile());
+                    saveXml(chooser.getSelectedFile());
             }
 
         });
