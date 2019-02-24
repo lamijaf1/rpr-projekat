@@ -3,14 +3,14 @@ package ba.unsa.etf.rpr.projekat;
 import java.util.Objects;
 
 public class Person {
-    private  int id;
+    private int id;
     private String username;
     private String password;
     private String fullName;
     private boolean isProfessor;
 
-    public Person(int id,String username, String password, String fullName, boolean isProfessor) {
-        this.id=id;
+    public Person(int id, String username, String password, String fullName, boolean isProfessor) {
+        this.id = id;
         this.username = username;
         this.password = password;
         this.fullName = fullName;

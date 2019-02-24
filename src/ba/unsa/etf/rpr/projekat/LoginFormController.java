@@ -29,7 +29,7 @@ public class LoginFormController {
     @FXML
     public void initialize() {
 
-        database=database.getInstance();
+        database = database.getInstance();
         statusMsg.setVisible(false);
     }
 
@@ -49,7 +49,7 @@ public class LoginFormController {
                     statusMsg.setText("Incorrect password. Try again.");
                 }
             } else {
-                if (username.equals("") || (username.equals(null))){
+                if (username.equals("") || (username.equals(null))) {
                     statusMsg.setVisible(true);
                     statusMsg.setText("Please enter username");
                 } else {
@@ -73,7 +73,7 @@ public class LoginFormController {
     public void LoginGuest(ActionEvent actionEvent) {
     }
 
-    public static Person getCurrentUser(){
+    public static Person getCurrentUser() {
         return currentUser;
     }
 }

@@ -20,22 +20,23 @@ public class TypeOfMaterialController {
 
     @FXML
     public void initialize() {
-        currentType="lectures";
+        currentType = "lectures";
         lecturesMenu.setOnAction(event -> {
-            currentType="lectures";
+            currentType = "lectures";
             menuButton.setText(currentType);
         });
         labsMenu.setOnAction(event -> {
-            currentType="labs";
+            currentType = "labs";
             menuButton.setText(currentType);
         });
         groupsMenu.setOnAction(event -> {
-            currentType="groups";
+            currentType = "groups";
             menuButton.setText(currentType);
         });
 
 
     }
+
     public void save(ActionEvent actionEvent) throws IOException, SQLException {
         SubjectViewController.setSubjectType(currentType);
         Stage stage = (Stage) menuButton.getScene().getWindow();

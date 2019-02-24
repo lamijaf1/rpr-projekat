@@ -11,9 +11,8 @@ import static javafx.scene.layout.Region.USE_COMPUTED_SIZE;
 public class Main extends Application {
 
 
-
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/loginForm.fxml"));
         Parent root = loader.load();

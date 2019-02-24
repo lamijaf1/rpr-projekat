@@ -13,8 +13,9 @@ public class Database {
     private Connection conn;
     private static Database instance;
     private PreparedStatement getAllPersons, getAllMaterials, getAllSubjects, getAllNotifications;
-    private PreparedStatement getProfessorById,getSubjectById,deleteNotifications,findMaxIdOfMaterials,addNewMaterial;
-    private PreparedStatement changeMaterial,deleteMaterial,getProfessorByName,getSubjectByName;
+    private PreparedStatement getProfessorById, getSubjectById, deleteNotifications, findMaxIdOfMaterials, addNewMaterial;
+    private PreparedStatement changeMaterial, deleteMaterial, getProfessorByName, getSubjectByName;
+
     public static Database getInstance() {
         if (instance == null) instance = new Database();
         return instance;
@@ -67,15 +68,15 @@ public class Database {
         try {
             getAllMaterials = conn.prepareStatement("SELECT  * FROM materials ORDER BY id");
             getAllSubjects = conn.prepareStatement("SELECT  * FROM subjects ORDER BY id");
-            getProfessorById=conn.prepareStatement("SELECT * FROM person WHERE id=?");
-            getProfessorByName=conn.prepareStatement("SELECT * FROM person WHERE username=?");
-            getSubjectByName=conn.prepareStatement("SELECT * FROM subjects WHERE name=?");
-            getAllNotifications=conn.prepareStatement("SELECT * FROM notifications ORDER BY id");
-            getSubjectById=conn.prepareStatement("SELECT * FROM subjects WHERE id=?");
-            deleteNotifications=conn.prepareStatement("DELETE FROM notifications WHERE id=?");
-            deleteMaterial=conn.prepareStatement("DELETE  FROM materials WHERE id=?");
-            findMaxIdOfMaterials=conn.prepareStatement("SELECT MAX(id)+1 FROM materials");
-            addNewMaterial=conn.prepareStatement( "INSERT INTO materials(id, name_material,subject,type) VALUES (?,?,?,?)");
+            getProfessorById = conn.prepareStatement("SELECT * FROM person WHERE id=?");
+            getProfessorByName = conn.prepareStatement("SELECT * FROM person WHERE username=?");
+            getSubjectByName = conn.prepareStatement("SELECT * FROM subjects WHERE name=?");
+            getAllNotifications = conn.prepareStatement("SELECT * FROM notifications ORDER BY id");
+            getSubjectById = conn.prepareStatement("SELECT * FROM subjects WHERE id=?");
+            deleteNotifications = conn.prepareStatement("DELETE FROM notifications WHERE id=?");
+            deleteMaterial = conn.prepareStatement("DELETE  FROM materials WHERE id=?");
+            findMaxIdOfMaterials = conn.prepareStatement("SELECT MAX(id)+1 FROM materials");
+            addNewMaterial = conn.prepareStatement("INSERT INTO materials(id, name_material,subject,type) VALUES (?,?,?,?)");
             changeMaterial = conn.prepareStatement("UPDATE materials SET visible=? WHERE id=?");
         } catch (SQLException e) {
             e.printStackTrace();
@@ -131,9 +132,10 @@ public class Database {
         return subject;
 
     }
+
     public Person getProfessor1(String name) {
         try {
-            getProfessorByName.setString(1,name);
+            getProfessorByName.setString(1, name);
             ResultSet rs = getProfessorByName.executeQuery();
             if (!rs.next()) return null;
             return getPersonFromResultSet(rs);
@@ -142,9 +144,10 @@ public class Database {
             return null;
         }
     }
+
     public Subject getSubjectByName(String name) {
         try {
-            getSubjectByName.setString(1,name);
+            getSubjectByName.setString(1, name);
             ResultSet rs = getSubjectByName.executeQuery();
             if (!rs.next()) return null;
             return getSubjectFromResultSet(rs);
@@ -156,7 +159,7 @@ public class Database {
 
     private Person getProfessor(int id) {
         try {
-            getProfessorById.setInt(1,id);
+            getProfessorById.setInt(1, id);
             ResultSet rs = getProfessorById.executeQuery();
             if (!rs.next()) return null;
             return getPersonFromResultSet(rs);
@@ -165,13 +168,14 @@ public class Database {
             return null;
         }
     }
+
     public ObservableList<Material> getMaterials() {
         ObservableList<Material> materials = FXCollections.observableArrayList();
         try {
             ResultSet rs = getAllMaterials.executeQuery();
 
             while (rs.next()) {
-                Material material= getMaterialFromResultSet(rs);
+                Material material = getMaterialFromResultSet(rs);
                 materials.add(material);
             }
             //conn.close();
@@ -189,8 +193,8 @@ public class Database {
             ResultSet rs = getAllMaterials.executeQuery();
 
             while (rs.next()) {
-                Material material= getMaterialFromResultSet(rs);
-                if (material.getSubject().equals(subjectName)){
+                Material material = getMaterialFromResultSet(rs);
+                if (material.getSubject().equals(subjectName)) {
                     materials.add(material);
                 }
             }
@@ -204,42 +208,45 @@ public class Database {
     }
 
     private Material getMaterialFromResultSet(ResultSet rs) throws SQLException {
-        return new Material(rs.getInt(1),rs.getString(2),rs.getString(3), rs.getString(4),rs.getInt(5));
+        return new Material(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getInt(5));
     }
 
-    public ObservableList<Material> getLectures(String subjectName){
+    public ObservableList<Material> getLectures(String subjectName) {
 
         ObservableList<Material> materials = getMaterialsBySubject(subjectName);
-        ObservableList<Material> lectures=FXCollections.observableArrayList();;
+        ObservableList<Material> lectures = FXCollections.observableArrayList();
+        ;
 
-        for (Material material:materials) {
-            if (material.getType().equals("lecture")){
+        for (Material material : materials) {
+            if (material.getType().equals("lecture")) {
                 lectures.add(material);
             }
         }
         return lectures;
     }
 
-    public ObservableList<Material> getLabs(String subjectName){
+    public ObservableList<Material> getLabs(String subjectName) {
 
         ObservableList<Material> materials = getMaterialsBySubject(subjectName);
-        ObservableList<Material> labs=FXCollections.observableArrayList();;
+        ObservableList<Material> labs = FXCollections.observableArrayList();
+        ;
 
-        for (Material material:materials) {
-            if (material.getType().equals("lab")){
+        for (Material material : materials) {
+            if (material.getType().equals("lab")) {
                 labs.add(material);
             }
         }
         return labs;
     }
 
-    public ObservableList<Material> getGroups(String subjectName){
+    public ObservableList<Material> getGroups(String subjectName) {
 
         ObservableList<Material> materials = getMaterialsBySubject(subjectName);
-        ObservableList<Material> groups=FXCollections.observableArrayList();;
+        ObservableList<Material> groups = FXCollections.observableArrayList();
 
-        for (Material material:materials) {
-            if (material.getType().equals("group")){
+
+        for (Material material : materials) {
+            if (material.getType().equals("group")) {
                 groups.add(material);
             }
         }
@@ -253,7 +260,7 @@ public class Database {
 
             while (rs.next()) {
                 Notification notification = getNotificationFromResultSet(rs);
-                if (notification.getSubject().getSubjectName().toLowerCase().equals(subjectName.toLowerCase())){
+                if (notification.getSubject().getSubjectName().toLowerCase().equals(subjectName.toLowerCase())) {
                     notifications.add(notification);
                 }
             }
@@ -265,9 +272,10 @@ public class Database {
 
         return notifications;
     }
+
     private Subject getSubject(int id) {
         try {
-            getSubjectById.setInt(1,id);
+            getSubjectById.setInt(1, id);
             ResultSet rs = getSubjectById.executeQuery();
             if (!rs.next()) return null;
             return getSubjectFromResultSet(rs);
@@ -278,19 +286,20 @@ public class Database {
     }
 
     private Notification getNotificationFromResultSet(ResultSet rs) throws SQLException {
-        Notification notification=  new Notification(rs.getInt(1), null, rs.getString(3),rs.getString(4));
+        Notification notification = new Notification(rs.getInt(1), null, rs.getString(3), rs.getString(4));
         notification.setSubject(getSubject(rs.getInt(2)));
         return notification;
     }
 
     public void deleteNotification(String subjectName) throws SQLException {
         ObservableList<Notification> notifications = getNotification(subjectName);
-        for(Notification notification:notifications){
+        for (Notification notification : notifications) {
             deleteNotifications.setInt(1, notification.getId());
             deleteNotifications.executeUpdate();
         }
 
     }
+
     public int getMaxIdOfMaterials() throws SQLException {
         int id = 1;
         ResultSet rs = findMaxIdOfMaterials.executeQuery();
@@ -299,24 +308,25 @@ public class Database {
         }
         return id;
     }
+
     public void addNewMaterial(Material material) throws SQLException {
-        addNewMaterial.setInt(1,material.getId());
-        addNewMaterial.setString(2,material.getNameMaterial());
-        addNewMaterial.setString(3,material.getSubject());
-        addNewMaterial.setString(4,material.getType());
+        addNewMaterial.setInt(1, material.getId());
+        addNewMaterial.setString(2, material.getNameMaterial());
+        addNewMaterial.setString(3, material.getSubject());
+        addNewMaterial.setString(4, material.getType());
         addNewMaterial.executeUpdate();
     }
+
     public void changeMaterial(Material material) throws SQLException {
-        changeMaterial.setInt(1,material.isVisible());
-        changeMaterial.setInt(2,material.getId());
+        changeMaterial.setInt(1, material.isVisible());
+        changeMaterial.setInt(2, material.getId());
         changeMaterial.executeUpdate();
     }
 
     public void deleteMaterial(Material material) throws SQLException {
-        deleteMaterial.setInt(1,material.getId());
+        deleteMaterial.setInt(1, material.getId());
         deleteMaterial.executeUpdate();
-     }
-
+    }
 
 
 }

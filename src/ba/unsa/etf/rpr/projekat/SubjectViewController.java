@@ -32,7 +32,7 @@ public class SubjectViewController {
     public Label statusMsg;
     private static String subjectName;
     private static String subjectType;
-    private boolean youAreProfessorOnSubject=CourseListController.isEditOnSelectSubject();
+    private boolean youAreProfessorOnSubject = CourseListController.isEditOnSelectSubject();
     ObservableList<Material> groupsForGuest = FXCollections.observableArrayList();
     ObservableList<Material> labsForGuest = FXCollections.observableArrayList();
     ObservableList<Material> lecturesForGuest = FXCollections.observableArrayList();
@@ -77,8 +77,6 @@ public class SubjectViewController {
         tableOfGroups.setItems(groups);
 
 
-
-
     }
 
     private void fillLabTable() {
@@ -111,8 +109,8 @@ public class SubjectViewController {
     }
 
     public void clearNotification(ActionEvent actionEvent) throws SQLException {
-        if(!youAreProfessorOnSubject)error();
-        else{
+        if (!youAreProfessorOnSubject) error();
+        else {
             statusMsg.setText("Welcome to " + subjectName);
             database.deleteNotification(subjectName);
         }
@@ -139,25 +137,26 @@ public class SubjectViewController {
     }
 
     public void openMaterial(ActionEvent actionEvent) throws IOException {
-            File file = new File("./resources/pdfs/" + currentMaterial.getNameMaterial() + ".pdf");
-            Desktop.getDesktop().open(file);
+        File file = new File("./resources/pdfs/" + currentMaterial.getNameMaterial() + ".pdf");
+        Desktop.getDesktop().open(file);
 
     }
 
     public void hideMaterial(ActionEvent actionEvent) throws IOException, SQLException {
-        if(currentMaterial!=null){
+        if (currentMaterial != null) {
             currentMaterial.setVisible(0);
             database.changeMaterial(currentMaterial);
         }
 
         //refillTables();
-        if(currentMaterial!=null) System.out.println(currentMaterial.isVisible());
+        if (currentMaterial != null) System.out.println(currentMaterial.isVisible());
     }
+
     public void unhideMaterial(ActionEvent actionEvent) throws IOException, SQLException {
-        if(currentMaterial!=null) currentMaterial.setVisible(1);
+        if (currentMaterial != null) currentMaterial.setVisible(1);
         database.changeMaterial(currentMaterial);
         //refillTables();
-        if(currentMaterial!=null) System.out.println(currentMaterial.isVisible());
+        if (currentMaterial != null) System.out.println(currentMaterial.isVisible());
     }
 
 
@@ -174,7 +173,7 @@ public class SubjectViewController {
     }
 
     public static void setSubjectType(String subject) {
-          subjectType = subject;
+        subjectType = subject;
     }
 
     public static void openChooser() throws SQLException, IOException {
@@ -183,74 +182,72 @@ public class SubjectViewController {
         chooser.setFileFilter(new FileNameExtensionFilter("", "pdf"));
         if (chooser.showSaveDialog(chooser) == JFileChooser.APPROVE_OPTION) {
             String filename = chooser.getSelectedFile().getName();
-            String currFIle=filename;
+            String currFIle = filename;
             if (!filename.endsWith(".pdf"))
                 filename += ".pdf";
 
             Path from = Paths.get(chooser.getSelectedFile().toURI());
-            Path to = Paths.get("./resources/pdfs/"+filename);
+            Path to = Paths.get("./resources/pdfs/" + filename);
             CopyOption[] options = new CopyOption[]{
                     StandardCopyOption.REPLACE_EXISTING,
                     StandardCopyOption.COPY_ATTRIBUTES
             };
             Files.copy(from, to, options);
-            int id=database.getMaxIdOfMaterials();
-            Material material=new Material(id, currFIle,subjectName,subjectType, 1);
+            int id = database.getMaxIdOfMaterials();
+            Material material = new Material(id, currFIle, subjectName, subjectType, 1);
             database.addNewMaterial(material);
 
         }
     }
+
     public void deleteMaterial(ActionEvent actionEvent) throws IOException, SQLException {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Delete material");
-        alert.setHeaderText("Are you sure you want delete "+ currentMaterial.getNameMaterial());
+        alert.setHeaderText("Are you sure you want delete " + currentMaterial.getNameMaterial());
         alert.showAndWait();
         if (alert.getResult() == ButtonType.OK) {
             //database delete material
 
-    System.out.println(currentMaterial.getType());
-            if(currentMaterial.getType().equals("lab")){
+            System.out.println(currentMaterial.getType());
+            if (currentMaterial.getType().equals("lab")) {
                 database.deleteMaterial(currentMaterial);
-                database=database.getInstance();
+                database = database.getInstance();
                 fillLabTable();
                 System.out.println("Da li si ovdje bio?");
                 columnNameLab.setCellValueFactory(
                         new PropertyValueFactory<Material, String>("nameMaterial")
                 );
             }
-            if(currentMaterial.getType().equals("lecture")){
+            if (currentMaterial.getType().equals("lecture")) {
                 System.out.println("Da li si ovdje bio?");
                 database.deleteMaterial(currentMaterial);
-                database=database.getInstance();
+                database = database.getInstance();
 
                 fillLectureTable();
-               // tableOfLectures.setItems(database.getLectures(subjectName));
+                // tableOfLectures.setItems(database.getLectures(subjectName));
                 columnName.setCellValueFactory(
                         new PropertyValueFactory<Material, String>("nameMaterial")
                 );
             }
 
-            if(currentMaterial.getType()=="group"){
+            if (currentMaterial.getType() == "group") {
                 database.deleteMaterial(currentMaterial);
                 System.out.println("Da li si ovdje bio?");
-                database=database.getInstance();
+                database = database.getInstance();
                 fillGroupTable();
-               tableOfGroups.setItems(database.getGroups(subjectName));
+                tableOfGroups.setItems(database.getGroups(subjectName));
                 columnNameGroup.setCellValueFactory(
                         new PropertyValueFactory<Material, String>("nameMaterial")
                 );
             }
 
 
-
-
-
-        }else{
+        } else {
             alert.setHeaderText("Okay");
         }
     }
 
-    public void refillTables(){
+    public void refillTables() {
         ObservableList<Material> groups = FXCollections.observableArrayList();
         ObservableList<Material> labs = FXCollections.observableArrayList();
         ObservableList<Material> lectures = FXCollections.observableArrayList();
@@ -261,8 +258,8 @@ public class SubjectViewController {
         });
         currentMaterial = tableOfGroups.getSelectionModel().getSelectedItem();
 
-        for(Material m:database.getGroups(subjectName)){
-            if (m.isVisible()==1){
+        for (Material m : database.getGroups(subjectName)) {
+            if (m.isVisible() == 1) {
                 groupsForGuest.add(m);
             }
         }
@@ -279,8 +276,8 @@ public class SubjectViewController {
             }
         });
         currentMaterial = tableOfLabs.getSelectionModel().getSelectedItem();
-        for(Material m:database.getLabs(subjectName)){
-            if (m.isVisible()==1){
+        for (Material m : database.getLabs(subjectName)) {
+            if (m.isVisible() == 1) {
                 labsForGuest.add(m);
             }
         }
@@ -296,8 +293,8 @@ public class SubjectViewController {
         });
         currentMaterial = tableOfLectures.getSelectionModel().getSelectedItem();
 
-        for(Material m:database.getLectures(subjectName)){
-            if (m.isVisible()==1){
+        for (Material m : database.getLectures(subjectName)) {
+            if (m.isVisible() == 1) {
                 lecturesForGuest.add(m);
             }
         }
@@ -307,6 +304,7 @@ public class SubjectViewController {
         tableOfLectures.setItems(lecturesForGuest);
 
     }
+
     public void error() {
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("Warning Dialog");

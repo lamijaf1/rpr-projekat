@@ -13,7 +13,7 @@ public class Notification {
         this.id = id;
         this.subject = subject;
         this.text = text;
-        this.date=date;
+        this.date = date;
     }
 
     public int getId() {

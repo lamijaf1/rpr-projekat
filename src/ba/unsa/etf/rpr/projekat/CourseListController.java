@@ -40,8 +40,9 @@ public class CourseListController {
     private static String value;
     public static boolean editOnSelectSubject;
     int idOfSubject;
+
     public void initialize() {
-        database=database.getInstance();
+        database = database.getInstance();
         sortSubjects();
         textWelcome.setText("Welcome, " + LoginFormController.getCurrentUser().getFullName());
         Timeline timeline = new Timeline(
@@ -113,23 +114,22 @@ public class CourseListController {
         phdTree.setRoot(root);
     }
 
-    public void onItemClickListener(TreeView<String> tree){
+    public void onItemClickListener(TreeView<String> tree) {
         tree.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<TreeItem<String>>() {
             @Override
             public void changed(ObservableValue<? extends TreeItem<String>> observable, TreeItem<String> oldValue, TreeItem<String> newValue) {
 
                 value = observable.getValue().toString();
-               // System.out.println(value);
-                value =value.substring(value.indexOf(":")+1, value.indexOf("]")).trim();
-                int currentId=LoginFormController.getCurrentUser().getId();
-                Subject subject=database.getSubjectByName(value);
-                if(subject!=null)  idOfSubject=subject.getId();
-                if(currentId==idOfSubject){
+                // System.out.println(value);
+                value = value.substring(value.indexOf(":") + 1, value.indexOf("]")).trim();
+                int currentId = LoginFormController.getCurrentUser().getId();
+                Subject subject = database.getSubjectByName(value);
+                if (subject != null) idOfSubject = subject.getId();
+                if (currentId == idOfSubject) {
                     System.out.println("OK, predajes na ovom predmetu");
-                    editOnSelectSubject=true;
-                }
-                else{
-                    editOnSelectSubject=false;
+                    editOnSelectSubject = true;
+                } else {
+                    editOnSelectSubject = false;
                       /*  Alert alert = new Alert(Alert.AlertType.WARNING);
                         alert.setTitle("Warning Dialog");
                         alert.setHeaderText("Look, a Warning Dialog");
@@ -153,9 +153,10 @@ public class CourseListController {
             }
         });
     }
-    public void signOut(ActionEvent actionEvent)  throws Exception{
+
+    public void signOut(ActionEvent actionEvent) throws Exception {
         // FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/loginForm.fxml"));
-        Main main=new Main();
+        Main main = new Main();
 
         Stage primaryStage = (Stage) textDate.getScene().getWindow();
         main.start(primaryStage);
@@ -163,7 +164,7 @@ public class CourseListController {
     }
 
 
-    public static String getSubjectTitle(){
+    public static String getSubjectTitle() {
         return value;
     }
 

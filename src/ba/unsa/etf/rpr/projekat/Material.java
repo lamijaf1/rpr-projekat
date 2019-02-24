@@ -13,7 +13,7 @@ public class Material {
         this.nameMaterial = nameMaterial;
         this.subject = subject;
         this.type = type;
-        this.visible=visible;
+        this.visible = visible;
     }
 
     public int isVisible() {

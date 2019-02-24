@@ -10,7 +10,7 @@ public class Subject {
         this.id = id;
         this.subjectName = subjectName;
         this.program = program;
-        this.professor=professor;
+        this.professor = professor;
     }
 
     public int getId() {
