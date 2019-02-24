@@ -1,5 +1,7 @@
 package ba.unsa.etf.rpr.projekat;
 
+
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -15,9 +17,19 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import org.w3c.dom.Attr;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import java.awt.*;
 import java.io.*;
 import java.net.*;
@@ -33,7 +45,7 @@ public class SubjectViewController {
     public Label statusMsg;
     private static String subjectName;
     private static String subjectType;
-    public Button tbAdd, tbHide, tbUnhide, tbDelete,tbOpen, tbClear, tbBack, tbHome;
+    public Button tbAdd, tbHide, tbUnhide, tbDelete, tbOpen, tbClear, tbBack, tbHome;
     private boolean youAreProfessorOnSubject = CourseListController.isEditOnSelectSubject();
     ObservableList<Material> groupsForGuest = FXCollections.observableArrayList();
     ObservableList<Material> labsForGuest = FXCollections.observableArrayList();
@@ -54,20 +66,18 @@ public class SubjectViewController {
         } else {
             statusMsg.setText("Welcome to " + subjectName);
         }
-        if(!CourseListController.isEditOnSelectSubject()){
+        if (!CourseListController.isEditOnSelectSubject()) {
             tbHide.setVisible(false);
             tbUnhide.setVisible(false);
             tbDelete.setVisible(false);
             tbClear.setVisible(false);
             tbAdd.setVisible(false);
             refillTables();
-        }else{
+        } else {
             fillGroupTable();
             fillLectureTable();
             fillLabTable();
         }
-
-
 
 
     }
@@ -327,10 +337,10 @@ public class SubjectViewController {
     }
 
     public void browser(ActionEvent actionEvent) throws IOException, URISyntaxException {
-        int courseId=1; //main page of c2 courseware
-        if(LoginFormController.getCurrentUser().getId()!=1)courseId=LoginFormController.getCurrentUser().getId();
-     //   if(LoginFormController.getCurrentUser().getId())
-      //  if(CourseListController.getSubjectTitle().toLowerCase().equals("rpr"))courseId=49;
+        int courseId = 1; //main page of c2 courseware
+        if (LoginFormController.getCurrentUser().getId() != 1) courseId = LoginFormController.getCurrentUser().getId();
+        //   if(LoginFormController.getCurrentUser().getId())
+        //  if(CourseListController.getSubjectTitle().toLowerCase().equals("rpr"))courseId=49;
 
         URL url = new URL("https://c2.etf.unsa.ba/course/view.php?id=" + courseId);
         Desktop d = Desktop.getDesktop();
@@ -339,6 +349,85 @@ public class SubjectViewController {
         d.browse(new URI("https://c2.etf.unsa.ba/course/view.php?id=" + courseId));
 
 
+    }
+
+    public void saveXml(File file) {
+        // Make a transformer factory to create the Transformer
+        //creating xml file using dom parser
+        try {
+            DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder documentBuilder = documentFactory.newDocumentBuilder();
+            Document document = documentBuilder.newDocument();
+            Element root = ((org.w3c.dom.Document) document).createElement("biblioteka");
+            ((org.w3c.dom.Document) document).appendChild(root);
+            Element izdvojeni = null;
+            Element elementi = null;
+            for (Material m : database.getMaterials()) {
+                elementi = document.createElement("id");
+                root.appendChild(elementi);
+                Attr attr = document.createAttribute("nameMaterial");
+                elementi.setAttributeNode(attr);
+                Element firstColumn = document.createElement("subject");
+                elementi.appendChild(firstColumn);
+                Element secondColumn = document.createElement("type");
+                elementi.appendChild(secondColumn);
+                Element thirdColumn = document.createElement("visible");
+                elementi.appendChild(thirdColumn);
+                attr.setValue(m.getId() + "");
+                firstColumn.setTextContent(m.getSubject());
+                secondColumn.setTextContent(m.getType());
+                thirdColumn.setTextContent(m.isVisible() + "");
+            }
+            // create the xml file
+            //transform the DOM Object to an XML File
+
+            TransformerFactory transformerFactory = TransformerFactory.newInstance();
+            Transformer transformer = transformerFactory.newTransformer();
+
+            //disable 'INDENT' and set the indent amount for the transformer
+            // transformer.setOutputProperty(OutputPropertiesFactory.S_KEY_INDENT_AMOUNT, "3");
+            transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "no");
+            transformer.setOutputProperty(OutputKeys.STANDALONE, "no");
+            // disable 'INDENT' for testSave2
+            transformer.setOutputProperty(OutputKeys.INDENT, "no");
+            DOMSource domSource = new DOMSource(document);
+            StreamResult streamResult = new StreamResult(file);
+            transformer.transform(domSource, streamResult);
+
+
+        } catch (Exception e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("");
+            alert.setHeaderText("Error!");
+            alert.setContentText("File not found!");
+            alert.showAndWait();
+        }
+    }
+
+    public void OpenXml(File file) {
+
+
+    }
+
+    public void doOpen(ActionEvent actionEvent) {
+    }
+
+    public void doSave(ActionEvent actionEvent) {
+        Platform.runLater(() -> {
+            JFileChooser chooser = new JFileChooser(this.getClass().getClassLoader().getResource("").getPath()+"/xml");
+            chooser.setDialogType(JFileChooser.OPEN_DIALOG);
+
+            chooser.setSelectedFile(new File(CourseListController.getSubjectTitle()+".xml"));
+            chooser.setFileFilter(new FileNameExtensionFilter("xml file", "xml"));
+            chooser.setCurrentDirectory(new File(String.valueOf(getClass().getResource("xml"))));
+            if (chooser.showSaveDialog(chooser) == JFileChooser.APPROVE_OPTION) {
+                String filename = chooser.getSelectedFile().toString();
+                if (!filename.endsWith(".xml"))
+                    filename += ".xml";
+                saveXml(chooser.getSelectedFile());
+            }
+
+        });
     }
 
 

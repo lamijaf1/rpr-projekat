@@ -140,11 +140,15 @@ public class CourseListController {
                     editOnSelectSubject = true;
                 } else {
                     editOnSelectSubject = false;
-                      /*  Alert alert = new Alert(Alert.AlertType.WARNING);
-                        alert.setTitle("Warning Dialog");
-                        alert.setHeaderText("Look, a Warning Dialog");
-                        alert.setContentText("ops, you are not a professor on this predmet!");
-                        alert.showAndWait();*/
+                    if(!LoginFormController.getCurrentUser().isProfessor()) {
+                        Platform.runLater(() -> {
+                            Alert alert = new Alert(Alert.AlertType.WARNING);
+                            alert.setTitle("Warning Dialog");
+                            alert.setHeaderText("Disabled editing on a subject");
+                            alert.setContentText("ops, you are not a professor on this predmet!");
+                            alert.showAndWait();
+                        });
+                    }
                 }
                 Platform.runLater(() -> {
                     try {

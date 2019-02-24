@@ -2,9 +2,6 @@
     -fx-graphic: none;
 }
 
-#menuOpen > .label{
-    -fx-graphic: url("/img/document-new.png");
-}
 #menuOpen .accelerator-text{
     -fx-graphic: none;
 }

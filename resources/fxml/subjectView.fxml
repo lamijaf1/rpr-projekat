@@ -33,12 +33,12 @@
                                     <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
                                 </accelerator>
                             </MenuItem>
-                            <MenuItem id="menuOpen" fx:id="open" text="_Open">
+                            <MenuItem id="menuOpen" fx:id="open" text="_Open" onAction="#doOpen">
                                 <accelerator>
                                     <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
                                 </accelerator>
                             </MenuItem>
-                            <MenuItem fx:id="save" styleClass="menuItem" text="_Save" />
+                            <MenuItem fx:id="save" styleClass="menuItem" text="_Save" onAction="#doSave"/>
                             <MenuItem fx:id="print" styleClass="menuItem" text="Print" />
                             <SeparatorMenuItem mnemonicParsing="false" />
                             <MenuItem styleClass="menuItem" text="_Exit" />

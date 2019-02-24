@@ -30,17 +30,8 @@ public class Main extends Application {
     }
 
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
         launch(args);
-        try (var listener = new ServerSocket(59090)) {
-            System.out.println("The date server is running...");
-            while (true) {
-                try (var socket = listener.accept()) {
-                    var out = new PrintWriter(socket.getOutputStream(), true);
-                    out.println(new Date().toString());
-                }
-            }
-        }
     }
 }
 
