@@ -36,7 +36,7 @@
                <children>
                   <Label prefHeight="36.0" prefWidth="144.0" text="Password: " GridPane.rowIndex="1" />
                   <Label prefHeight="32.0" prefWidth="144.0" text="Username:" />
-                  <PasswordField fx:id="passwordField" prefHeight="10.0" prefWidth="174.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <PasswordField fx:id="passwordField" focusTraversable="false" prefHeight="10.0" prefWidth="174.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <TextField fx:id="usernameField" prefHeight="10.0" GridPane.columnIndex="1" />
                   <Button fx:id="loginBtn" defaultButton="true" mnemonicParsing="false" onAction="#Login" prefHeight="25.0" prefWidth="125.0" text="Log In" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
                   <Button fx:id="guestBtn" alignment="CENTER" mnemonicParsing="false" onAction="#LoginGuest" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: FFFFF00;" text="Log in as guest" textFill="#2d33a1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP" />

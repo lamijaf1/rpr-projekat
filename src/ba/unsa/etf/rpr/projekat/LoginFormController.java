@@ -28,7 +28,9 @@ public class LoginFormController {
 
     @FXML
     public void initialize() {
-
+        usernameField.setEditable(true);
+        usernameField.selectHome();
+       //usernameField.setFocusTraversable(true);
         database = database.getInstance();
         statusMsg.setVisible(false);
     }
