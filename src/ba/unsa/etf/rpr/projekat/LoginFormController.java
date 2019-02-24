@@ -24,12 +24,13 @@ public class LoginFormController {
     private Database database;
     public TextField statusMsg;
     private static Person currentUser;
+    private static boolean isProfessor;
 
 
     @FXML
     public void initialize() {
         usernameField.setEditable(true);
-        usernameField.selectHome();
+        //usernameField.selectHome();
        //usernameField.setFocusTraversable(true);
         database = database.getInstance();
         statusMsg.setVisible(false);
@@ -60,6 +61,7 @@ public class LoginFormController {
                 }
             }
         }
+
     }
 
     private void courseList() throws IOException {
@@ -72,10 +74,16 @@ public class LoginFormController {
         primaryStage.setScene(new Scene(root, 600, 400));
     }
 
-    public void LoginGuest(ActionEvent actionEvent) {
+    public void LoginGuest(ActionEvent actionEvent) throws IOException {
+        isProfessor=false;
+        courseList();
     }
 
     public static Person getCurrentUser() {
         return currentUser;
+    }
+
+    public static boolean isProfessor() {
+        return isProfessor;
     }
 }
