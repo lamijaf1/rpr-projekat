@@ -41,6 +41,7 @@ public class CourseListController {
     private String[] phdSubjects = new String[100];
     private static String value;
     public static boolean editOnSelectSubject;
+    public  boolean professor;
     int idOfSubject;
 
     public void initialize() {
@@ -125,7 +126,11 @@ public class CourseListController {
                 value = observable.getValue().toString();
                 // System.out.println(value);
                 value = value.substring(value.indexOf(":") + 1, value.indexOf("]")).trim();
-                int currentId = LoginFormController.getCurrentUser().getId();
+                int currentId=-1;
+                if (LoginFormController.getCurrentUser() != null) {
+                     currentId = LoginFormController.getCurrentUser().getId();
+                }
+
                 Subject subject = database.getSubjectByName(value);
                 if (subject != null) idOfSubject = subject.getId();
                 if (currentId == idOfSubject) {

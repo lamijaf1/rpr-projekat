@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseButton;
@@ -32,6 +33,7 @@ public class SubjectViewController {
     public Label statusMsg;
     private static String subjectName;
     private static String subjectType;
+    public Button tbAdd, tbHide, tbUnhide, tbDelete,tbOpen, tbClear, tbBack, tbHome;
     private boolean youAreProfessorOnSubject = CourseListController.isEditOnSelectSubject();
     ObservableList<Material> groupsForGuest = FXCollections.observableArrayList();
     ObservableList<Material> labsForGuest = FXCollections.observableArrayList();
@@ -39,6 +41,13 @@ public class SubjectViewController {
 
     @FXML
     public void initialize() {
+        if(!CourseListController.isEditOnSelectSubject()){
+            tbHide.setVisible(false);
+            tbUnhide.setVisible(false);
+            tbDelete.setVisible(false);
+            tbClear.setVisible(false);
+            tbAdd.setVisible(false);
+        }
         database = database.getInstance();
         subjectName = CourseListController.getSubjectTitle();
         String notificationString = "";
