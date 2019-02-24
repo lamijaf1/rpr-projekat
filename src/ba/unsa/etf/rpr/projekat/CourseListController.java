@@ -38,6 +38,7 @@ public class CourseListController {
     private String[] masterSubjects = new String[100];
     private String[] phdSubjects = new String[100];
     private static String value;
+    public static boolean editOnSelectSubject;
     int idOfSubject;
     public void initialize() {
         database=database.getInstance();
@@ -125,27 +126,29 @@ public class CourseListController {
                 if(subject!=null)  idOfSubject=subject.getId();
                 if(currentId==idOfSubject){
                     System.out.println("OK, predajes na ovom predmetu");
-                    Platform.runLater(() -> {
-                        try {
-                            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/subjectView.fxml"));
-                            SubjectViewController controller = new SubjectViewController();
-                            loader.setController(controller);
-                            Parent root = loader.load();
-                            Stage primaryStage = (Stage) textDate.getScene().getWindow();
-                            primaryStage.setTitle(value);
-                            primaryStage.setScene(new Scene(root, 600, 400));
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    });
+                    editOnSelectSubject=true;
                 }
                 else{
-                        Alert alert = new Alert(Alert.AlertType.WARNING);
+                    editOnSelectSubject=false;
+                      /*  Alert alert = new Alert(Alert.AlertType.WARNING);
                         alert.setTitle("Warning Dialog");
                         alert.setHeaderText("Look, a Warning Dialog");
                         alert.setContentText("ops, you are not a professor on this predmet!");
-                        alert.showAndWait();
+                        alert.showAndWait();*/
+                }
+                Platform.runLater(() -> {
+                    try {
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/subjectView.fxml"));
+                        SubjectViewController controller = new SubjectViewController();
+                        loader.setController(controller);
+                        Parent root = loader.load();
+                        Stage primaryStage = (Stage) textDate.getScene().getWindow();
+                        primaryStage.setTitle(value);
+                        primaryStage.setScene(new Scene(root, 600, 400));
+                    } catch (IOException e) {
+                        e.printStackTrace();
                     }
+                });
 
             }
         });
@@ -164,6 +167,9 @@ public class CourseListController {
         return value;
     }
 
+    public static boolean isEditOnSelectSubject() {
+        return editOnSelectSubject;
+    }
 }
 
 

@@ -32,7 +32,7 @@ public class SubjectViewController {
     public Label statusMsg;
     private static String subjectName;
     private static String subjectType;
-
+    private boolean youAreProfessorOnSubject=CourseListController.isEditOnSelectSubject();
     ObservableList<Material> groupsForGuest = FXCollections.observableArrayList();
     ObservableList<Material> labsForGuest = FXCollections.observableArrayList();
     ObservableList<Material> lecturesForGuest = FXCollections.observableArrayList();
@@ -111,8 +111,12 @@ public class SubjectViewController {
     }
 
     public void clearNotification(ActionEvent actionEvent) throws SQLException {
-        statusMsg.setText("Welcome to " + subjectName);
-        database.deleteNotification(subjectName);
+        if(!youAreProfessorOnSubject)error();
+        else{
+            statusMsg.setText("Welcome to " + subjectName);
+            database.deleteNotification(subjectName);
+        }
+
     }
 
     public void back(ActionEvent actionEvent) throws Exception {
@@ -302,6 +306,13 @@ public class SubjectViewController {
         );
         tableOfLectures.setItems(lecturesForGuest);
 
+    }
+    public void error() {
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("Warning Dialog");
+        alert.setHeaderText("Look, a Warning Dialog");
+        alert.setContentText("ops, you are not a professor on this predmet!");
+        alert.showAndWait();
     }
 
 

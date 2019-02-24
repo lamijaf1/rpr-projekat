@@ -2,13 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f70c769-014d-4f68-ab49-8d68c9d08944" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a09fea21-74fb-41f7-9252-68f91ba3758f.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a09fea21-74fb-41f7-9252-68f91ba3758f/storage_v2/_src_/schema/main.uQUzAA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/img/Originals/hide.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/img/Originals/open.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/img/Originals/unhide.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/img/hide.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/img/open.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/img/unhide.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/pdfs/124408359-Impulsna-Elektronika-Zbirka-Zadataka-z-Pasic-1979.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/pdfs/Mis druga parc.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectDatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/projectDatabase.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectDatabase.db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/projectDatabase.db.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/fxml/loginForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fxml/loginForm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CourseListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CourseListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/SubjectViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/SubjectViewController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -73,16 +80,16 @@
           <entry key="css" value="59" />
           <entry key="dummy" value="1" />
           <entry key="fxml" value="715" />
-          <entry key="java" value="11046" />
+          <entry key="java" value="11246" />
           <entry key="sql" value="45" />
-          <entry key="txt" value="841" />
+          <entry key="txt" value="1019" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="59" />
-          <entry key="JAVA" value="11046" />
-          <entry key="PLAIN_TEXT" value="842" />
+          <entry key="JAVA" value="11246" />
+          <entry key="PLAIN_TEXT" value="1020" />
           <entry key="SQL" value="45" />
           <entry key="XML" value="715" />
         </counts>
@@ -168,14 +175,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CourseListController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="124" column="34" selection-start-line="124" selection-start-column="34" selection-end-line="124" selection-end-column="34" />
+            <state relative-caret-position="192">
+              <caret line="136" column="44" selection-start-line="132" selection-start-column="25" selection-end-line="136" selection-end-column="44" />
               <folding>
                 <element signature="e#5427#5428#0" expanded="true" />
                 <element signature="e#5455#5456#0" expanded="true" />
+                <element signature="e#6567#6568#0" expanded="true" />
+                <element signature="e#6609#6610#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -203,21 +212,21 @@
           <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/SubjectViewController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="912">
-              <caret line="54" selection-start-line="54" selection-end-line="54" />
+            <state relative-caret-position="1088">
+              <caret line="113" column="37" selection-start-line="113" selection-start-column="37" selection-end-line="113" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#fillLabTable#0;class#SubjectViewController#0" />
                 <element signature="method#fillLectureTable#0;class#SubjectViewController#0" />
-                <element signature="method#clearNotification#0;class#SubjectViewController#0" />
                 <element signature="method#back#0;class#SubjectViewController#0" />
                 <element signature="method#signOut#0;class#SubjectViewController#0" />
                 <element signature="method#unhideMaterial#0;class#SubjectViewController#0" />
                 <element signature="method#saveMaterials#0;class#SubjectViewController#0" />
-                <element signature="e#6387#6388#0" expanded="true" />
-                <element signature="e#6426#6427#0" expanded="true" />
+                <element signature="e#6544#6545#0" expanded="true" />
+                <element signature="e#6583#6584#0" expanded="true" />
                 <element signature="method#openChooser#0;class#SubjectViewController#0" />
                 <element signature="method#refillTables#0;class#SubjectViewController#0" />
               </folding>
@@ -263,11 +272,11 @@
         <option value="$PROJECT_DIR$/resources/fxml/subjectView.fxml" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/LoginFormController.java" />
         <option value="$PROJECT_DIR$/projectDatabase.db.sql" />
-        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/SubjectViewController.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Database.java" />
         <option value="$PROJECT_DIR$/resources/fxml/loginForm.fxml" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Main.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CourseListController.java" />
+        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/SubjectViewController.java" />
       </list>
     </option>
   </component>
@@ -351,7 +360,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550970836270" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550971809419" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -403,7 +412,7 @@
       <workItem from="1550878971701" duration="7606000" />
       <workItem from="1550922134912" duration="16523000" />
       <workItem from="1550940054786" duration="2569000" />
-      <workItem from="1550943302986" duration="20378000" />
+      <workItem from="1550943302986" duration="21236000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1550857919822</created>
@@ -552,11 +561,18 @@
       <option name="project" value="LOCAL" />
       <updated>1550967866479</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="only professor on subject can edit subject!!!!">
+      <created>1550971097604</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1550971097604</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66212000" />
+    <option name="totallyTimeSpent" value="67070000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="696" extended-state="6" />
@@ -567,10 +583,10 @@
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.23867314" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.23867314" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5053192" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.47695035" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -618,7 +634,9 @@
     <MESSAGE value="implement hide option for material" />
     <MESSAGE value="added delete button for professor" />
     <MESSAGE value="implement option for delete materials" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement option for delete materials" />
+    <MESSAGE value="only professor on subject can edit subject!!!!" />
+    <MESSAGE value="added all function for professor" />
+    <option name="LAST_COMMIT_MESSAGE" value="added all function for professor" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Professor.java" />
@@ -766,33 +784,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/SubjectViewController.java">
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CourseListController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        <state relative-caret-position="192">
+          <caret line="136" column="44" selection-start-line="132" selection-start-column="25" selection-end-line="136" selection-end-column="44" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#fillLectureTable#0;class#SubjectViewController#0" />
-            <element signature="method#clearNotification#0;class#SubjectViewController#0" />
-            <element signature="method#back#0;class#SubjectViewController#0" />
-            <element signature="method#signOut#0;class#SubjectViewController#0" />
-            <element signature="method#unhideMaterial#0;class#SubjectViewController#0" />
-            <element signature="method#saveMaterials#0;class#SubjectViewController#0" />
-            <element signature="e#6387#6388#0" expanded="true" />
-            <element signature="e#6426#6427#0" expanded="true" />
-            <element signature="method#openChooser#0;class#SubjectViewController#0" />
-            <element signature="method#refillTables#0;class#SubjectViewController#0" />
+            <element signature="e#5427#5428#0" expanded="true" />
+            <element signature="e#5455#5456#0" expanded="true" />
+            <element signature="e#6567#6568#0" expanded="true" />
+            <element signature="e#6609#6610#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CourseListController.java">
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/SubjectViewController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="124" column="34" selection-start-line="124" selection-start-column="34" selection-end-line="124" selection-end-column="34" />
+        <state relative-caret-position="1088">
+          <caret line="113" column="37" selection-start-line="113" selection-start-column="37" selection-end-line="113" selection-end-column="37" />
           <folding>
-            <element signature="e#5427#5428#0" expanded="true" />
-            <element signature="e#5455#5456#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#fillLabTable#0;class#SubjectViewController#0" />
+            <element signature="method#fillLectureTable#0;class#SubjectViewController#0" />
+            <element signature="method#back#0;class#SubjectViewController#0" />
+            <element signature="method#signOut#0;class#SubjectViewController#0" />
+            <element signature="method#unhideMaterial#0;class#SubjectViewController#0" />
+            <element signature="method#saveMaterials#0;class#SubjectViewController#0" />
+            <element signature="e#6544#6545#0" expanded="true" />
+            <element signature="e#6583#6584#0" expanded="true" />
+            <element signature="method#openChooser#0;class#SubjectViewController#0" />
+            <element signature="method#refillTables#0;class#SubjectViewController#0" />
           </folding>
         </state>
       </provider>
