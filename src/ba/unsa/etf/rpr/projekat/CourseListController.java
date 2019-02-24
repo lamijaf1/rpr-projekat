@@ -24,6 +24,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
 
+import static javafx.scene.layout.Region.USE_COMPUTED_SIZE;
+
 public class CourseListController {
     @FXML
     private TreeView<String> undergraduateTree;
@@ -170,6 +172,19 @@ public class CourseListController {
 
     public static boolean isEditOnSelectSubject() {
         return editOnSelectSubject;
+    }
+    public void about(ActionEvent actionEvent) {
+        try {
+            Stage newStage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/about.fxml"));
+            Parent root = loader.load();
+            newStage.setTitle("Something about aplication");
+            newStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+            newStage.setResizable(false);
+            newStage.show();
+        }catch (Exception e){
+            e.getMessage();
+        }
     }
 }
 

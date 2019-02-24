@@ -49,7 +49,7 @@
             </Menu>
             <Menu text="_Help">
                 <items>
-                    <MenuItem text="_About" />
+                    <MenuItem text="_About" onAction="#about" />
                 </items>
             </Menu>
         </menus>
