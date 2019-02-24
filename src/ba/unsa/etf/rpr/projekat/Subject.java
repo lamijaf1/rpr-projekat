@@ -5,7 +5,7 @@ public class Subject {
     private String subjectName;
     private String program;
     private Person professor;
-
+    public Subject(){}
     public Subject(int id, String subjectName, String program, Person professor) {
         this.id = id;
         this.subjectName = subjectName;

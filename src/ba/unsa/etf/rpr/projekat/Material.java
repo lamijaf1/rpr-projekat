@@ -7,7 +7,7 @@ public class Material {
     private String type;
     private int visible;
 
-
+    public Material(){}
     public Material(int id, String nameMaterial, String subject, String type, int visible) {
         this.id = id;
         this.nameMaterial = nameMaterial;

@@ -17,9 +17,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import org.w3c.dom.Attr;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
+import org.w3c.dom.*;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -404,12 +402,71 @@ public class SubjectViewController {
         }
     }
 
-    public void OpenXml(File file) {
+    public void openXml(File file) {
+        Subject subject=new Subject();
+        try {
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+            Document doc = dBuilder.parse(file);
+            NodeList nodelist =doc.getDocumentElement().getChildNodes();
+            if (!doc.getDocumentElement().getTagName().equals(CourseListController.getSubjectTitle())) throw new WrongChoiceException("ERROR!");
+            for(int i=0;i<nodelist.getLength();i++) {
+                Material material = new Material();
+                Node d = nodelist.item(i);
+                if (d instanceof Element) {
+                    Element e = (Element) d;
+                    material.setId(Integer.parseInt(e.getAttribute("id")));
+                    NodeList podaci = e.getChildNodes();
+                    for (int j = 0; j < podaci.getLength(); j++) {
+                        Node podatak = podaci.item(j);
+                        if (podatak instanceof Element) {
+                            Element noviPodatak = (Element) podatak;
+                            switch (noviPodatak.getTagName()) {
+                                case "nameMaterial":
+                                    material.setNameMaterial(noviPodatak.getTextContent());
+                                    break;
+                                case "subject":
+                                    material.setSubject(noviPodatak.getTextContent());
+                                    break;
+                                case "type":
+                                    material.setType(noviPodatak.getTextContent());
+                                    break;
+                                case "visible":
+                                    material.setVisible(Integer.parseInt(noviPodatak.getTextContent()));
+                                    break;
+                                default:
+                            }
+                        }
+                    }
+
+                }
+                database.addNewMaterial(material);
+
+            }
+        } catch(Exception | WrongChoiceException e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("");
+            alert.setHeaderText("Wrong format!");
+            alert.setContentText("File not found!");
+            alert.showAndWait();
+        }
 
 
     }
 
     public void doOpen(ActionEvent actionEvent) {
+        JFileChooser chooser = new JFileChooser(this.getClass().getClassLoader().getResource("").getPath()+"/xml");
+        chooser.setDialogType(JFileChooser.OPEN_DIALOG);
+        chooser.setSelectedFile(new File(CourseListController.getSubjectTitle()+".xml"));
+        chooser.setFileFilter(new FileNameExtensionFilter("xml file", "xml"));
+        if (chooser.showSaveDialog(chooser) == JFileChooser.APPROVE_OPTION)
+        {
+            String filename = chooser.getSelectedFile().toString();
+            if (!filename .endsWith(".xml"))
+                filename += ".xml";
+            openXml(chooser.getSelectedFile());
+        }
+
     }
 
     public void doSave(ActionEvent actionEvent) {
