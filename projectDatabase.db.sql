@@ -36,7 +36,7 @@ INSERT INTO "materials" VALUES (3,'group1','math','groups',1);
 INSERT INTO "materials" VALUES (6,'Mis druga parc.pdf','Physics','labs',1);
 INSERT INTO "materials" VALUES (7,'group2','Physics','group',1);
 INSERT INTO "materials" VALUES (8,'lab1','Physics','lab',1);
-INSERT INTO "materials" VALUES (9,'124408359-Impulsna-Elektronika-Zbirka-Zadataka-z-Pasic-1979.pdf','math','groups',NULL);
+INSERT INTO "materials" VALUES (9,'124408359-Impulsna-Elektronika-Zbirka-Zadataka-z-Pasic-1979.pdf','math','groups',1);
 INSERT INTO "notifications" VALUES (1,2,'No class today','24.2.2019.');
 INSERT INTO "notifications" VALUES (2,2,'On monday quiz','24.2.2019.');
 INSERT INTO "notifications" VALUES (3,1,'Dobrodošli, nema novih obavijesti','02.02.2019.');

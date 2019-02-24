@@ -41,13 +41,7 @@ public class SubjectViewController {
 
     @FXML
     public void initialize() {
-        if(!CourseListController.isEditOnSelectSubject()){
-            tbHide.setVisible(false);
-            tbUnhide.setVisible(false);
-            tbDelete.setVisible(false);
-            tbClear.setVisible(false);
-            tbAdd.setVisible(false);
-        }
+
         database = database.getInstance();
         subjectName = CourseListController.getSubjectTitle();
         String notificationString = "";
@@ -60,10 +54,20 @@ public class SubjectViewController {
         } else {
             statusMsg.setText("Welcome to " + subjectName);
         }
+        if(!CourseListController.isEditOnSelectSubject()){
+            tbHide.setVisible(false);
+            tbUnhide.setVisible(false);
+            tbDelete.setVisible(false);
+            tbClear.setVisible(false);
+            tbAdd.setVisible(false);
+            refillTables();
+        }else{
+            fillGroupTable();
+            fillLectureTable();
+            fillLabTable();
+        }
 
-        fillGroupTable();
-        fillLectureTable();
-        fillLabTable();
+
 
 
     }
