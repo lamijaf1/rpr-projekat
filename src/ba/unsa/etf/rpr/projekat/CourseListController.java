@@ -14,10 +14,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.control.TreeItem;
-import javafx.scene.control.TreeView;
+import javafx.scene.control.*;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -41,7 +38,7 @@ public class CourseListController {
     private String[] masterSubjects = new String[100];
     private String[] phdSubjects = new String[100];
     private static String value;
-
+    int idOfSubject;
     public void initialize() {
         database=database.getInstance();
         sortSubjects();
@@ -121,21 +118,35 @@ public class CourseListController {
             public void changed(ObservableValue<? extends TreeItem<String>> observable, TreeItem<String> oldValue, TreeItem<String> newValue) {
 
                 value = observable.getValue().toString();
+               // System.out.println(value);
                 value =value.substring(value.indexOf(":")+1, value.indexOf("]")).trim();
-
-                Platform.runLater(() -> {
-                    try {
-                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/subjectView.fxml"));
-                        SubjectViewController controller = new SubjectViewController();
-                        loader.setController(controller);
-                        Parent root = loader.load();
-                        Stage primaryStage = (Stage) textDate.getScene().getWindow();
-                        primaryStage.setTitle(value);
-                        primaryStage.setScene(new Scene(root, 600, 400));
-                    } catch (IOException e) {
-                        e.printStackTrace();
+                int currentId=LoginFormController.getCurrentUser().getId();
+                Subject subject=database.getSubjectByName(value);
+                if(subject!=null)  idOfSubject=subject.getId();
+                if(currentId==idOfSubject){
+                    System.out.println("OK, predajes na ovom predmetu");
+                    Platform.runLater(() -> {
+                        try {
+                            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/subjectView.fxml"));
+                            SubjectViewController controller = new SubjectViewController();
+                            loader.setController(controller);
+                            Parent root = loader.load();
+                            Stage primaryStage = (Stage) textDate.getScene().getWindow();
+                            primaryStage.setTitle(value);
+                            primaryStage.setScene(new Scene(root, 600, 400));
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    });
+                }
+                else{
+                        Alert alert = new Alert(Alert.AlertType.WARNING);
+                        alert.setTitle("Warning Dialog");
+                        alert.setHeaderText("Look, a Warning Dialog");
+                        alert.setContentText("ops, you are not a professor on this predmet!");
+                        alert.showAndWait();
                     }
-                });
+
             }
         });
     }

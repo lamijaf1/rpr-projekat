@@ -14,7 +14,7 @@ public class Database {
     private static Database instance;
     private PreparedStatement getAllPersons, getAllMaterials, getAllSubjects, getAllNotifications;
     private PreparedStatement getProfessorById,getSubjectById,deleteNotifications,findMaxIdOfMaterials,addNewMaterial;
-    private PreparedStatement changeMaterial,deleteMaterial;
+    private PreparedStatement changeMaterial,deleteMaterial,getProfessorByName,getSubjectByName;
     public static Database getInstance() {
         if (instance == null) instance = new Database();
         return instance;
@@ -68,6 +68,8 @@ public class Database {
             getAllMaterials = conn.prepareStatement("SELECT  * FROM materials ORDER BY id");
             getAllSubjects = conn.prepareStatement("SELECT  * FROM subjects ORDER BY id");
             getProfessorById=conn.prepareStatement("SELECT * FROM person WHERE id=?");
+            getProfessorByName=conn.prepareStatement("SELECT * FROM person WHERE username=?");
+            getSubjectByName=conn.prepareStatement("SELECT * FROM subjects WHERE name=?");
             getAllNotifications=conn.prepareStatement("SELECT * FROM notifications ORDER BY id");
             getSubjectById=conn.prepareStatement("SELECT * FROM subjects WHERE id=?");
             deleteNotifications=conn.prepareStatement("DELETE FROM notifications WHERE id=?");
@@ -128,6 +130,28 @@ public class Database {
 
         return subject;
 
+    }
+    public Person getProfessor1(String name) {
+        try {
+            getProfessorByName.setString(1,name);
+            ResultSet rs = getProfessorByName.executeQuery();
+            if (!rs.next()) return null;
+            return getPersonFromResultSet(rs);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+    public Subject getSubjectByName(String name) {
+        try {
+            getSubjectByName.setString(1,name);
+            ResultSet rs = getSubjectByName.executeQuery();
+            if (!rs.next()) return null;
+            return getSubjectFromResultSet(rs);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     private Person getProfessor(int id) {

@@ -21,7 +21,7 @@
                   <Image url="@../img/loginbackground.jpg" />
                </image>
             </ImageView>
-            <GridPane alignment="CENTER">
+            <GridPane alignment="CENTER" prefHeight="381.0" prefWidth="613.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="99.0" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="170.0" />

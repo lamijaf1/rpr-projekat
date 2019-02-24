@@ -32,6 +32,7 @@ public class SubjectViewController {
     public Label statusMsg;
     private static String subjectName;
     private static String subjectType;
+
     ObservableList<Material> groupsForGuest = FXCollections.observableArrayList();
     ObservableList<Material> labsForGuest = FXCollections.observableArrayList();
     ObservableList<Material> lecturesForGuest = FXCollections.observableArrayList();
@@ -140,8 +141,11 @@ public class SubjectViewController {
     }
 
     public void hideMaterial(ActionEvent actionEvent) throws IOException, SQLException {
-        if(currentMaterial!=null) currentMaterial.setVisible(0);
-        database.changeMaterial(currentMaterial);
+        if(currentMaterial!=null){
+            currentMaterial.setVisible(0);
+            database.changeMaterial(currentMaterial);
+        }
+
         //refillTables();
         if(currentMaterial!=null) System.out.println(currentMaterial.isVisible());
     }

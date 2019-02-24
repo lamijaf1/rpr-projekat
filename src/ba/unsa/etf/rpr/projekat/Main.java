@@ -18,7 +18,7 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/loginForm.fxml"));
         Parent root = loader.load();
         primaryStage.setTitle("Classroom materials");
-        primaryStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+        primaryStage.setScene(new Scene(root, 650, 450));
         primaryStage.setResizable(false);
         primaryStage.show();
 
