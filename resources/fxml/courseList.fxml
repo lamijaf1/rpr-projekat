@@ -34,8 +34,8 @@
                             <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
                         </accelerator>
                     </MenuItem>
-                    <MenuItem fx:id="save" styleClass="menuItem" text="_Save" />
-                    <MenuItem fx:id="print" styleClass="menuItem" text="Print" />
+                    <MenuItem fx:id="save" styleClass="menuItem" text="_SaveAs" onAction="#saveAs" />
+                    <MenuItem fx:id="print" styleClass="menuItem" text="Print" onAction="#print" />
                     <SeparatorMenuItem mnemonicParsing="false" />
                     <MenuItem styleClass="menuItem" text="_Exit" onAction="#signOut" />
                 </items>

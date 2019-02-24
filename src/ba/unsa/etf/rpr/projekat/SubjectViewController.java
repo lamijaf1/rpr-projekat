@@ -403,14 +403,15 @@ public class SubjectViewController {
     }
 
     public void openXml(File file) {
-        Subject subject=new Subject();
+        Subject subject = new Subject();
         try {
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(file);
-            NodeList nodelist =doc.getDocumentElement().getChildNodes();
-            if (!doc.getDocumentElement().getTagName().equals(CourseListController.getSubjectTitle())) throw new WrongChoiceException("ERROR!");
-            for(int i=0;i<nodelist.getLength();i++) {
+            NodeList nodelist = doc.getDocumentElement().getChildNodes();
+            if (!doc.getDocumentElement().getTagName().equals(CourseListController.getSubjectTitle()))
+                throw new WrongChoiceException("ERROR!");
+            for (int i = 0; i < nodelist.getLength(); i++) {
                 Material material = new Material();
                 Node d = nodelist.item(i);
                 if (d instanceof Element) {
@@ -443,7 +444,7 @@ public class SubjectViewController {
                 database.addNewMaterial(material);
 
             }
-        } catch(Exception | WrongChoiceException e) {
+        } catch (Exception | WrongChoiceException e) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("");
             alert.setHeaderText("Wrong format!");
@@ -455,14 +456,13 @@ public class SubjectViewController {
     }
 
     public void doOpen(ActionEvent actionEvent) {
-        JFileChooser chooser = new JFileChooser(this.getClass().getClassLoader().getResource("").getPath()+"/xml");
+        JFileChooser chooser = new JFileChooser(this.getClass().getClassLoader().getResource("").getPath() + "/xml");
         chooser.setDialogType(JFileChooser.OPEN_DIALOG);
-        chooser.setSelectedFile(new File(CourseListController.getSubjectTitle()+".xml"));
+        chooser.setSelectedFile(new File(CourseListController.getSubjectTitle() + ".xml"));
         chooser.setFileFilter(new FileNameExtensionFilter("xml file", "xml"));
-        if (chooser.showSaveDialog(chooser) == JFileChooser.APPROVE_OPTION)
-        {
+        if (chooser.showSaveDialog(chooser) == JFileChooser.APPROVE_OPTION) {
             String filename = chooser.getSelectedFile().toString();
-            if (!filename .endsWith(".xml"))
+            if (!filename.endsWith(".xml"))
                 filename += ".xml";
             openXml(chooser.getSelectedFile());
         }
@@ -471,17 +471,17 @@ public class SubjectViewController {
 
     public void doSave(ActionEvent actionEvent) {
         Platform.runLater(() -> {
-           // JFileChooser chooser= new JFileChooser();
-            JFileChooser chooser = new JFileChooser(this.getClass().getClassLoader().getResource("").getPath()+"/xml");
+            // JFileChooser chooser= new JFileChooser();
+            JFileChooser chooser = new JFileChooser(this.getClass().getClassLoader().getResource("").getPath() + "/xml");
             chooser.setDialogType(JFileChooser.OPEN_DIALOG);
-            chooser.setSelectedFile(new File(CourseListController.getSubjectTitle()+".xml"));
+            chooser.setSelectedFile(new File(CourseListController.getSubjectTitle() + ".xml"));
             chooser.setFileFilter(new FileNameExtensionFilter("xml file", "xml"));
             //chooser.setCurrentDirectory(new File(String.valueOf(getClass().getResource("xml"))));
             if (chooser.showSaveDialog(chooser) == JFileChooser.APPROVE_OPTION) {
                 String filename = chooser.getSelectedFile().toString();
                 if (!filename.endsWith(".xml"))
                     filename += ".xml";
-                    saveXml(chooser.getSelectedFile());
+                saveXml(chooser.getSelectedFile());
             }
 
         });

@@ -16,9 +16,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.StackPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import net.sf.jasperreports.engine.JRException;
 
+import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -196,6 +199,39 @@ public class CourseListController {
             newStage.show();
         }catch (Exception e){
             e.getMessage();
+        }
+    }
+    public void print (ActionEvent actionEvent) {
+        Platform.runLater(() -> {
+            try {
+                new CourswareReport().showReport(Database.getInstance().getConn());
+            } catch (JRException e1) {
+                e1.printStackTrace();
+            }
+        });
+    }
+    public void saveAs(ActionEvent actionEvent){
+        FileChooser fileChooser = new FileChooser();
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("XML File (*.xml)", "*.xml");
+        fileChooser.getExtensionFilters().add(extFilter);
+        FileChooser.ExtensionFilter extFilter1 = new FileChooser.ExtensionFilter("PDF (*.pdf)", "*.pdf");
+        fileChooser.getExtensionFilters().add(extFilter1);
+        FileChooser.ExtensionFilter extFilter2 = new FileChooser.ExtensionFilter("DOCX (*.docx)", "*.docx");
+        fileChooser.getExtensionFilters().add(extFilter2);
+        File file = fileChooser.showSaveDialog(new Stage());
+        if (file != null) {
+            CourswareReport gradoviReport = new CourswareReport();
+            try {
+                String name = file.getName();
+                int lastIndexOf = name.lastIndexOf(".");
+                if (lastIndexOf == -1) {
+                    name=""; // empty extension
+                }
+                gradoviReport.saveAs(database.getInstance().getConn(),name, file.getCanonicalPath());
+            }
+            catch (Exception ex) {
+                ex.printStackTrace();
+            }
         }
     }
 }
