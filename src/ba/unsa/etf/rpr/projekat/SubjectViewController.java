@@ -19,8 +19,8 @@ import javafx.stage.Stage;
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
+import java.net.*;
 import java.nio.file.*;
 import java.sql.SQLException;
 
@@ -324,6 +324,21 @@ public class SubjectViewController {
         alert.setHeaderText("Look, a Warning Dialog");
         alert.setContentText("ops, you are not a professor on this predmet!");
         alert.showAndWait();
+    }
+
+    public void browser(ActionEvent actionEvent) throws IOException, URISyntaxException {
+        int courseId=1; //main page of c2 courseware
+        if(LoginFormController.getCurrentUser().getId()!=1)courseId=LoginFormController.getCurrentUser().getId();
+     //   if(LoginFormController.getCurrentUser().getId())
+      //  if(CourseListController.getSubjectTitle().toLowerCase().equals("rpr"))courseId=49;
+
+        URL url = new URL("https://c2.etf.unsa.ba/course/view.php?id=" + courseId);
+        Desktop d = Desktop.getDesktop();
+
+        // Browse a URL, C2 courseware, id of subject is id of subject on c2
+        d.browse(new URI("https://c2.etf.unsa.ba/course/view.php?id=" + courseId));
+
+
     }
 
 

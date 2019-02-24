@@ -47,6 +47,7 @@ public class CourseListController {
     public void initialize() {
         database = database.getInstance();
         sortSubjects();
+        if(!LoginFormController.getCurrentUser().isProfessor())editOnSelectSubject=false; //if isProfessor is false immediately he cant edit on subjects
         if(!LoginFormController.isGuest()) textWelcome.setText("Welcome, " + LoginFormController.getCurrentUser().getFullName());
        //else if(!database.getProfessor1(LoginFormController.getCurrentUser()).isProfessor())
         else textWelcome.setText("Welcome on coursware,\n you are signed as guest. ");

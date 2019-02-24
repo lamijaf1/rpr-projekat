@@ -5,6 +5,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectDatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/projectDatabase.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectDatabase.db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/projectDatabase.db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/fxml/subjectView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fxml/subjectView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/img/photothumb.db" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/photothumb.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CourseListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CourseListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/SubjectViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/SubjectViewController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -67,35 +72,35 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="59" />
+          <entry key="css" value="69" />
           <entry key="dummy" value="1" />
-          <entry key="fxml" value="765" />
-          <entry key="java" value="11885" />
+          <entry key="fxml" value="794" />
+          <entry key="java" value="12243" />
           <entry key="sql" value="70" />
-          <entry key="txt" value="1415" />
+          <entry key="txt" value="1658" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="59" />
-          <entry key="JAVA" value="11885" />
-          <entry key="PLAIN_TEXT" value="1416" />
+          <entry key="CSS" value="69" />
+          <entry key="JAVA" value="12243" />
+          <entry key="PLAIN_TEXT" value="1659" />
           <entry key="SQL" value="70" />
-          <entry key="XML" value="765" />
+          <entry key="XML" value="794" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="4" />
+          <entry key="css" value="5" />
           <entry key="fxml" value="18" />
-          <entry key="java" value="53" />
+          <entry key="java" value="54" />
           <entry key="sql" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="4" />
-          <entry key="JAVA" value="53" />
+          <entry key="CSS" value="5" />
+          <entry key="JAVA" value="54" />
           <entry key="SQL" value="8" />
           <entry key="XML" value="18" />
         </counts>
@@ -117,8 +122,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CourseListController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7">
-              <caret line="152" selection-start-line="152" selection-end-line="152" />
+            <state relative-caret-position="-1545">
+              <caret line="49" column="152" selection-start-line="49" selection-start-column="152" selection-end-line="49" selection-end-column="152" />
               <folding>
                 <element signature="method#loadMasterItems#0;class#CourseListController#0" />
                 <element signature="method#loadPhdItems#0;class#CourseListController#0" />
@@ -132,11 +137,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/fxml/subjectView.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="68" column="168" selection-start-line="68" selection-start-column="168" selection-end-line="68" selection-end-column="168" />
+            <state relative-caret-position="280">
+              <caret line="71" column="103" selection-start-line="71" selection-start-column="103" selection-end-line="71" selection-end-column="103" />
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="211">
+              <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -151,26 +165,43 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/SubjectViewController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2484">
-              <caret line="49" column="27" lean-forward="true" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
+            <state relative-caret-position="156">
+              <caret line="330" column="58" selection-start-line="330" selection-start-column="58" selection-end-line="330" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#initialize#0;class#SubjectViewController#0" />
+                <element signature="method#fillGroupTable#0;class#SubjectViewController#0" />
                 <element signature="method#fillLabTable#0;class#SubjectViewController#0" />
                 <element signature="method#fillLectureTable#0;class#SubjectViewController#0" />
                 <element signature="method#clearNotification#0;class#SubjectViewController#0" />
                 <element signature="method#back#0;class#SubjectViewController#0" />
                 <element signature="method#signOut#0;class#SubjectViewController#0" />
+                <element signature="method#openMaterial#0;class#SubjectViewController#0" />
+                <element signature="method#hideMaterial#0;class#SubjectViewController#0" />
                 <element signature="method#unhideMaterial#0;class#SubjectViewController#0" />
                 <element signature="method#saveMaterials#0;class#SubjectViewController#0" />
-                <element signature="e#6652#6653#0" expanded="true" />
-                <element signature="e#6689#6690#0" expanded="true" />
                 <element signature="method#openChooser#0;class#SubjectViewController#0" />
+                <element signature="method#deleteMaterial#0;class#SubjectViewController#0" />
+                <element signature="method#refillTables#0;class#SubjectViewController#0" />
+                <element signature="method#error#0;class#SubjectViewController#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Database.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="86">
@@ -189,8 +220,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/LoginFormController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="79" column="21" selection-start-line="79" selection-start-column="21" selection-end-line="79" selection-end-column="21" />
+            <state relative-caret-position="71">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#initialize#0;class#LoginFormController#0" />
@@ -199,28 +230,6 @@
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/TypeOfMaterialController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/fxml/about.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="85" selection-start-line="13" selection-start-column="85" selection-end-line="13" selection-end-column="85" />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -261,9 +270,7 @@
         <option value="$PROJECT_DIR$/resources/fxml/main.css" />
         <option value="$PROJECT_DIR$/resources/fxml/typeOfMaterial.fxml" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/typeOfMaterialController.java" />
-        <option value="$PROJECT_DIR$/resources/css/main.css" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Database.java" />
-        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Main.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Material.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Notification.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Person.java" />
@@ -272,11 +279,13 @@
         <option value="$PROJECT_DIR$/resources/fxml/courseList.fxml" />
         <option value="$PROJECT_DIR$/resources/fxml/about.fxml" />
         <option value="$PROJECT_DIR$/resources/fxml/loginForm.fxml" />
-        <option value="$PROJECT_DIR$/resources/fxml/subjectView.fxml" />
         <option value="$PROJECT_DIR$/projectDatabase.db.sql" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/LoginFormController.java" />
+        <option value="$PROJECT_DIR$/resources/fxml/subjectView.fxml" />
+        <option value="$PROJECT_DIR$/resources/css/main.css" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CourseListController.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/SubjectViewController.java" />
+        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Main.java" />
       </list>
     </option>
   </component>
@@ -322,6 +331,12 @@
               <item name="rpr-projekat" type="b2602c69:ProjectViewProjectNode" />
               <item name="rpr-projekat" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rpr-projekat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rpr-projekat" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="fxml" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -354,7 +369,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550973894613" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551029967348" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -407,7 +422,7 @@
       <workItem from="1550922134912" duration="16523000" />
       <workItem from="1550940054786" duration="2569000" />
       <workItem from="1550943302986" duration="23462000" />
-      <workItem from="1551012587138" duration="3348000" />
+      <workItem from="1551012587138" duration="6596000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1550857919822</created>
@@ -619,11 +634,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551014944426</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="omogucena opcija unhide kako treba, profesor sakrije predavanje, promjeni se visible sa 1 na 0, ali on idalje vidi, kada gost ili student pristupi, izzvrsi se refilltable i ona popuni samo onim materijalima koji su visible==1">
+      <created>1551016244632</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1551016244632</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72644000" />
+    <option name="totallyTimeSpent" value="75892000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="696" extended-state="6" />
@@ -638,7 +660,7 @@
       <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.21682848" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.63829786" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2996454" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -666,7 +688,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="layout changes" />
     <MESSAGE value="implementirana login forma, provjera sifre i username.a&#10;Povezivanje osoba unesenih kroz user sa bazom" />
     <MESSAGE value="added tree view of course list" />
     <MESSAGE value="finished course list" />
@@ -691,7 +712,8 @@
     <MESSAGE value="logovanje kao gost podrzano" />
     <MESSAGE value="onemoguceno je upravljanje od strane studenata,profesora koji ne predaju,ili gostiju na predmetu" />
     <MESSAGE value="omoguceno logovanje od strane studenta, gosta i profesora" />
-    <option name="LAST_COMMIT_MESSAGE" value="omoguceno logovanje od strane studenta, gosta i profesora" />
+    <MESSAGE value="omogucena opcija unhide kako treba, profesor sakrije predavanje, promjeni se visible sa 1 na 0, ali on idalje vidi, kada gost ili student pristupi, izzvrsi se refilltable i ona popuni samo onim materijalima koji su visible==1" />
+    <option name="LAST_COMMIT_MESSAGE" value="omogucena opcija unhide kako treba, profesor sakrije predavanje, promjeni se visible sa 1 na 0, ali on idalje vidi, kada gost ili student pristupi, izzvrsi se refilltable i ona popuni samo onim materijalima koji su visible==1" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Professor.java" />
@@ -704,20 +726,6 @@
         </state>
       </provider>
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="19" column="49" selection-end-line="32" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Material.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -799,64 +807,10 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/fxml/subjectView.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="68" column="168" selection-start-line="68" selection-start-column="168" selection-end-line="68" selection-end-column="168" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/projectDatabase.db.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
           <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/LoginFormController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="79" column="21" selection-start-line="79" selection-start-column="21" selection-end-line="79" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initialize#0;class#LoginFormController#0" />
-            <element signature="e#2825#2826#0" expanded="true" />
-            <element signature="e#2859#2860#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CourseListController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7">
-          <caret line="152" selection-start-line="152" selection-end-line="152" />
-          <folding>
-            <element signature="method#loadMasterItems#0;class#CourseListController#0" />
-            <element signature="method#loadPhdItems#0;class#CourseListController#0" />
-            <element signature="method#signOut#0;class#CourseListController#0" />
-            <element signature="method#about#0;class#CourseListController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/SubjectViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2484">
-          <caret line="49" column="27" lean-forward="true" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#fillLabTable#0;class#SubjectViewController#0" />
-            <element signature="method#fillLectureTable#0;class#SubjectViewController#0" />
-            <element signature="method#clearNotification#0;class#SubjectViewController#0" />
-            <element signature="method#back#0;class#SubjectViewController#0" />
-            <element signature="method#signOut#0;class#SubjectViewController#0" />
-            <element signature="method#unhideMaterial#0;class#SubjectViewController#0" />
-            <element signature="method#saveMaterials#0;class#SubjectViewController#0" />
-            <element signature="e#6652#6653#0" expanded="true" />
-            <element signature="e#6689#6690#0" expanded="true" />
-            <element signature="method#openChooser#0;class#SubjectViewController#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -870,6 +824,82 @@
             <element signature="method#getMaxIdOfMaterials#0;class#Database#0" />
             <element signature="method#addNewMaterial#0;class#Database#0" />
             <element signature="method#changeMaterial#0;class#Database#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/LoginFormController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initialize#0;class#LoginFormController#0" />
+            <element signature="e#2825#2826#0" expanded="true" />
+            <element signature="e#2859#2860#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/fxml/subjectView.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="71" column="103" selection-start-line="71" selection-start-column="103" selection-end-line="71" selection-end-column="103" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CourseListController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1545">
+          <caret line="49" column="152" selection-start-line="49" selection-start-column="152" selection-end-line="49" selection-end-column="152" />
+          <folding>
+            <element signature="method#loadMasterItems#0;class#CourseListController#0" />
+            <element signature="method#loadPhdItems#0;class#CourseListController#0" />
+            <element signature="method#signOut#0;class#CourseListController#0" />
+            <element signature="method#about#0;class#CourseListController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/SubjectViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="330" column="58" selection-start-line="330" selection-start-column="58" selection-end-line="330" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initialize#0;class#SubjectViewController#0" />
+            <element signature="method#fillGroupTable#0;class#SubjectViewController#0" />
+            <element signature="method#fillLabTable#0;class#SubjectViewController#0" />
+            <element signature="method#fillLectureTable#0;class#SubjectViewController#0" />
+            <element signature="method#clearNotification#0;class#SubjectViewController#0" />
+            <element signature="method#back#0;class#SubjectViewController#0" />
+            <element signature="method#signOut#0;class#SubjectViewController#0" />
+            <element signature="method#openMaterial#0;class#SubjectViewController#0" />
+            <element signature="method#hideMaterial#0;class#SubjectViewController#0" />
+            <element signature="method#unhideMaterial#0;class#SubjectViewController#0" />
+            <element signature="method#saveMaterials#0;class#SubjectViewController#0" />
+            <element signature="method#openChooser#0;class#SubjectViewController#0" />
+            <element signature="method#deleteMaterial#0;class#SubjectViewController#0" />
+            <element signature="method#refillTables#0;class#SubjectViewController#0" />
+            <element signature="method#error#0;class#SubjectViewController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

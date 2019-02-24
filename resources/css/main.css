@@ -23,6 +23,10 @@
 #tbHide {
     -fx-graphic: url("/img/hide.png");
 }
+
+#tbExplore {
+    -fx-graphic: url("/img/explore.jpg");
+}
 #tbUnhide {
     -fx-graphic: url("/img/unhide.png");
 }
