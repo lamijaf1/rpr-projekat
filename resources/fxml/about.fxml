@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@/css/main.css" />
+    </stylesheets>
+    <children>
+        <Label layoutY="319.0" prefHeight="17.0" prefWidth="232.0" text="Project name: Classroom materials" />
+        <Label layoutY="350.0" text="Author: Lamija Fazlija" />
+        <ImageView fitHeight="315.0" fitWidth="375.0" layoutX="98.0" pickOnBounds="true">
+            <image>
+                <Image url="@/img/interesantnaslicica.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>
