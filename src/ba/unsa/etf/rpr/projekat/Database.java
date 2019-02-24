@@ -14,7 +14,7 @@ public class Database {
     private static Database instance;
     private PreparedStatement getAllPersons, getAllMaterials, getAllSubjects, getAllNotifications;
     private PreparedStatement getProfessorById,getSubjectById,deleteNotifications,findMaxIdOfMaterials,addNewMaterial;
-    private PreparedStatement changeMaterial;
+    private PreparedStatement changeMaterial,deleteMaterial;
     public static Database getInstance() {
         if (instance == null) instance = new Database();
         return instance;
@@ -71,6 +71,7 @@ public class Database {
             getAllNotifications=conn.prepareStatement("SELECT * FROM notifications ORDER BY id");
             getSubjectById=conn.prepareStatement("SELECT * FROM subjects WHERE id=?");
             deleteNotifications=conn.prepareStatement("DELETE FROM notifications WHERE id=?");
+            deleteMaterial=conn.prepareStatement("DELETE  FROM materials WHERE id=?");
             findMaxIdOfMaterials=conn.prepareStatement("SELECT MAX(id)+1 FROM materials");
             addNewMaterial=conn.prepareStatement( "INSERT INTO materials(id, name_material,subject,type) VALUES (?,?,?,?)");
             changeMaterial = conn.prepareStatement("UPDATE materials SET visible=? WHERE id=?");
@@ -286,6 +287,12 @@ public class Database {
         changeMaterial.setInt(2,material.getId());
         changeMaterial.executeUpdate();
     }
+
+    public void deleteMaterial(Material material) throws SQLException {
+        deleteMaterial.setInt(1,material.getId());
+        deleteMaterial.executeUpdate();
+     }
+
 
 
 }

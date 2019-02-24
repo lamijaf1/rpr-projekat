@@ -192,7 +192,7 @@ public class SubjectViewController {
 
         }
     }
-    public void deleteMaterial(ActionEvent actionEvent) throws IOException {
+    public void deleteMaterial(ActionEvent actionEvent) throws IOException, SQLException {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Delete material");
         alert.setHeaderText("Are you sure you want delete "+ currentMaterial.getNameMaterial());
@@ -200,9 +200,45 @@ public class SubjectViewController {
         if (alert.getResult() == ButtonType.OK) {
             //database delete material
 
+    System.out.println(currentMaterial.getType());
+            if(currentMaterial.getType().equals("lab")){
+                database.deleteMaterial(currentMaterial);
+                database=database.getInstance();
+                fillLabTable();
+                System.out.println("Da li si ovdje bio?");
+                columnNameLab.setCellValueFactory(
+                        new PropertyValueFactory<Material, String>("nameMaterial")
+                );
+            }
+            if(currentMaterial.getType().equals("lecture")){
+                System.out.println("Da li si ovdje bio?");
+                database.deleteMaterial(currentMaterial);
+                database=database.getInstance();
+
+                fillLectureTable();
+               // tableOfLectures.setItems(database.getLectures(subjectName));
+                columnName.setCellValueFactory(
+                        new PropertyValueFactory<Material, String>("nameMaterial")
+                );
+            }
+
+            if(currentMaterial.getType()=="group"){
+                database.deleteMaterial(currentMaterial);
+                System.out.println("Da li si ovdje bio?");
+                database=database.getInstance();
+                fillGroupTable();
+               tableOfGroups.setItems(database.getGroups(subjectName));
+                columnNameGroup.setCellValueFactory(
+                        new PropertyValueFactory<Material, String>("nameMaterial")
+                );
+            }
+
+
+
+
 
         }else{
-
+            alert.setHeaderText("Okay");
         }
     }
 
