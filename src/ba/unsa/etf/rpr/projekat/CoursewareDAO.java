@@ -5,19 +5,18 @@ import javafx.collections.ObservableList;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.lang.reflect.Field;
 import java.sql.*;
 import java.util.Scanner;
 
-public class Database {
+public class CoursewareDAO {
     private Connection conn;
-    private static Database instance;
+    private static CoursewareDAO instance;
     private PreparedStatement getAllPersons, getAllMaterials, getAllSubjects, getAllNotifications;
     private PreparedStatement getProfessorById, getSubjectById, deleteNotifications, findMaxIdOfMaterials, addNewMaterial;
     private PreparedStatement changeMaterial, deleteMaterial, getProfessorByName, getSubjectByName;
 
-    public static Database getInstance() {
-        if (instance == null) instance = new Database();
+    public static CoursewareDAO getInstance() {
+        if (instance == null) instance = new CoursewareDAO();
         return instance;
     }
 
@@ -46,7 +45,7 @@ public class Database {
         input.close();
     }
 
-    private Database() {
+    private CoursewareDAO() {
 
         try {
             conn = DriverManager.getConnection("jdbc:sqlite:projectDatabase.db");
@@ -331,5 +330,19 @@ public class Database {
 
     public Connection getConn() {
         return conn;
+    }
+
+    public void close() {
+        try {
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void removeInstance() {
+        if (instance == null) return;
+        instance.close();
+        instance = null;
     }
 }

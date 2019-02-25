@@ -5,7 +5,6 @@ import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -14,8 +13,6 @@ import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.MouseButton;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import org.w3c.dom.*;
 
@@ -29,8 +26,11 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.awt.*;
-import java.io.*;
-import java.net.*;
+import java.io.File;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.nio.file.*;
 import java.sql.SQLException;
 
@@ -40,7 +40,7 @@ public class SubjectViewController {
 
     public TableView<Material> tableOfLectures, tableOfLabs, tableOfGroups;
     public TableColumn<Material, String> columnName, columnNameLab, columnNameGroup;
-    public static Database database;
+    public static CoursewareDAO coursewareDAO;
     public Material currentMaterial;
     public Label statusMsg;
     private static String subjectName;
@@ -53,12 +53,11 @@ public class SubjectViewController {
 
     @FXML
     public void initialize() {
-
-        database = database.getInstance();
+        coursewareDAO = coursewareDAO.getInstance();
         subjectName = CourseListController.getSubjectTitle();
         String notificationString = "";
-        if (database.getNotification(subjectName) != null) {
-            ObservableList<Notification> notifications = database.getNotification(subjectName);
+        if (coursewareDAO.getNotification(subjectName) != null) {
+            ObservableList<Notification> notifications = coursewareDAO.getNotification(subjectName);
             for (Notification notification : notifications) {
                 notificationString += (notification.getDate() + "-> " + notification.getText() + "\n");
             }
@@ -91,7 +90,7 @@ public class SubjectViewController {
             }
         });
         currentMaterial = tableOfGroups.getSelectionModel().getSelectedItem();
-        ObservableList<Material> groups = database.getGroups(subjectName);
+        ObservableList<Material> groups = coursewareDAO.getGroups(subjectName);
 
 
         columnNameGroup.setCellValueFactory(
@@ -109,7 +108,7 @@ public class SubjectViewController {
             }
         });
         currentMaterial = tableOfLabs.getSelectionModel().getSelectedItem();
-        ObservableList<Material> labs = database.getLabs(subjectName);
+        ObservableList<Material> labs = coursewareDAO.getLabs(subjectName);
 
         columnNameLab.setCellValueFactory(new PropertyValueFactory<Material, String>("nameMaterial"));
 
@@ -123,7 +122,7 @@ public class SubjectViewController {
             }
         });
         currentMaterial = tableOfLectures.getSelectionModel().getSelectedItem();
-        ObservableList<Material> lectures = database.getLectures(subjectName);
+        ObservableList<Material> lectures = coursewareDAO.getLectures(subjectName);
 
         columnName.setCellValueFactory(
                 new PropertyValueFactory<Material, String>("nameMaterial")
@@ -135,7 +134,7 @@ public class SubjectViewController {
         if (!youAreProfessorOnSubject) error();
         else {
             statusMsg.setText("Welcome to " + subjectName);
-            database.deleteNotification(subjectName);
+            coursewareDAO.deleteNotification(subjectName);
         }
 
     }
@@ -168,7 +167,7 @@ public class SubjectViewController {
     public void hideMaterial(ActionEvent actionEvent) throws IOException, SQLException {
         if (currentMaterial != null) {
             currentMaterial.setVisible(0);
-            database.changeMaterial(currentMaterial);
+            coursewareDAO.changeMaterial(currentMaterial);
         }
 
         //refillTables();
@@ -177,7 +176,7 @@ public class SubjectViewController {
 
     public void unhideMaterial(ActionEvent actionEvent) throws IOException, SQLException {
         if (currentMaterial != null) currentMaterial.setVisible(1);
-        database.changeMaterial(currentMaterial);
+        coursewareDAO.changeMaterial(currentMaterial);
         //refillTables();
         if (currentMaterial != null) System.out.println(currentMaterial.isVisible());
     }
@@ -216,9 +215,9 @@ public class SubjectViewController {
                     StandardCopyOption.COPY_ATTRIBUTES
             };
             Files.copy(from, to, options);
-            int id = database.getMaxIdOfMaterials();
+            int id = coursewareDAO.getMaxIdOfMaterials();
             Material material = new Material(id, currFIle, subjectName, subjectType, 1);
-            database.addNewMaterial(material);
+            coursewareDAO.addNewMaterial(material);
 
         }
     }
@@ -229,12 +228,12 @@ public class SubjectViewController {
         alert.setHeaderText("Are you sure you want delete " + currentMaterial.getNameMaterial());
         alert.showAndWait();
         if (alert.getResult() == ButtonType.OK) {
-            //database delete material
+            //coursewareDAO delete material
 
             System.out.println(currentMaterial.getType());
             if (currentMaterial.getType().equals("lab")) {
-                database.deleteMaterial(currentMaterial);
-                database = database.getInstance();
+                coursewareDAO.deleteMaterial(currentMaterial);
+                coursewareDAO = coursewareDAO.getInstance();
                 fillLabTable();
                 System.out.println("Da li si ovdje bio?");
                 columnNameLab.setCellValueFactory(
@@ -242,23 +241,23 @@ public class SubjectViewController {
                 );
             }
             if (currentMaterial.getType().equals("lecture")) {
-                System.out.println("Da li si ovdje bio?");
-                database.deleteMaterial(currentMaterial);
-                database = database.getInstance();
+                //System.out.println("Da li si ovdje bio?");
+                coursewareDAO.deleteMaterial(currentMaterial);
+                coursewareDAO = coursewareDAO.getInstance();
 
                 fillLectureTable();
-                // tableOfLectures.setItems(database.getLectures(subjectName));
+                // tableOfLectures.setItems(coursewareDAO.getLectures(subjectName));
                 columnName.setCellValueFactory(
                         new PropertyValueFactory<Material, String>("nameMaterial")
                 );
             }
 
             if (currentMaterial.getType() == "group") {
-                database.deleteMaterial(currentMaterial);
-                System.out.println("Da li si ovdje bio?");
-                database = database.getInstance();
+                coursewareDAO.deleteMaterial(currentMaterial);
+                //System.out.println("Da li si ovdje bio?");
+                coursewareDAO = coursewareDAO.getInstance();
                 fillGroupTable();
-                tableOfGroups.setItems(database.getGroups(subjectName));
+                tableOfGroups.setItems(coursewareDAO.getGroups(subjectName));
                 columnNameGroup.setCellValueFactory(
                         new PropertyValueFactory<Material, String>("nameMaterial")
                 );
@@ -281,7 +280,7 @@ public class SubjectViewController {
         });
         currentMaterial = tableOfGroups.getSelectionModel().getSelectedItem();
 
-        for (Material m : database.getGroups(subjectName)) {
+        for (Material m : coursewareDAO.getGroups(subjectName)) {
             if (m.isVisible() == 1) {
                 groupsForGuest.add(m);
             }
@@ -299,7 +298,7 @@ public class SubjectViewController {
             }
         });
         currentMaterial = tableOfLabs.getSelectionModel().getSelectedItem();
-        for (Material m : database.getLabs(subjectName)) {
+        for (Material m : coursewareDAO.getLabs(subjectName)) {
             if (m.isVisible() == 1) {
                 labsForGuest.add(m);
             }
@@ -316,7 +315,7 @@ public class SubjectViewController {
         });
         currentMaterial = tableOfLectures.getSelectionModel().getSelectedItem();
 
-        for (Material m : database.getLectures(subjectName)) {
+        for (Material m : coursewareDAO.getLectures(subjectName)) {
             if (m.isVisible() == 1) {
                 lecturesForGuest.add(m);
             }
@@ -337,8 +336,8 @@ public class SubjectViewController {
     }
 
     public void browser(ActionEvent actionEvent) throws IOException, URISyntaxException {
-        int courseId = database.getSubjectByName(subjectName).getId(); //main page of c2 courseware
-        //if (database.getSubjectByName(subjectName).getId()!=1) courseId = LoginFormController.getCurrentUser().getId();
+        int courseId = coursewareDAO.getSubjectByName(subjectName).getId(); //main page of c2 courseware
+        //if (coursewareDAO.getSubjectByName(subjectName).getId()!=1) courseId = LoginFormController.getCurrentUser().getId();
         //   if(LoginFormController.getCurrentUser().getId())
         //  if(CourseListController.getSubjectTitle().toLowerCase().equals("rpr"))courseId=49;
 
@@ -362,7 +361,7 @@ public class SubjectViewController {
             ((org.w3c.dom.Document) document).appendChild(root);
             Element izdvojeni = null;
             Element elementi = null;
-            for (Material m : database.getMaterialsBySubject(CourseListController.getSubjectTitle())) {
+            for (Material m : coursewareDAO.getMaterialsBySubject(CourseListController.getSubjectTitle())) {
                 elementi = document.createElement("id");
                 root.appendChild(elementi);
                 Attr attr = document.createAttribute("nameMaterial");
@@ -443,7 +442,7 @@ public class SubjectViewController {
                     }
 
                 }
-                database.addNewMaterial(material);
+                coursewareDAO.addNewMaterial(material);
 
             }
         } catch (Exception | WrongChoiceException e) {

@@ -11,11 +11,12 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
-import javafx.scene.layout.StackPane;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Label;
+import javafx.scene.control.TreeItem;
+import javafx.scene.control.TreeView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -25,7 +26,6 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.List;
 
 import static javafx.scene.layout.Region.USE_COMPUTED_SIZE;
 
@@ -38,7 +38,7 @@ public class CourseListController {
     private TreeView<String> phdTree;
     @FXML
     private Label textDate, textWelcome;
-    private Database database;
+    private CoursewareDAO coursewareDAO;
     private String[] undergraduateSubjects = new String[100];
     private String[] masterSubjects = new String[100];
     private String[] phdSubjects = new String[100];
@@ -48,13 +48,15 @@ public class CourseListController {
     int idOfSubject;
 
     public void initialize() {
-        database = database.getInstance();
+        coursewareDAO = coursewareDAO.getInstance();
+
+        //   if(coursewareDAO.getSubjectByName(value)!=null && coursewareDAO.getSubjectByName(value).getProfessor().getId()==LoginFormController.getCurrentUser().getId())editOnSelectSubject=true;
         sortSubjects();
         if (!LoginFormController.getCurrentUser().isProfessor())
             editOnSelectSubject = false; //if isProfessor is false immediately he cant edit on subjects
         if (!LoginFormController.isGuest())
             textWelcome.setText("Welcome, " + LoginFormController.getCurrentUser().getFullName());
-            //else if(!database.getProfessor1(LoginFormController.getCurrentUser()).isProfessor())
+            //else if(!coursewareDAO.getProfessor1(LoginFormController.getCurrentUser()).isProfessor())
         else textWelcome.setText("Welcome on coursware,\n you are signed as guest. ");
         Timeline timeline = new Timeline(
                 new KeyFrame(Duration.seconds(0),
@@ -83,7 +85,7 @@ public class CourseListController {
     }
 
     private void sortSubjects() {
-        ObservableList<Subject> subjects = database.getSubjects();
+        ObservableList<Subject> subjects = coursewareDAO.getSubjects();
         int x = 0, y = 0, z = 0;
         for (Subject subject : subjects) {
             if (subject.getProgram().toLowerCase().equals("undergraduate")) {
@@ -138,7 +140,7 @@ public class CourseListController {
                     currentId = LoginFormController.getCurrentUser().getId();
                 }
 
-                Subject subject = database.getSubjectByName(value);
+                Subject subject = coursewareDAO.getSubjectByName(value);
                 if (subject != null) idOfSubject = subject.getId();
                 if (currentId == idOfSubject) {
                     System.out.println("OK, predajes na ovom predmetu");
@@ -208,7 +210,7 @@ public class CourseListController {
     public void print(ActionEvent actionEvent) {
         Platform.runLater(() -> {
             try {
-                new CourswareReport().showReport(Database.getInstance().getConn());
+                new CourswareReport().showReport(CoursewareDAO.getInstance().getConn());
             } catch (JRException e1) {
                 e1.printStackTrace();
             }
@@ -232,7 +234,7 @@ public class CourseListController {
                 if (lastIndexOf == -1) {
                     name = ""; // empty extension
                 }
-                gradoviReport.saveAs(database.getInstance().getConn(), name, file.getCanonicalPath());
+                gradoviReport.saveAs(coursewareDAO.getInstance().getConn(), name, file.getCanonicalPath());
             } catch (Exception ex) {
                 ex.printStackTrace();
             }

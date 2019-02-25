@@ -8,20 +8,19 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.paint.Color;
-import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+
+import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class LoginFormController {
     public TextField usernameField;
     public PasswordField passwordField;
     public Button loginBtn;
     public Button guestBtn;
-    private Database database;
+    private CoursewareDAO coursewareDAO;
     public TextField statusMsg;
     private static Person currentUser;
     private static boolean isGuest;
@@ -32,16 +31,17 @@ public class LoginFormController {
         usernameField.setEditable(true);
         //usernameField.selectHome();
         //usernameField.setFocusTraversable(true);
-        database = database.getInstance();
+        coursewareDAO = coursewareDAO.getInstance();
         statusMsg.setVisible(false);
     }
 
     public void Login(ActionEvent actionEvent) throws IOException {
         String username = usernameField.getText();
         String password = passwordField.getText();
-        ObservableList<Person> persons = database.getPersons();
+        System.out.println(username);
+        ObservableList<Person> persons = coursewareDAO.getPersons();
         for (Person p : persons) {
-            if (p.getFullName().equals(username)) {
+            if (p.getUsername().equals(username)) {
                 if (p.getPassword().equals(password)) {
                     currentUser = p;
                     courseList();
@@ -73,7 +73,7 @@ public class LoginFormController {
         Parent root = loader.load();
         Stage primaryStage = (Stage) usernameField.getScene().getWindow();
         primaryStage.setTitle("Course List");
-        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
     }
 
     public void LoginGuest(ActionEvent actionEvent) throws IOException {
