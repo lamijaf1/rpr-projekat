@@ -8,8 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3f70c769-014d-4f68-ab49-8d68c9d08944" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,17 +80,17 @@
           <entry key="java" value="15236" />
           <entry key="jrxml" value="96" />
           <entry key="sql" value="70" />
-          <entry key="txt" value="2555" />
-          <entry key="xml" value="89" />
+          <entry key="txt" value="2579" />
+          <entry key="xml" value="110" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="69" />
           <entry key="JAVA" value="15236" />
-          <entry key="PLAIN_TEXT" value="2573" />
+          <entry key="PLAIN_TEXT" value="2597" />
           <entry key="SQL" value="70" />
-          <entry key="XML" value="1056" />
+          <entry key="XML" value="1077" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -115,23 +117,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/SubjectViewController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="156" column="70" selection-start-line="156" selection-start-column="70" selection-end-line="156" selection-end-column="70" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
+            <state relative-caret-position="187">
+              <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -156,54 +146,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/TypeOfMaterialController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/reports/courseware.jrxml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1139">
               <caret line="67" column="22" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CourseListController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
-              <folding>
-                <element signature="method#sortSubjects#0;class#CourseListController#0" />
-                <element signature="method#loadUndergraduateItems#0;class#CourseListController#0" />
-                <element signature="method#loadMasterItems#0;class#CourseListController#0" />
-                <element signature="method#loadPhdItems#0;class#CourseListController#0" />
-                <element signature="method#onItemClickListener#0;class#CourseListController#0" />
-                <element signature="method#signOut#0;class#CourseListController#0" />
-                <element signature="method#about#0;class#CourseListController#0" />
-                <element signature="method#print#0;class#CourseListController#0" />
-                <element signature="method#saveAs#0;class#CourseListController#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CoursewareDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1309">
-              <caret line="77" column="131" selection-start-line="77" selection-start-column="131" selection-end-line="77" selection-end-column="131" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -278,7 +224,17 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand />
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="rpr-projekat" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="rpr-projekat" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
       <select />
     </treeState>
   </component>
@@ -307,35 +263,12 @@
             <path>
               <item name="rpr-projekat" type="b2602c69:ProjectViewProjectNode" />
               <item name="rpr-projekat" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rpr-projekat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rpr-projekat" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="fxml" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rpr-projekat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rpr-projekat" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="xml" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rpr-projekat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rpr-projekat" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rpr-projekat" type="b2602c69:ProjectViewProjectNode" />
               <item name="rpr-projekat" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rpr-projekat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rpr-projekat" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -353,10 +286,10 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551109726713" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551110887233" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lamija/rpr-projekat" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -364,7 +297,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lamija\Desktop\rpr-projekat\src\main\resources" />
+      <recent name="C:\Users\Lamija\Desktop\rpr-projekat\resources" />
       <recent name="C:\Users\Lamija\Desktop\rpr-projekat" />
+      <recent name="C:\Users\Lamija\Desktop\rpr-projekat\src\main" />
+      <recent name="C:\Users\Lamija\Desktop\rpr-projekat\src" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Lamija\Desktop\rpr-projekat" />
@@ -385,7 +322,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JAR Application.rpr-projekat-1.0-SNAPSHOT-jar-with-dependencies.jar">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.projekat.Main" />
       <module name="rpr-projekat" />
@@ -406,13 +343,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="rpr-projekat-1.0-SNAPSHOT-jar-with-dependencies.jar" type="JarApplication" factoryName="JAR Application" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/rpr-projekat-1.0-SNAPSHOT-jar-with-dependencies.jar" />
+      <method v="2" />
+    </configuration>
+    <configuration name="rpr-projekat-1.0-SNAPSHOT.jar" type="JarApplication" factoryName="JAR Application" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/rpr-projekat-1.0-SNAPSHOT.jar" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.CoursewareDAOTest.regenerateFile" />
+      <item itemvalue="JAR Application.rpr-projekat-1.0-SNAPSHOT.jar" />
+      <item itemvalue="JAR Application.rpr-projekat-1.0-SNAPSHOT-jar-with-dependencies.jar" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JAR Application.rpr-projekat-1.0-SNAPSHOT-jar-with-dependencies.jar" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JAR Application.rpr-projekat-1.0-SNAPSHOT.jar" />
         <item itemvalue="JUnit.CoursewareDAOTest.regenerateFile" />
       </list>
     </recent_temporary>
@@ -437,7 +386,7 @@
       <workItem from="1551012587138" duration="18483000" />
       <workItem from="1551044654674" duration="2780000" />
       <workItem from="1551093508769" duration="13014000" />
-      <workItem from="1551108412323" duration="1151000" />
+      <workItem from="1551108412323" duration="2438000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1550857919822</created>
@@ -740,7 +689,14 @@
       <option name="project" value="LOCAL" />
       <updated>1551108060471</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="kreiran target folder">
+      <created>1551109834134</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1551109834134</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -749,7 +705,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104724000" />
+    <option name="totallyTimeSpent" value="106011000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="696" extended-state="6" />
@@ -760,29 +716,29 @@
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.2435275" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.2394822" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49838188" weight="0.039007094" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8632686" visible="true" weight="0.32978722" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8632686" visible="true" weight="0.38475177" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32978722" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.13673139" side_tool="true" visible="true" weight="0.32978722" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.13673139" side_tool="true" visible="true" weight="0.38475177" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4935275" weight="0.20390071" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info active="true" anchor="right" id="Ant Build" order="1" visible="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Database" order="7" weight="0.2249191" />
-      <window_info anchor="right" id="Maven Projects" order="8" weight="0.19174758" />
+      <window_info anchor="right" id="Maven Projects" order="8" visible="true" weight="0.19174758" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -792,7 +748,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ADDED TYPEOFMATERIAL FORM" />
     <MESSAGE value="updated materials, added choosers" />
     <MESSAGE value="updated materials, added choosers, added new options for professor" />
     <MESSAGE value="implement hide option for material" />
@@ -817,7 +772,8 @@
     <MESSAGE value="dodani neki testovi i popravljeno povezivanje profesora sa svojim predmetom" />
     <MESSAGE value="popravljeni neki propusti,&#10;nije dodavalo direkt u formu vec samo u bazu.taj dio ispravljen&#10;promjenjene neke ikonice stavljeni transparentne" />
     <MESSAGE value="problem bio kod signOut , kada udje neko ko nije gost pa se odjavi pa udje kao gost pa izadje pa onda opet udje neko ko nije gost, ostane tekst dobrodoslice za gosta" />
-    <option name="LAST_COMMIT_MESSAGE" value="problem bio kod signOut , kada udje neko ko nije gost pa se odjavi pa udje kao gost pa izadje pa onda opet udje neko ko nije gost, ostane tekst dobrodoslice za gosta" />
+    <MESSAGE value="kreiran target folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="kreiran target folder" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -832,6 +788,10 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Professor.java" />
@@ -947,6 +907,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1063,8 +1026,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
+        <state relative-caret-position="187">
+          <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
         </state>
       </provider>
     </entry>
