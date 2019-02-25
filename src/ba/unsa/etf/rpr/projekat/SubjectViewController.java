@@ -232,7 +232,8 @@ public class SubjectViewController {
     public void deleteMaterial(ActionEvent actionEvent) throws IOException, SQLException {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Delete material");
-        alert.setHeaderText("Are you sure you want delete " + currentMaterial.getNameMaterial());
+        if (currentMaterial != null)
+            alert.setHeaderText("Are you sure you want delete " + currentMaterial.getNameMaterial());
         alert.showAndWait();
         if (alert.getResult() == ButtonType.OK) {
             //coursewareDAO delete material

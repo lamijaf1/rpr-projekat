@@ -6,9 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f70c769-014d-4f68-ab49-8d68c9d08944" name="Default Changelist" comment="">
+    <list default="true" id="3f70c769-014d-4f68-ab49-8d68c9d08944" name="Default Changelist" comment="kreiran jar, kada se pokrene on, otvara se main, sto je i trebalo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -80,7 +79,7 @@
           <entry key="java" value="15236" />
           <entry key="jrxml" value="96" />
           <entry key="sql" value="70" />
-          <entry key="txt" value="2579" />
+          <entry key="txt" value="2650" />
           <entry key="xml" value="110" />
         </counts>
       </usages-collector>
@@ -88,7 +87,7 @@
         <counts>
           <entry key="CSS" value="69" />
           <entry key="JAVA" value="15236" />
-          <entry key="PLAIN_TEXT" value="2597" />
+          <entry key="PLAIN_TEXT" value="2668" />
           <entry key="SQL" value="70" />
           <entry key="XML" value="1077" />
         </counts>
@@ -97,7 +96,7 @@
         <counts>
           <entry key="css" value="5" />
           <entry key="fxml" value="23" />
-          <entry key="java" value="80" />
+          <entry key="java" value="81" />
           <entry key="jrxml" value="2" />
           <entry key="sql" value="10" />
           <entry key="tld" value="3" />
@@ -108,7 +107,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="5" />
-          <entry key="JAVA" value="80" />
+          <entry key="JAVA" value="81" />
           <entry key="SQL" value="10" />
           <entry key="XML" value="34" />
         </counts>
@@ -117,11 +116,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+            <state relative-caret-position="136">
+              <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/CoursewareDAOTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -212,6 +223,7 @@
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CourseListController.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/LoginFormController.java" />
         <option value="$PROJECT_DIR$/resources/pom.fxml" />
+        <option value="$PROJECT_DIR$/resources/xml/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
@@ -224,17 +236,7 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="rpr-projekat" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="rpr-projekat" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-      </expand>
+      <expand />
       <select />
     </treeState>
   </component>
@@ -263,12 +265,29 @@
             <path>
               <item name="rpr-projekat" type="b2602c69:ProjectViewProjectNode" />
               <item name="rpr-projekat" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rpr-projekat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rpr-projekat" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="xml" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rpr-projekat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rpr-projekat" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rpr-projekat" type="b2602c69:ProjectViewProjectNode" />
               <item name="rpr-projekat" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rpr-projekat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rpr-projekat" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -277,6 +296,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="ChangesTree.GroupingKeys" value="directory" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
@@ -286,10 +306,10 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551111113711" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551111540942" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lamija/rpr-projekat" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -297,11 +317,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Lamija\Desktop\rpr-projekat\src\main\resources" />
-      <recent name="C:\Users\Lamija\Desktop\rpr-projekat\resources" />
+      <recent name="C:\Users\Lamija\Desktop\rpr-projekat\resources\xml" />
+      <recent name="C:\Users\Lamija\Desktop\rpr-projekat\target" />
+      <recent name="C:\Users\Lamija\Desktop\rpr-projekat\target\test-classes" />
       <recent name="C:\Users\Lamija\Desktop\rpr-projekat" />
-      <recent name="C:\Users\Lamija\Desktop\rpr-projekat\src\main" />
-      <recent name="C:\Users\Lamija\Desktop\rpr-projekat\src" />
+      <recent name="C:\Users\Lamija\Desktop\rpr-projekat\src\main\resources" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Lamija\Desktop\rpr-projekat" />
@@ -322,7 +342,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JAR Application.rpr-projekat-1.0-SNAPSHOT-jar-with-dependencies.jar">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.projekat.Main" />
       <module name="rpr-projekat" />
@@ -359,8 +379,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JAR Application.rpr-projekat-1.0-SNAPSHOT-jar-with-dependencies.jar" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JAR Application.rpr-projekat-1.0-SNAPSHOT-jar-with-dependencies.jar" />
         <item itemvalue="JAR Application.rpr-projekat-1.0-SNAPSHOT.jar" />
         <item itemvalue="JUnit.CoursewareDAOTest.regenerateFile" />
       </list>
@@ -386,7 +406,7 @@
       <workItem from="1551012587138" duration="18483000" />
       <workItem from="1551044654674" duration="2780000" />
       <workItem from="1551093508769" duration="13014000" />
-      <workItem from="1551108412323" duration="2438000" />
+      <workItem from="1551108412323" duration="2977000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1550857919822</created>
@@ -696,7 +716,21 @@
       <option name="project" value="LOCAL" />
       <updated>1551109834134</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="kreiran jar, kada se pokrene on, otvara se main, sto je i trebalo">
+      <created>1551110963659</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1551110963659</updated>
+    </task>
+    <task id="LOCAL-00046" summary="kreiran jar, kada se pokrene on, otvara se main, sto je i trebalo">
+      <created>1551111138947</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1551111138947</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -705,10 +739,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106011000" />
+    <option name="totallyTimeSpent" value="106550000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="696" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Designer" order="1" />
@@ -719,14 +754,14 @@
       <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.2394822" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49838188" weight="0.039007094" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8632686" visible="true" weight="0.38475177" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8632686" visible="true" weight="0.15602838" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32978722" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.13673139" side_tool="true" visible="true" weight="0.38475177" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.13673139" side_tool="true" visible="true" weight="0.15602838" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4935275" weight="0.20390071" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.0" />
@@ -738,7 +773,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Database" order="7" weight="0.2249191" />
-      <window_info anchor="right" id="Maven Projects" order="8" visible="true" weight="0.19174758" />
+      <window_info anchor="right" id="Maven Projects" order="8" visible="true" weight="0.12135922" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -748,7 +783,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updated materials, added choosers" />
     <MESSAGE value="updated materials, added choosers, added new options for professor" />
     <MESSAGE value="implement hide option for material" />
     <MESSAGE value="added delete button for professor" />
@@ -773,7 +807,8 @@
     <MESSAGE value="popravljeni neki propusti,&#10;nije dodavalo direkt u formu vec samo u bazu.taj dio ispravljen&#10;promjenjene neke ikonice stavljeni transparentne" />
     <MESSAGE value="problem bio kod signOut , kada udje neko ko nije gost pa se odjavi pa udje kao gost pa izadje pa onda opet udje neko ko nije gost, ostane tekst dobrodoslice za gosta" />
     <MESSAGE value="kreiran target folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="kreiran target folder" />
+    <MESSAGE value="kreiran jar, kada se pokrene on, otvara se main, sto je i trebalo" />
+    <option name="LAST_COMMIT_MESSAGE" value="kreiran jar, kada se pokrene on, otvara se main, sto je i trebalo" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -903,16 +938,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/CoursewareDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/LoginFormController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
@@ -1026,8 +1051,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        <state relative-caret-position="136">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/CoursewareDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
