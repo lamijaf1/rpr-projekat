@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="rpr-projekat:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3f70c769-014d-4f68-ab49-8d68c9d08944" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CourseListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CourseListController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,7 +55,7 @@
     <session id="102869890">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.100" value="1" />
           <entry key="project.open.time.106" value="1" />
@@ -60,9 +64,10 @@
           <entry key="project.open.time.129" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.81" value="1" />
           <entry key="project.open.time.89" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -70,30 +75,31 @@
           <entry key="css" value="69" />
           <entry key="dummy" value="18" />
           <entry key="fxml" value="871" />
-          <entry key="java" value="15222" />
+          <entry key="java" value="15236" />
           <entry key="jrxml" value="96" />
           <entry key="sql" value="70" />
-          <entry key="txt" value="2383" />
+          <entry key="txt" value="2555" />
+          <entry key="xml" value="89" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="69" />
-          <entry key="JAVA" value="15222" />
-          <entry key="PLAIN_TEXT" value="2401" />
+          <entry key="JAVA" value="15236" />
+          <entry key="PLAIN_TEXT" value="2573" />
           <entry key="SQL" value="70" />
-          <entry key="XML" value="967" />
+          <entry key="XML" value="1056" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="5" />
-          <entry key="fxml" value="22" />
+          <entry key="fxml" value="23" />
           <entry key="java" value="80" />
           <entry key="jrxml" value="2" />
           <entry key="sql" value="10" />
-          <entry key="tld" value="1" />
-          <entry key="xml" value="3" />
+          <entry key="tld" value="3" />
+          <entry key="xml" value="5" />
           <entry key="xsl" value="1" />
         </counts>
       </usages-collector>
@@ -102,7 +108,7 @@
           <entry key="CSS" value="5" />
           <entry key="JAVA" value="80" />
           <entry key="SQL" value="10" />
-          <entry key="XML" value="29" />
+          <entry key="XML" value="34" />
         </counts>
       </usages-collector>
     </session>
@@ -110,31 +116,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/LoginFormController.java">
+        <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/SubjectViewController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="80" column="21" lean-forward="true" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Subject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="14" selection-end-line="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+            <state relative-caret-position="210">
+              <caret line="156" column="70" selection-start-line="156" selection-start-column="70" selection-end-line="156" selection-end-column="70" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -143,32 +128,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/SubjectViewController.java">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="223" column="56" lean-forward="true" selection-start-line="223" selection-start-column="56" selection-end-line="223" selection-end-column="56" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3585#4142#0" />
-                <element signature="e#4148#4755#0" />
-                <element signature="e#4761#5036#0" />
-                <element signature="e#5042#5525#0" />
-                <element signature="e#5531#5834#0" />
-                <element signature="e#5840#6054#0" />
-                <element signature="e#6060#6414#0" />
-                <element signature="e#6420#6747#0" />
-                <element signature="e#7663#7664#0" expanded="true" />
-                <element signature="e#7700#7701#0" expanded="true" />
-                <element signature="e#8514#10557#0" />
-                <element signature="e#10563#12775#0" />
-                <element signature="e#12781#13071#0" />
-                <element signature="e#13077#13848#0" />
-                <element signature="e#13854#16593#0" />
-                <element signature="e#16599#19061#0" />
-                <element signature="e#19067#19749#0" />
-                <element signature="e#19755#20680#0" />
-                <element signature="e#20686#21213#0" />
-              </folding>
+            <state relative-caret-position="191">
+              <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
             </state>
           </provider>
         </entry>
@@ -176,7 +139,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projectDatabase.db.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
+            <state relative-caret-position="680">
               <caret line="40" column="60" selection-start-line="40" selection-start-column="60" selection-end-line="40" selection-end-column="60" />
             </state>
           </provider>
@@ -186,7 +149,7 @@
         <entry file="file://$PROJECT_DIR$/resources/fxml/subjectView.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
+            <state relative-caret-position="731">
               <caret line="43" column="91" selection-start-line="43" selection-start-column="91" selection-end-line="43" selection-end-column="91" />
             </state>
           </provider>
@@ -195,8 +158,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/TypeOfMaterialController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="35" column="11" lean-forward="true" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+            <state relative-caret-position="595">
+              <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -207,8 +170,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/reports/courseware.jrxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="67" column="22" lean-forward="true" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
+            <state relative-caret-position="1139">
+              <caret line="67" column="22" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -216,8 +179,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CourseListController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="70" column="18" lean-forward="true" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+            <state relative-caret-position="680">
+              <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
               <folding>
                 <element signature="method#sortSubjects#0;class#CourseListController#0" />
                 <element signature="method#loadUndergraduateItems#0;class#CourseListController#0" />
@@ -236,33 +199,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CoursewareDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-499">
+            <state relative-caret-position="1309">
               <caret line="77" column="131" selection-start-line="77" selection-start-column="131" selection-end-line="77" selection-end-column="131" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#817#1607#0" />
-                <element signature="e#3447#3922#0" />
-                <element signature="e#3928#4118#0" />
-                <element signature="e#4124#4610#0" />
-                <element signature="e#4616#4874#0" />
-                <element signature="e#4880#5246#0" />
-                <element signature="e#5252#5619#0" />
-                <element signature="e#5625#5977#0" />
-                <element signature="e#5983#6480#0" />
-                <element signature="e#6486#7097#0" />
-                <element signature="e#7103#7294#0" />
-                <element signature="e#7300#7736#0" />
-                <element signature="e#7742#8158#0" />
-                <element signature="e#8164#8581#0" />
-                <element signature="e#8587#9281#0" />
-                <element signature="e#9287#9635#0" />
-                <element signature="e#9641#9928#0" />
-                <element signature="e#9934#10278#0" />
-                <element signature="e#10284#10509#0" />
-                <element signature="e#10868#11089#0" />
-                <element signature="e#11095#11260#0" />
-                <element signature="e#11328#11473#0" />
-                <element signature="e#11484#11616#0" />
               </folding>
             </state>
           </provider>
@@ -275,9 +215,9 @@
       <list>
         <option value="CSS File" />
         <option value="XSLT Stylesheet" />
-        <option value="Tag Library Descriptor" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
+        <option value="Tag Library Descriptor" />
       </list>
     </option>
   </component>
@@ -320,11 +260,13 @@
         <option value="$PROJECT_DIR$/test/DatabaseTest.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Database.java" />
         <option value="$PROJECT_DIR$/test/CoursewareDAOTest.java" />
-        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/LoginFormController.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CoursewareDAO.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/SubjectViewController.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/TypeOfMaterialController.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CourseListController.java" />
+        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/LoginFormController.java" />
+        <option value="$PROJECT_DIR$/resources/pom.fxml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -341,7 +283,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
+    <option name="x" value="-4" />
     <option name="width" value="1292" />
     <option name="height" value="732" />
   </component>
@@ -353,8 +295,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -371,7 +313,13 @@
               <item name="rpr-projekat" type="b2602c69:ProjectViewProjectNode" />
               <item name="rpr-projekat" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="reports" type="462c0819:PsiDirectoryNode" />
+              <item name="fxml" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rpr-projekat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rpr-projekat" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="xml" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rpr-projekat" type="b2602c69:ProjectViewProjectNode" />
@@ -382,7 +330,7 @@
               <item name="rpr-projekat" type="b2602c69:ProjectViewProjectNode" />
               <item name="rpr-projekat" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="projekat" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rpr-projekat" type="b2602c69:ProjectViewProjectNode" />
@@ -397,19 +345,30 @@
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="rpr-projekat" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551107981635" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551109726713" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lamija/rpr-projekat" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lamija\Desktop\rpr-projekat" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lamija\Desktop\rpr-projekat" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ba.unsa.etf.rpr.projekat" />
     </key>
@@ -477,7 +436,8 @@
       <workItem from="1550943302986" duration="23462000" />
       <workItem from="1551012587138" duration="18483000" />
       <workItem from="1551044654674" duration="2780000" />
-      <workItem from="1551093508769" duration="12589000" />
+      <workItem from="1551093508769" duration="13014000" />
+      <workItem from="1551108412323" duration="1151000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1550857919822</created>
@@ -773,7 +733,14 @@
       <option name="project" value="LOCAL" />
       <updated>1551106816865</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="problem bio kod signOut , kada udje neko ko nije gost pa se odjavi pa udje kao gost pa izadje pa onda opet udje neko ko nije gost, ostane tekst dobrodoslice za gosta">
+      <created>1551108060471</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1551108060471</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -782,11 +749,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103148000" />
+    <option name="totallyTimeSpent" value="104724000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="696" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Designer" order="1" />
@@ -794,29 +760,29 @@
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.2394822" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.2435275" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49838188" weight="0.039007094" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8640777" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8632686" visible="true" weight="0.32978722" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32978722" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.13592233" side_tool="true" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.13673139" side_tool="true" visible="true" weight="0.32978722" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.4935275" weight="0.20390071" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info active="true" anchor="right" id="Ant Build" order="1" visible="true" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Database" order="7" weight="0.2249191" />
-      <window_info anchor="right" id="Maven Projects" order="8" visible="true" weight="0.016990291" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.19174758" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -826,7 +792,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added buttons for signout, back and clear notifications,&#10;implemented methods for those buttons" />
     <MESSAGE value="ADDED TYPEOFMATERIAL FORM" />
     <MESSAGE value="updated materials, added choosers" />
     <MESSAGE value="updated materials, added choosers, added new options for professor" />
@@ -851,7 +816,8 @@
     <MESSAGE value="optimize imports" />
     <MESSAGE value="dodani neki testovi i popravljeno povezivanje profesora sa svojim predmetom" />
     <MESSAGE value="popravljeni neki propusti,&#10;nije dodavalo direkt u formu vec samo u bazu.taj dio ispravljen&#10;promjenjene neke ikonice stavljeni transparentne" />
-    <option name="LAST_COMMIT_MESSAGE" value="popravljeni neki propusti,&#10;nije dodavalo direkt u formu vec samo u bazu.taj dio ispravljen&#10;promjenjene neke ikonice stavljeni transparentne" />
+    <MESSAGE value="problem bio kod signOut , kada udje neko ko nije gost pa se odjavi pa udje kao gost pa izadje pa onda opet udje neko ko nije gost, ostane tekst dobrodoslice za gosta" />
+    <option name="LAST_COMMIT_MESSAGE" value="problem bio kod signOut , kada udje neko ko nije gost pa se odjavi pa udje kao gost pa izadje pa onda opet udje neko ko nije gost, ostane tekst dobrodoslice za gosta" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -939,10 +905,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="79">
           <caret line="37" column="18" selection-end-line="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#showReport#0;class#CourswareReport#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -978,10 +940,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <element signature="e#131#132#0" expanded="true" />
-            <element signature="e#155#156#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -989,6 +947,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/LoginFormController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1002,17 +967,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/fxml/subjectView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="43" column="91" selection-start-line="43" selection-start-column="91" selection-end-line="43" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
+        <state relative-caret-position="391">
           <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1022,48 +979,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/projectDatabase.db.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
+        <state relative-caret-position="680">
           <caret line="40" column="60" selection-start-line="40" selection-start-column="60" selection-end-line="40" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CoursewareDAO.java">
+    <entry file="file://$PROJECT_DIR$/resources/fxml/subjectView.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-499">
-          <caret line="77" column="131" selection-start-line="77" selection-start-column="131" selection-end-line="77" selection-end-column="131" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#817#1607#0" />
-            <element signature="e#3447#3922#0" />
-            <element signature="e#3928#4118#0" />
-            <element signature="e#4124#4610#0" />
-            <element signature="e#4616#4874#0" />
-            <element signature="e#4880#5246#0" />
-            <element signature="e#5252#5619#0" />
-            <element signature="e#5625#5977#0" />
-            <element signature="e#5983#6480#0" />
-            <element signature="e#6486#7097#0" />
-            <element signature="e#7103#7294#0" />
-            <element signature="e#7300#7736#0" />
-            <element signature="e#7742#8158#0" />
-            <element signature="e#8164#8581#0" />
-            <element signature="e#8587#9281#0" />
-            <element signature="e#9287#9635#0" />
-            <element signature="e#9641#9928#0" />
-            <element signature="e#9934#10278#0" />
-            <element signature="e#10284#10509#0" />
-            <element signature="e#10868#11089#0" />
-            <element signature="e#11095#11260#0" />
-            <element signature="e#11328#11473#0" />
-            <element signature="e#11484#11616#0" />
-          </folding>
+        <state relative-caret-position="731">
+          <caret line="43" column="91" selection-start-line="43" selection-start-column="91" selection-end-line="43" selection-end-column="91" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/TypeOfMaterialController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="35" column="11" lean-forward="true" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+        <state relative-caret-position="595">
+          <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1072,25 +1004,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/reports/courseware.jrxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="67" column="22" lean-forward="true" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/LoginFormController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="80" column="21" lean-forward="true" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1139">
+          <caret line="67" column="22" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CourseListController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="70" column="18" lean-forward="true" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+        <state relative-caret-position="680">
+          <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
           <folding>
             <element signature="method#sortSubjects#0;class#CourseListController#0" />
             <element signature="method#loadUndergraduateItems#0;class#CourseListController#0" />
@@ -1105,32 +1027,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/SubjectViewController.java">
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CoursewareDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="223" column="56" lean-forward="true" selection-start-line="223" selection-start-column="56" selection-end-line="223" selection-end-column="56" />
+        <state relative-caret-position="1309">
+          <caret line="77" column="131" selection-start-line="77" selection-start-column="131" selection-end-line="77" selection-end-column="131" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3585#4142#0" />
-            <element signature="e#4148#4755#0" />
-            <element signature="e#4761#5036#0" />
-            <element signature="e#5042#5525#0" />
-            <element signature="e#5531#5834#0" />
-            <element signature="e#5840#6054#0" />
-            <element signature="e#6060#6414#0" />
-            <element signature="e#6420#6747#0" />
-            <element signature="e#7663#7664#0" expanded="true" />
-            <element signature="e#7700#7701#0" expanded="true" />
-            <element signature="e#8514#10557#0" />
-            <element signature="e#10563#12775#0" />
-            <element signature="e#12781#13071#0" />
-            <element signature="e#13077#13848#0" />
-            <element signature="e#13854#16593#0" />
-            <element signature="e#16599#19061#0" />
-            <element signature="e#19067#19749#0" />
-            <element signature="e#19755#20680#0" />
-            <element signature="e#20686#21213#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/fxml/pom.tld">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.tld">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/SubjectViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="156" column="70" selection-start-line="156" selection-start-column="70" selection-end-line="156" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
         </state>
       </provider>
     </entry>
@@ -1140,10 +1074,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>rpr-projekat:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

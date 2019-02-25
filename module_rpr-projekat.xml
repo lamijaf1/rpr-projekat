@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_rpr-projekat" default="compile.module.rpr-projekat">
+    <dirname property="module.rpr-projekat.basedir" file="${ant.file.module_rpr-projekat}"/>
+
+    <property name="module.jdk.home.rpr-projekat" value="${project.jdk.home}"/>
+    <property name="module.jdk.bin.rpr-projekat" value="${project.jdk.bin}"/>
+    <property name="module.jdk.classpath.rpr-projekat" value="${project.jdk.classpath}"/>
+
+    <property name="compiler.args.rpr-projekat" value="-encoding UTF-8 -source 10 -target 10 ${compiler.args}"/>
+
+    <property name="rpr-projekat.output.dir" value="${module.rpr-projekat.basedir}/out/production/rpr-projekat"/>
+    <property name="rpr-projekat.testoutput.dir" value="${module.rpr-projekat.basedir}/out/test/rpr-projekat"/>
+
+    <path id="rpr-projekat.module.bootclasspath">
+        <!-- Paths to be included in compilation bootclasspath -->
+    </path>
+
+    <path id="rpr-projekat.module.production.classpath">
+        <path refid="${module.jdk.classpath.rpr-projekat}"/>
+        <path refid="library.mysql:mysql-connector-java:8.0.15.classpath"/>
+        <path refid="library.org.xerial:sqlite-jdbc:3.23.1.classpath"/>
+        <path refid="library.org.xerial:sqlite-jdbc:3.25.2.classpath"/>
+        <path refid="library.net.sf.jasperreports:jasperreports:6.6.0.classpath"/>
+    </path>
+
+    <path id="rpr-projekat.runtime.production.module.classpath">
+        <pathelement location="${rpr-projekat.output.dir}"/>
+        <path refid="library.mysql:mysql-connector-java:8.0.15.classpath"/>
+        <path refid="library.org.xerial:sqlite-jdbc:3.23.1.classpath"/>
+        <path refid="library.org.xerial:sqlite-jdbc:3.25.2.classpath"/>
+        <path refid="library.net.sf.jasperreports:jasperreports:6.6.0.classpath"/>
+    </path>
+
+    <path id="rpr-projekat.module.classpath">
+        <path refid="${module.jdk.classpath.rpr-projekat}"/>
+        <pathelement location="${rpr-projekat.output.dir}"/>
+        <path refid="library.mysql:mysql-connector-java:8.0.15.classpath"/>
+        <path refid="library.org.xerial:sqlite-jdbc:3.23.1.classpath"/>
+        <path refid="library.org.xerial:sqlite-jdbc:3.25.2.classpath"/>
+        <path refid="library.net.sf.jasperreports:jasperreports:6.6.0.classpath"/>
+        <pathelement
+                location="${path.variable.maven_repository}/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar"/>
+        <pathelement
+                location="${path.variable.maven_repository}/org/junit/jupiter/junit-jupiter-api/5.4.0/junit-jupiter-api-5.4.0.jar"/>
+        <pathelement
+                location="${path.variable.maven_repository}/org/junit/platform/junit-platform-commons/1.4.0/junit-platform-commons-1.4.0.jar"/>
+        <pathelement location="${path.variable.maven_repository}/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar"/>
+    </path>
+
+    <path id="rpr-projekat.runtime.module.classpath">
+        <pathelement location="${rpr-projekat.testoutput.dir}"/>
+        <pathelement location="${rpr-projekat.output.dir}"/>
+        <path refid="library.mysql:mysql-connector-java:8.0.15.classpath"/>
+        <path refid="library.org.xerial:sqlite-jdbc:3.23.1.classpath"/>
+        <path refid="library.org.xerial:sqlite-jdbc:3.25.2.classpath"/>
+        <path refid="library.net.sf.jasperreports:jasperreports:6.6.0.classpath"/>
+        <pathelement
+                location="${path.variable.maven_repository}/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar"/>
+        <pathelement
+                location="${path.variable.maven_repository}/org/junit/jupiter/junit-jupiter-api/5.4.0/junit-jupiter-api-5.4.0.jar"/>
+        <pathelement
+                location="${path.variable.maven_repository}/org/junit/platform/junit-platform-commons/1.4.0/junit-platform-commons-1.4.0.jar"/>
+        <pathelement location="${path.variable.maven_repository}/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar"/>
+    </path>
+
+
+    <patternset id="excluded.from.module.rpr-projekat">
+        <patternset refid="ignored.files"/>
+    </patternset>
+
+    <patternset id="excluded.from.compilation.rpr-projekat">
+        <patternset refid="excluded.from.module.rpr-projekat"/>
+    </patternset>
+
+    <path id="rpr-projekat.module.sourcepath">
+        <dirset dir="${module.rpr-projekat.basedir}">
+            <include name="src"/>
+            <include name="resources"/>
+        </dirset>
+    </path>
+
+    <path id="rpr-projekat.module.test.sourcepath">
+        <dirset dir="${module.rpr-projekat.basedir}">
+            <include name="test"/>
+        </dirset>
+    </path>
+
+
+    <target name="compile.module.rpr-projekat"
+            depends="compile.module.rpr-projekat.production,compile.module.rpr-projekat.tests"
+            description="Compile module rpr-projekat"/>
+
+    <target name="compile.module.rpr-projekat.production" depends="register.custom.compilers"
+            description="Compile module rpr-projekat; production classes">
+        <mkdir dir="${rpr-projekat.output.dir}"/>
+        <javac2 destdir="${rpr-projekat.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}"
+                memorymaximumsize="${compiler.max.memory}" fork="true"
+                executable="${module.jdk.bin.rpr-projekat}/javac">
+            <compilerarg line="${compiler.args.rpr-projekat}"/>
+            <bootclasspath refid="rpr-projekat.module.bootclasspath"/>
+            <classpath refid="rpr-projekat.module.production.classpath"/>
+            <src refid="rpr-projekat.module.sourcepath"/>
+            <patternset refid="excluded.from.compilation.rpr-projekat"/>
+        </javac2>
+
+        <copy todir="${rpr-projekat.output.dir}">
+            <fileset dir="${module.rpr-projekat.basedir}/src">
+                <patternset refid="compiler.resources"/>
+                <type type="file"/>
+            </fileset>
+            <fileset dir="${module.rpr-projekat.basedir}/resources">
+                <patternset refid="compiler.resources"/>
+                <type type="file"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="compile.module.rpr-projekat.tests"
+            depends="register.custom.compilers,compile.module.rpr-projekat.production"
+            description="compile module rpr-projekat; test classes" unless="skip.tests">
+        <mkdir dir="${rpr-projekat.testoutput.dir}"/>
+        <javac2 destdir="${rpr-projekat.testoutput.dir}" debug="${compiler.debug}"
+                nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true"
+                executable="${module.jdk.bin.rpr-projekat}/javac">
+            <compilerarg line="${compiler.args.rpr-projekat}"/>
+            <bootclasspath refid="rpr-projekat.module.bootclasspath"/>
+            <classpath refid="rpr-projekat.module.classpath"/>
+            <src refid="rpr-projekat.module.test.sourcepath"/>
+            <patternset refid="excluded.from.compilation.rpr-projekat"/>
+        </javac2>
+
+        <copy todir="${rpr-projekat.testoutput.dir}">
+            <fileset dir="${module.rpr-projekat.basedir}/test">
+                <patternset refid="compiler.resources"/>
+                <type type="file"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="clean.module.rpr-projekat" description="cleanup module">
+        <delete dir="${rpr-projekat.output.dir}"/>
+        <delete dir="${rpr-projekat.testoutput.dir}"/>
+    </target>
+</project>
