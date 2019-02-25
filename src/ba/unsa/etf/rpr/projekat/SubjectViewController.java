@@ -45,7 +45,8 @@ public class SubjectViewController {
     public Label statusMsg;
     private static String subjectName;
     private static String subjectType;
-    public Button tbAdd, tbHide, tbUnhide, tbDelete, tbOpen, tbClear, tbBack, tbHome;
+    private static Button tbBack;
+    public Button tbAdd, tbHide, tbUnhide, tbDelete, tbOpen, tbClear, tbHome;
     private boolean youAreProfessorOnSubject = CourseListController.isEditOnSelectSubject();
     ObservableList<Material> groupsForGuest = FXCollections.observableArrayList();
     ObservableList<Material> labsForGuest = FXCollections.observableArrayList();
@@ -65,7 +66,7 @@ public class SubjectViewController {
         } else {
             statusMsg.setText("Welcome to " + subjectName);
         }
-        if (!CourseListController.isEditOnSelectSubject()) {
+        if (!CourseListController.isEditOnSelectSubject() || LoginFormController.isGuest()) {
             tbHide.setVisible(false);
             tbUnhide.setVisible(false);
             tbDelete.setVisible(false);
@@ -191,6 +192,8 @@ public class SubjectViewController {
         primaryStage.setTitle("Type of material");
         primaryStage.setScene(new Scene(root, 400, 140));
         primaryStage.setResizable(false);
+        //fillLectureTable();
+
 
     }
 
@@ -218,8 +221,12 @@ public class SubjectViewController {
             int id = coursewareDAO.getMaxIdOfMaterials();
             Material material = new Material(id, currFIle, subjectName, subjectType, 1);
             coursewareDAO.addNewMaterial(material);
+            coursewareDAO = coursewareDAO.getInstance();
+
+
 
         }
+
     }
 
     public void deleteMaterial(ActionEvent actionEvent) throws IOException, SQLException {

@@ -31,15 +31,13 @@ CREATE TABLE IF NOT EXISTS "person" (
 	"is_professor"	INTEGER,
 	PRIMARY KEY("id")
 );
-INSERT INTO "materials" VALUES (1,'lab1','RPR','lab',1);
-INSERT INTO "materials" VALUES (2,'lecture1','RPR','lecture',1);
+INSERT INTO "materials" VALUES (1,'lab1','RPR','lab',0);
+INSERT INTO "materials" VALUES (2,'lecture1','RPR','lecture',0);
 INSERT INTO "materials" VALUES (3,'group1','RPR','group',1);
 INSERT INTO "materials" VALUES (4,'lab1','OR','lab',1);
 INSERT INTO "materials" VALUES (5,'lecture1','OR','lecture',1);
 INSERT INTO "materials" VALUES (6,'group1','OR','group',1);
 INSERT INTO "materials" VALUES (7,'lab2','OR','lab',0);
-INSERT INTO "notifications" VALUES (1,49,'no class today','24.02.2019.');
-INSERT INTO "notifications" VALUES (2,49,'quiz starts tomorrow','25.02.2019.');
 INSERT INTO "subjects" VALUES (49,'RPR','undergraduate',49);
 INSERT INTO "subjects" VALUES (152,'Database','master',6);
 INSERT INTO "subjects" VALUES (182,'DOS','master',7);

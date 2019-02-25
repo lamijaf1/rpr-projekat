@@ -147,7 +147,7 @@ public class CourseListController {
                     editOnSelectSubject = true;
                 } else {
                     editOnSelectSubject = false;
-                    if (!LoginFormController.getCurrentUser().isProfessor()) {
+                    if (LoginFormController.getCurrentUser().isProfessor()) {
                         Platform.runLater(() -> {
                             Alert alert = new Alert(Alert.AlertType.WARNING);
                             alert.setTitle("Warning Dialog");
@@ -240,6 +240,8 @@ public class CourseListController {
             }
         }
     }
+
+
 }
 
 

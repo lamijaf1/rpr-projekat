@@ -75,7 +75,7 @@ public class CoursewareDAO {
             deleteNotifications = conn.prepareStatement("DELETE FROM notifications WHERE id=?");
             deleteMaterial = conn.prepareStatement("DELETE  FROM materials WHERE id=?");
             findMaxIdOfMaterials = conn.prepareStatement("SELECT MAX(id)+1 FROM materials");
-            addNewMaterial = conn.prepareStatement("INSERT INTO materials(id, name_material,subject,type) VALUES (?,?,?,?)");
+            addNewMaterial = conn.prepareStatement("INSERT INTO materials(id, name_material,subject,type,visible) VALUES (?,?,?,?,?)");
             changeMaterial = conn.prepareStatement("UPDATE materials SET visible=? WHERE id=?");
         } catch (SQLException e) {
             e.printStackTrace();
@@ -313,6 +313,7 @@ public class CoursewareDAO {
         addNewMaterial.setString(2, material.getNameMaterial());
         addNewMaterial.setString(3, material.getSubject());
         addNewMaterial.setString(4, material.getType());
+        addNewMaterial.setInt(5, material.isVisible());
         addNewMaterial.executeUpdate();
     }
 
