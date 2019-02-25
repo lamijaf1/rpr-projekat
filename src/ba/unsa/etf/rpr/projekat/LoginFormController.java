@@ -28,6 +28,7 @@ public class LoginFormController {
 
     @FXML
     public void initialize() {
+        isGuest = false;
         usernameField.setEditable(true);
         //usernameField.selectHome();
         //usernameField.setFocusTraversable(true);

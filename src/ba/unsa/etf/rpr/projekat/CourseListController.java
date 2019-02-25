@@ -52,7 +52,7 @@ public class CourseListController {
 
         //   if(coursewareDAO.getSubjectByName(value)!=null && coursewareDAO.getSubjectByName(value).getProfessor().getId()==LoginFormController.getCurrentUser().getId())editOnSelectSubject=true;
         sortSubjects();
-        if (!LoginFormController.getCurrentUser().isProfessor())
+        if (LoginFormController.getCurrentUser() != null && !LoginFormController.getCurrentUser().isProfessor())
             editOnSelectSubject = false; //if isProfessor is false immediately he cant edit on subjects
         if (!LoginFormController.isGuest())
             textWelcome.setText("Welcome, " + LoginFormController.getCurrentUser().getFullName());
@@ -147,7 +147,7 @@ public class CourseListController {
                     editOnSelectSubject = true;
                 } else {
                     editOnSelectSubject = false;
-                    if (LoginFormController.getCurrentUser().isProfessor()) {
+                    if (LoginFormController.getCurrentUser() != null && LoginFormController.getCurrentUser().isProfessor()) {
                         Platform.runLater(() -> {
                             Alert alert = new Alert(Alert.AlertType.WARNING);
                             alert.setTitle("Warning Dialog");
