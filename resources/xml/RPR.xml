@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<professor>
+    <subjects id="1">
+        <nameMaterial>izvjestaj</nameMaterial>
+        <subject>RPR</subject>
+        <type>group</type>
+        <visible>1</visible>
+    </subjects>
+    <subjects id="2">
+        <nameMaterial>main.pdf</nameMaterial>
+        <subject>RPR</subject>
+        <type>lecture</type>
+        <visible>1</visible>
+    </subjects>
+    <subjects id="4">
+        <nameMaterial>group1.pdf</nameMaterial>
+        <subject>RPR</subject>
+        <type>group</type>
+        <visible>1</visible>
+    </subjects>
+    <subjects id="5">
+        <nameMaterial>IOt.pdf</nameMaterial>
+        <subject>RPR</subject>
+        <type>lecture</type>
+        <visible>1</visible>
+    </subjects>
+    <subjects id="6">
+        <nameMaterial>lab1.pdf</nameMaterial>
+        <subject>RPR</subject>
+        <type>lab</type>
+        <visible>0</visible>
+    </subjects>
+</professor>
