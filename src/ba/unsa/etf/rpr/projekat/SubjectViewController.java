@@ -25,6 +25,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.awt.*;
+import java.awt.MenuItem;
 import java.io.File;
 import java.io.IOException;
 import java.net.URI;
@@ -46,6 +47,7 @@ public class SubjectViewController {
     private static String subjectType;
     private static Button tbBack;
     private Material novi;
+    private MenuItem save;
     public Button tbAdd, tbHide, tbUnhide, tbDelete, tbOpen, tbClear, tbHome;
     private boolean youAreProfessorOnSubject = CourseListController.isEditOnSelectSubject();
     ObservableList<Material> groupsForGuest = FXCollections.observableArrayList();
@@ -72,14 +74,14 @@ public class SubjectViewController {
             tbDelete.setVisible(false);
             tbClear.setVisible(false);
             tbAdd.setVisible(false);
+            //save.setEnabled(true);
+            // save.setEnabled(false);
             refillTables();
         } else {
             fillGroupTable();
             fillLectureTable();
             fillLabTable();
         }
-
-
     }
 
     private void fillGroupTable() {
