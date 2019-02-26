@@ -6,7 +6,6 @@ import java.io.File;
 import java.sql.SQLException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class CoursewareDAOTest {
 
@@ -18,8 +17,8 @@ public class CoursewareDAOTest {
         CoursewareDAO dao = CoursewareDAO.getInstance();
         ObservableList<Material> material = dao.getMaterials();
         //ISTO DODATI KASNIJE KADA BAZU KONACNO POPUNIM
-        assertEquals("math", material.get(0).getSubject());
-        assertEquals("group", material.get(1).getType());
+        assertEquals("RPR", material.get(0).getSubject());
+        assertEquals("lecture", material.get(1).getType());
     }
 
     @Test
@@ -29,8 +28,8 @@ public class CoursewareDAOTest {
         dbfile.delete();
         CoursewareDAO dao = CoursewareDAO.getInstance();
         ObservableList<Person> persons = dao.getPersons();
-        assertEquals("DODATIKASNIJE", persons.get(0).getFullName());
-        assertEquals("DODATIKASNIJE", persons.get(1).getUsername());
+        assertEquals("student", persons.get(0).getFullName());
+        assertEquals("lfazlija1", persons.get(1).getUsername());
     }
 
     @Test
@@ -43,22 +42,18 @@ public class CoursewareDAOTest {
         dao.deleteMaterial(material);
         ObservableList<Material> materials = dao.getMaterials();
         //ISTO DODATI KASNIJE KADA BAZU KONACNO POPUNIM
-        assertEquals("lecture1", materials.get(0).getNameMaterial());
-        assertEquals("group", materials.get(1).getType());
+        assertEquals("izvjestaj", materials.get(0).getNameMaterial());
+        assertEquals("lecture", materials.get(1).getType());
     }
 
     @Test
-    void deleteNotification() throws SQLException {
+    void getNotification() throws SQLException {
         CoursewareDAO.removeInstance();
         File dbfile = new File("projectDatabase.db");
         dbfile.delete();
         CoursewareDAO dao = CoursewareDAO.getInstance();
-        Subject subject = new Subject(1, "math1", "undergraduate", null);
-        Notification notification = new Notification(1, subject, "No class today", "21.12.2020");
-        dao.deleteNotification(notification.getSubject().getSubjectName());
-        ObservableList<Notification> notifications = dao.getNotification(notification.getSubject().getSubjectName());
-        assertNotEquals(1, notifications.get(0).getId());
-        // i ovo modifikovati kad ostalo zavrsiim
+        ObservableList<Notification> notifications = dao.getNotification("RPR");
+        assertEquals("No class today", notifications.get(0).getText());
 
     }
 
@@ -95,8 +90,8 @@ public class CoursewareDAOTest {
         dbfile.delete();
         CoursewareDAO dao = CoursewareDAO.getInstance();
         ObservableList<Subject> subjects = dao.getSubjects();
-        assertEquals("", subjects.get(0).getSubjectName());
-        assertEquals("", subjects.get(1).getProgram());
+        assertEquals("RPR", subjects.get(0).getSubjectName());
+        assertEquals("master", subjects.get(1).getProgram());
     }
 
 

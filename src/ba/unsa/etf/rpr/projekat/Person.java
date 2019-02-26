@@ -12,6 +12,7 @@ public class Person implements Serializable {
 
     public Person() {
     }
+
     public Person(int id, String username, String password, String fullName, boolean isProfessor) {
         this.id = id;
         this.username = username;

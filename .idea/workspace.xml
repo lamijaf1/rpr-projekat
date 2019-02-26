@@ -6,16 +6,15 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f70c769-014d-4f68-ab49-8d68c9d08944" name="Default Changelist" comment="kreiran jar, kada se pokrene on, otvara se main, sto je i trebalo">
+    <list default="true" id="3f70c769-014d-4f68-ab49-8d68c9d08944" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projectDatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/projectDatabase.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/xml/math.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CoursewareDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CoursewareDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Material.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Notification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projectDatabase.db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/projectDatabase.db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/fxml/subjectView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fxml/subjectView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/LoginFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Subject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/SubjectViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/SubjectViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/CoursewareDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/CoursewareDAOTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -132,24 +131,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="7" />
+          <entry key="About" value="1" />
+          <entry key="java" value="20" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="7" />
+          <entry key="JAVA" value="20" />
+          <entry key="UML" value="1" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="917" />
+          <entry key="java" value="989" />
+          <entry key="txt" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="917" />
+          <entry key="JAVA" value="989" />
+          <entry key="PLAIN_TEXT" value="27" />
         </counts>
       </usages-collector>
     </session>
@@ -159,27 +162,610 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/SubjectViewController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="479" selection-start-line="479" selection-end-line="479" />
+            <state relative-caret-position="160">
+              <caret line="415" column="42" selection-start-line="415" selection-start-column="42" selection-end-line="415" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1996#3113#0" />
+                <element signature="e#3119#3722#0" />
+                <element signature="e#3229#3380#0" />
+                <element signature="e#3728#4285#0" />
+                <element signature="e#4291#4898#0" />
+                <element signature="e#5185#5668#0" />
+                <element signature="e#5674#5977#0" />
+                <element signature="e#5983#6417#0" />
+                <element signature="e#6423#6777#0" />
+                <element signature="e#6783#7110#0" />
+                <element signature="e#7117#7716#0" />
+                <element signature="e#7816#8961#0" />
+                <element signature="e#8967#11061#0" />
+                <element signature="e#11067#13279#0" />
+                <element signature="e#13285#13575#0" />
+                <element signature="e#13581#14065#0" />
+                <element signature="e#14071#16588#0" />
+                <element signature="e#19910#20833#0" />
+                <element signature="e#20839#21366#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CoursewareDAO.java">
+        <entry file="uml://JAVA/ba.unsa.etf.rpr.projekat.About">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>ba.unsa.etf.rpr.projekat.About</OriginalElement>
+              <nodes>
+                <node x="4603.742882987658" y="15497.0">java.awt.Container.WakingRunnable</node>
+                <node x="4095.992882987658" y="18294.5">java.awt.Container.MouseEventTargetFilter</node>
+                <node x="3029.141016508366" y="11411.0">java.awt.Component.DummyRequestFocusController</node>
+                <node x="5773.410206273825" y="0.0">ba.unsa.etf.rpr.projekat.SubjectViewController</node>
+                <node x="6569.410206273825" y="0.0">ba.unsa.etf.rpr.projekat.CourseListController</node>
+                <node x="4663.659549654325" y="0.0">java.awt.image.ImageObserver</node>
+                <node x="2317.367882987658" y="18284.0">java.awt.Window.Type</node>
+                <node x="916.8250000000003" y="11400.0">java.lang.Throwable.SentinelHolder</node>
+                <node x="6947.410206273825" y="0.0">javafx.application.Application</node>
+                <node x="5010.410206273825" y="11234.0">java.awt.Component.BltBufferStrategy</node>
+                <node x="1541.2214899528335" y="15353.0">java.lang.Enum</node>
+                <node x="5386.410206273825" y="15486.0">java.awt.Component.FlipSubRegionBufferStrategy</node>
+                <node x="1126.3678829876578" y="18295.5">ba.unsa.etf.rpr.projekat.MaterialType</node>
+                <node x="3617.242882987658" y="15419.0">java.awt.Container.AccessibleAWTContainer</node>
+                <node x="4479.266016508366" y="11355.0">java.awt.Component.SingleBufferStrategy</node>
+                <node x="1505.4714899528335" y="19101.0">javax.swing.JFrame</node>
+                <node x="288.5964899528335" y="11400.0">java.lang.Throwable.PrintStreamOrWriter</node>
+                <node x="7633.410206273825" y="0.0">ba.unsa.etf.rpr.projekat.TypeOfMaterialController</node>
+                <node x="4899.742882987658" y="15486.0">java.awt.Component.BltSubRegionBufferStrategy</node>
+                <node x="2883.992882987658" y="17656.0">java.awt.Frame</node>
+                <node x="129.8464899528335" y="15474.5">java.lang.Throwable.WrappedPrintWriter</node>
+                <node x="1606.304823286167" y="11422.5">javax.accessibility.Accessible</node>
+                <node x="4439.492882987658" y="309.0">java.awt.Component</node>
+                <node x="6915.410206273825" y="413.0">javafx.application.Application.Parameters</node>
+                <node x="389.8464899528335" y="15474.5">java.lang.Throwable.WrappedPrintStream</node>
+                <node x="4216.867882987658" y="15508.5">java.awt.Container.EventTargetFilter</node>
+                <node x="1875.2428829876578" y="99.5">java.io.Serializable</node>
+                <node x="2072.2214899528335" y="15464.0">java.awt.Component.AccessibleAWTComponent.AccessibleAWTComponentHandler</node>
+                <node x="7134.410206273825" y="435.5">ba.unsa.etf.rpr.projekat.Main</node>
+                <node x="2061.2227062738248" y="4742.5">ba.unsa.etf.rpr.projekat.Material</node>
+                <node x="0.0" y="4731.5">ba.unsa.etf.rpr.projekat.Person</node>
+                <node x="1820.2214899528335" y="15486.0">java.awt.Component.AccessibleAWTComponent.AccessibleAWTFocusHandler</node>
+                <node x="2551.2227062738248" y="18284.5">javax.swing.WindowConstants</node>
+                <node x="308.0" y="4423.0">java.lang.Throwable</node>
+                <node x="1448.9714899528335" y="19921.5">ba.unsa.etf.rpr.projekat.CourswareReport</node>
+                <node x="2098.367882987658" y="18273.0">java.awt.Component.BaselineResizeBehavior</node>
+                <node x="2347.2227062738248" y="4753.5">ba.unsa.etf.rpr.projekat.Subject</node>
+                <node x="663.8250000000003" y="11422.5">ba.unsa.etf.rpr.projekat.WrongChoiceException</node>
+                <node x="1263.3678829876578" y="18295.5">java.beans.JavaBean</node>
+                <node x="7346.410206273825" y="0.0">ba.unsa.etf.rpr.projekat.LoginFormController</node>
+                <node x="1648.3678829876578" y="18317.5">javax.swing.TransferHandler.HasGetTransferHandler</node>
+                <node x="1474.3678829876578" y="18306.5">javax.swing.SwingContainer</node>
+                <node x="5310.410206273825" y="11179.0">java.awt.Component.FlipBufferStrategy</node>
+                <node x="1951.9727062738245" y="11047.0">java.awt.Component.AccessibleAWTComponent</node>
+                <node x="3548.141016508366" y="11411.0">java.awt.Component.ProxyCapabilities</node>
+                <node x="3901.266016508366" y="9474.0">java.awt.Container</node>
+                <node x="4446.992882987658" y="18294.5">java.awt.Container.DropTargetEventTargetFilter</node>
+                <node x="3178.992882987658" y="18261.5">java.awt.Window.WindowDisposerRecord</node>
+                <node x="1020.2428829876578" y="4765.0">ba.unsa.etf.rpr.projekat.Notification</node>
+                <node x="7882.410206273825" y="0.0">ba.unsa.etf.rpr.projekat.About</node>
+                <node x="3048.117882987658" y="13483.0">java.awt.Window</node>
+                <node x="2635.492882987658" y="66.0">java.awt.MenuContainer</node>
+                <node x="1889.3678829876578" y="18284.5">javax.swing.RootPaneContainer</node>
+                <node x="3364.7227062738248" y="19420.5">java.awt.Frame.AccessibleAWTFrame</node>
+                <node x="3781.992882987658" y="18295.0">java.awt.Container.AccessibleAWTContainer.AccessibleContainerHandler</node>
+                <node x="4777.266016508366" y="11422.5">java.awt.Component.AWTTreeLock</node>
+                <node x="3515.992882987658" y="18283.5">java.awt.Window.AccessibleAWTWindow</node>
+                <node x="1419.179823286167" y="11422.5">java.lang.Comparable</node>
+                <node x="6162.410206273825" y="0.0">ba.unsa.etf.rpr.projekat.CoursewareDAO</node>
+                <node x="3303.2227062738248" y="19910.0">javax.swing.JFrame.AccessibleJFrame</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="java.lang.Throwable" target="java.io.Serializable">
+                  <point x="0.0" y="-423.5" />
+                  <point x="617.5" y="269.0" />
+                  <point x="1895.1178829876578" y="269.0" />
+                  <point x="-33.125" y="15.0" />
+                </edge>
+                <edge source="javax.swing.JFrame.AccessibleJFrame" target="java.awt.Frame.AccessibleAWTFrame">
+                  <point x="61.5" y="-48.5" />
+                  <point x="0.0" y="60.0" />
+                </edge>
+                <edge source="ba.unsa.etf.rpr.projekat.CourswareReport" target="javax.swing.JFrame">
+                  <point x="0.0" y="-37.0" />
+                  <point x="-80.0" y="379.5" />
+                </edge>
+                <edge source="java.awt.Component" target="java.awt.image.ImageObserver">
+                  <point x="154.66666666666697" y="-4537.5" />
+                  <point x="0.0" y="114.5" />
+                </edge>
+                <edge source="java.awt.Container.WakingRunnable" target="java.awt.Container">
+                  <point x="0.0" y="-37.5" />
+                  <point x="4687.742882987658" y="13443.0" />
+                  <point x="4412.766016508366" y="13443.0" />
+                  <point x="232.5" y="1974.5" />
+                </edge>
+                <edge source="java.awt.Container.AccessibleAWTContainer.AccessibleContainerHandler" target="java.awt.Container.AccessibleAWTContainer">
+                  <point x="0.0" y="-48.5" />
+                  <point x="3928.992882987658" y="17636.0" />
+                  <point x="3913.492882987658" y="17636.0" />
+                  <point x="98.75" y="115.5" />
+                </edge>
+                <edge source="java.awt.Frame" target="java.awt.Window">
+                  <point x="68.75" y="-687.5" />
+                  <point x="3090.242882987658" y="17636.0" />
+                  <point x="3221.742882987658" y="17636.0" />
+                  <point x="-57.875" y="2051.5" />
+                </edge>
+                <edge source="java.awt.Window.Type" target="java.lang.Enum">
+                  <point x="-26.0" y="-59.5" />
+                  <point x="2343.367882987658" y="17606.0" />
+                  <point x="1757.0548232861668" y="17606.0" />
+                  <point x="86.33333333333326" y="181.5" />
+                </edge>
+                <edge source="java.awt.Frame" target="java.awt.MenuContainer">
+                  <point x="-68.75" y="-687.5" />
+                  <point x="2952.742882987658" y="17606.0" />
+                  <point x="2604.7227062738248" y="17606.0" />
+                  <point x="2604.7227062738248" y="289.0" />
+                  <point x="2694.492882987658" y="289.0" />
+                  <point x="-59.0" y="48.5" />
+                </edge>
+                <edge source="java.lang.Throwable.PrintStreamOrWriter" target="java.lang.Throwable">
+                  <point x="0.0" y="-48.5" />
+                  <point x="381.0964899528335" y="9454.0" />
+                  <point x="493.6999999999998" y="9454.0" />
+                  <point x="-123.79999999999995" y="423.5" />
+                </edge>
+                <edge source="java.lang.Throwable.WrappedPrintWriter" target="java.lang.Throwable">
+                  <point x="-60.0" y="-60.0" />
+                  <point x="189.8464899528335" y="13463.0" />
+                  <point x="221.4714899528335" y="13463.0" />
+                  <point x="221.4714899528335" y="9454.0" />
+                  <point x="369.9000000000001" y="9454.0" />
+                  <point x="-247.5999999999999" y="423.5" />
+                </edge>
+                <edge source="javax.swing.JFrame" target="javax.accessibility.Accessible">
+                  <point x="-137.14285714285688" y="-379.5" />
+                  <point x="1528.3286328099766" y="19081.0" />
+                  <point x="1104.1178829876578" y="19081.0" />
+                  <point x="1104.1178829876578" y="13463.0" />
+                  <point x="1667.304823286167" y="13463.0" />
+                  <point x="-61.0" y="26.0" />
+                </edge>
+                <edge source="java.awt.Component.FlipSubRegionBufferStrategy" target="java.awt.Component.FlipBufferStrategy">
+                  <point x="-85.5" y="-48.5" />
+                  <point x="0.0" y="269.5" />
+                </edge>
+                <edge source="java.awt.Window" target="javax.accessibility.Accessible">
+                  <point x="-115.75" y="-2051.5" />
+                  <point x="3163.867882987658" y="13453.0" />
+                  <point x="1789.304823286167" y="13453.0" />
+                  <point x="61.0" y="26.0" />
+                </edge>
+                <edge source="java.awt.Component.ProxyCapabilities" target="java.awt.Component">
+                  <point x="0.0" y="-37.5" />
+                  <point x="3678.641016508366" y="9434.0" />
+                  <point x="4587.129246624022" y="9434.0" />
+                  <point x="-84.36363636363603" y="4537.5" />
+                </edge>
+                <edge source="java.lang.Enum" target="java.lang.Comparable">
+                  <point x="-64.75" y="-181.5" />
+                  <point x="1605.9714899528335" y="13453.0" />
+                  <point x="1499.179823286167" y="13453.0" />
+                  <point x="0.0" y="26.0" />
+                </edge>
+                <edge source="java.awt.Window.AccessibleAWTWindow" target="java.awt.Container.AccessibleAWTContainer">
+                  <point x="61.5" y="-60.0" />
+                  <point x="3700.492882987658" y="17636.0" />
+                  <point x="3715.992882987658" y="17636.0" />
+                  <point x="-98.75" y="115.5" />
+                </edge>
+                <edge source="java.awt.Component.BltSubRegionBufferStrategy" target="java.awt.Component">
+                  <point x="-84.25" y="-48.5" />
+                  <point x="4983.992882987658" y="13463.0" />
+                  <point x="4999.910206273825" y="13463.0" />
+                  <point x="4999.910206273825" y="9444.0" />
+                  <point x="4755.856519351294" y="9444.0" />
+                  <point x="84.36363636363603" y="4537.5" />
+                </edge>
+                <edge source="java.awt.Component" target="java.io.Serializable">
+                  <point x="-154.66666666666697" y="-4537.5" />
+                  <point x="4516.826216320991" y="259.0" />
+                  <point x="1974.6178829876578" y="259.0" />
+                  <point x="46.375" y="15.0" />
+                </edge>
+                <edge source="java.awt.Window.WindowDisposerRecord" target="java.awt.Window">
+                  <point x="0.0" y="-82.0" />
+                  <point x="57.875" y="2051.5" />
+                </edge>
+                <edge source="java.awt.Container.DropTargetEventTargetFilter" target="java.awt.Container.EventTargetFilter">
+                  <point x="-56.75" y="-49.0" />
+                  <point x="4503.742882987658" y="17636.0" />
+                  <point x="4381.867882987658" y="17636.0" />
+                  <point x="55.0" y="26.0" />
+                </edge>
+                <edge source="java.awt.Component.AccessibleAWTComponent.AccessibleAWTFocusHandler" target="java.awt.Component.AccessibleAWTComponent">
+                  <point x="0.0" y="-48.5" />
+                  <point x="1936.2214899528335" y="13463.0" />
+                  <point x="2017.8060396071578" y="13463.0" />
+                  <point x="-131.66666666666674" y="401.5" />
+                </edge>
+                <edge source="java.awt.Container.AccessibleAWTContainer" target="java.awt.Component.AccessibleAWTComponent">
+                  <point x="-98.75" y="-115.5" />
+                  <point x="3715.992882987658" y="13443.0" />
+                  <point x="2281.139372940491" y="13443.0" />
+                  <point x="131.66666666666652" y="401.5" />
+                </edge>
+                <edge source="java.lang.Throwable.WrappedPrintStream" target="java.lang.Throwable">
+                  <point x="62.5" y="-60.0" />
+                  <point x="577.3464899528335" y="13463.0" />
+                  <point x="543.2214899528335" y="13463.0" />
+                  <point x="543.2214899528335" y="9454.0" />
+                  <point x="617.5" y="9454.0" />
+                  <point x="0.0" y="423.5" />
+                </edge>
+                <edge source="ba.unsa.etf.rpr.projekat.Main" target="javafx.application.Application">
+                  <point x="0.0" y="-37.0" />
+                  <point x="7217.910206273825" y="388.0" />
+                  <point x="7200.910206273825" y="388.0" />
+                  <point x="84.5" y="181.5" />
+                </edge>
+                <edge source="ba.unsa.etf.rpr.projekat.Notification" target="java.io.Serializable">
+                  <point x="0.0" y="-81.5" />
+                  <point x="1157.2428829876578" y="279.0" />
+                  <point x="1908.3678829876578" y="279.0" />
+                  <point x="-19.875" y="15.0" />
+                </edge>
+                <edge source="java.awt.Component.BltBufferStrategy" target="java.awt.Component">
+                  <point x="0.0" y="-214.5" />
+                  <point x="5150.410206273825" y="9434.0" />
+                  <point x="4798.038337533113" y="9434.0" />
+                  <point x="126.54545454545496" y="4537.5" />
+                </edge>
+                <edge source="javax.swing.JFrame" target="java.beans.JavaBean">
+                  <point x="-91.42857142857156" y="-379.5" />
+                  <point x="1574.042918524262" y="19071.0" />
+                  <point x="1358.8678829876578" y="19071.0" />
+                  <point x="0.0" y="48.0" />
+                </edge>
+                <edge source="ba.unsa.etf.rpr.projekat.Material" target="java.io.Serializable">
+                  <point x="0.0" y="-104.0" />
+                  <point x="2194.2227062738248" y="279.0" />
+                  <point x="1948.1178829876578" y="279.0" />
+                  <point x="19.875" y="15.0" />
+                </edge>
+                <edge source="java.awt.Component.AWTTreeLock" target="java.awt.Component">
+                  <point x="0.0" y="-26.0" />
+                  <point x="4853.266016508366" y="9454.0" />
+                  <point x="4713.674701169476" y="9454.0" />
+                  <point x="42.18181818181802" y="4537.5" />
+                </edge>
+                <edge source="java.lang.Throwable.WrappedPrintStream" target="java.lang.Throwable.PrintStreamOrWriter">
+                  <point x="-62.5" y="-60.0" />
+                  <point x="452.3464899528335" y="13463.0" />
+                  <point x="427.3464899528335" y="13463.0" />
+                  <point x="46.25" y="48.5" />
+                </edge>
+                <edge source="ba.unsa.etf.rpr.projekat.MaterialType" target="java.lang.Enum">
+                  <point x="0.0" y="-48.0" />
+                  <point x="1184.8678829876578" y="17636.0" />
+                  <point x="1584.3881566195003" y="17636.0" />
+                  <point x="-86.33333333333331" y="181.5" />
+                </edge>
+                <edge source="java.awt.Component.BaselineResizeBehavior" target="java.lang.Enum">
+                  <point x="-49.75" y="-70.5" />
+                  <point x="2148.117882987658" y="17636.0" />
+                  <point x="1670.7214899528335" y="17636.0" />
+                  <point x="0.0" y="181.5" />
+                </edge>
+                <edge source="java.awt.Component.AccessibleAWTComponent" target="java.awt.Component">
+                  <point x="98.75" y="-401.5" />
+                  <point x="2248.2227062738248" y="9404.0" />
+                  <point x="4460.583792078567" y="9404.0" />
+                  <point x="-210.909090909091" y="4537.5" />
+                </edge>
+                <edge source="java.awt.Container.AccessibleAWTContainer" target="java.awt.Container">
+                  <point x="98.75" y="-115.5" />
+                  <point x="3913.492882987658" y="13463.0" />
+                  <point x="4040.766016508366" y="13463.0" />
+                  <point x="-139.5" y="1974.5" />
+                </edge>
+                <edge source="javafx.application.Application.Parameters" target="javafx.application.Application">
+                  <point x="0.0" y="-59.5" />
+                  <point x="7014.910206273825" y="388.0" />
+                  <point x="7031.910206273825" y="388.0" />
+                  <point x="-84.5" y="181.5" />
+                </edge>
+                <edge source="java.awt.Component.BaselineResizeBehavior" target="java.awt.Component">
+                  <point x="49.75" y="-70.5" />
+                  <point x="2247.617882987658" y="17616.0" />
+                  <point x="2756.3250000000003" y="17616.0" />
+                  <point x="2756.3250000000003" y="9414.0" />
+                  <point x="4502.765610260385" y="9414.0" />
+                  <point x="-168.72727272727298" y="4537.5" />
+                </edge>
+                <edge source="java.awt.Container.MouseEventTargetFilter" target="java.awt.Container">
+                  <point x="-55.0" y="-49.0" />
+                  <point x="4150.992882987658" y="17636.0" />
+                  <point x="4173.242882987658" y="17636.0" />
+                  <point x="4173.242882987658" y="13463.0" />
+                  <point x="4133.766016508366" y="13463.0" />
+                  <point x="-46.5" y="1974.5" />
+                </edge>
+                <edge source="java.awt.Frame.AccessibleAWTFrame" target="java.awt.Frame">
+                  <point x="-61.5" y="-60.0" />
+                  <point x="3426.2227062738248" y="19081.0" />
+                  <point x="3090.242882987658" y="19081.0" />
+                  <point x="68.75" y="687.5" />
+                </edge>
+                <edge source="java.awt.Component.AccessibleAWTComponent" target="java.io.Serializable">
+                  <point x="-98.75" y="-401.5" />
+                  <point x="2050.7227062738248" y="289.0" />
+                  <point x="1934.8678829876578" y="289.0" />
+                  <point x="6.625" y="15.0" />
+                </edge>
+                <edge source="java.awt.Container.EventTargetFilter" target="java.awt.Container">
+                  <point x="0.0" y="-26.0" />
+                  <point x="4326.867882987658" y="13463.0" />
+                  <point x="4226.766016508366" y="13463.0" />
+                  <point x="46.5" y="1974.5" />
+                </edge>
+                <edge source="java.lang.Enum" target="java.io.Serializable">
+                  <point x="64.75" y="-181.5" />
+                  <point x="1735.4714899528335" y="13443.0" />
+                  <point x="1589.679823286167" y="13443.0" />
+                  <point x="1589.679823286167" y="289.0" />
+                  <point x="1921.6178829876578" y="289.0" />
+                  <point x="-6.625" y="15.0" />
+                </edge>
+                <edge source="javax.swing.JFrame" target="javax.swing.RootPaneContainer">
+                  <point x="45.714285714285325" y="-379.5" />
+                  <point x="1711.1857756671188" y="19061.0" />
+                  <point x="1983.8678829876578" y="19061.0" />
+                  <point x="0.0" y="59.0" />
+                </edge>
+                <edge source="java.awt.Container.MouseEventTargetFilter" target="java.awt.Container.EventTargetFilter">
+                  <point x="55.0" y="-49.0" />
+                  <point x="4260.992882987658" y="17636.0" />
+                  <point x="4271.867882987658" y="17636.0" />
+                  <point x="-55.0" y="26.0" />
+                </edge>
+                <edge source="java.awt.Component.AccessibleAWTComponent.AccessibleAWTComponentHandler" target="java.awt.Component.AccessibleAWTComponent">
+                  <point x="0.0" y="-70.5" />
+                  <point x="2219.7214899528335" y="13463.0" />
+                  <point x="2149.4727062738248" y="13463.0" />
+                  <point x="0.0" y="401.5" />
+                </edge>
+                <edge source="java.awt.Component.DummyRequestFocusController" target="java.awt.Component">
+                  <point x="0.0" y="-37.5" />
+                  <point x="3278.641016508366" y="9424.0" />
+                  <point x="4544.947428442203" y="9424.0" />
+                  <point x="-126.54545454545496" y="4537.5" />
+                </edge>
+                <edge source="java.awt.Window.AccessibleAWTWindow" target="java.awt.Window">
+                  <point x="-61.5" y="-60.0" />
+                  <point x="3577.492882987658" y="17636.0" />
+                  <point x="3453.242882987658" y="17636.0" />
+                  <point x="173.625" y="2051.5" />
+                </edge>
+                <edge source="ba.unsa.etf.rpr.projekat.WrongChoiceException" target="java.lang.Throwable">
+                  <point x="0.0" y="-26.0" />
+                  <point x="780.3250000000003" y="9454.0" />
+                  <point x="741.3" y="9454.0" />
+                  <point x="123.79999999999995" y="423.5" />
+                </edge>
+                <edge source="ba.unsa.etf.rpr.projekat.Person" target="java.io.Serializable">
+                  <point x="0.0" y="-115.0" />
+                  <point x="144.0" y="259.0" />
+                  <point x="1881.8678829876578" y="259.0" />
+                  <point x="-46.375" y="15.0" />
+                </edge>
+                <edge source="java.lang.Throwable.WrappedPrintWriter" target="java.lang.Throwable.PrintStreamOrWriter">
+                  <point x="60.0" y="-60.0" />
+                  <point x="309.8464899528335" y="13463.0" />
+                  <point x="334.8464899528335" y="13463.0" />
+                  <point x="-46.25" y="48.5" />
+                </edge>
+                <edge source="java.awt.Window" target="java.awt.Container">
+                  <point x="115.75" y="-2051.5" />
+                  <point x="3395.367882987658" y="13453.0" />
+                  <point x="3947.766016508366" y="13453.0" />
+                  <point x="-232.5" y="1974.5" />
+                </edge>
+                <edge source="java.awt.Frame.AccessibleAWTFrame" target="java.awt.Window.AccessibleAWTWindow">
+                  <point x="61.5" y="-60.0" />
+                  <point x="3549.2227062738248" y="19081.0" />
+                  <point x="3638.992882987658" y="19081.0" />
+                  <point x="0.0" y="60.0" />
+                </edge>
+                <edge source="java.awt.Component" target="java.awt.MenuContainer">
+                  <point x="0.0" y="-4537.5" />
+                  <point x="4671.492882987658" y="249.0" />
+                  <point x="2812.492882987658" y="249.0" />
+                  <point x="59.0" y="48.5" />
+                </edge>
+                <edge source="javax.swing.JFrame" target="java.awt.Frame">
+                  <point x="137.14285714285688" y="-379.5" />
+                  <point x="1802.6143470956904" y="19081.0" />
+                  <point x="2952.742882987658" y="19081.0" />
+                  <point x="-68.75" y="687.5" />
+                </edge>
+                <edge source="java.awt.Component.SingleBufferStrategy" target="java.awt.Component">
+                  <point x="0.0" y="-93.5" />
+                  <point x="4618.266016508366" y="9454.0" />
+                  <point x="4671.492882987658" y="9454.0" />
+                  <point x="0.0" y="4537.5" />
+                </edge>
+                <edge source="javax.swing.JFrame" target="javax.swing.WindowConstants">
+                  <point x="91.42857142857156" y="-379.5" />
+                  <point x="1756.900061381405" y="19071.0" />
+                  <point x="2662.7227062738248" y="19071.0" />
+                  <point x="0.0" y="59.0" />
+                </edge>
+                <edge source="java.awt.Component.FlipBufferStrategy" target="java.awt.Component">
+                  <point x="0.0" y="-269.5" />
+                  <point x="5471.410206273825" y="9424.0" />
+                  <point x="4840.220155714931" y="9424.0" />
+                  <point x="168.72727272727298" y="4537.5" />
+                </edge>
+                <edge source="java.lang.Throwable.SentinelHolder" target="java.lang.Throwable">
+                  <point x="0.0" y="-48.5" />
+                  <point x="1096.8250000000003" y="9454.0" />
+                  <point x="865.0999999999999" y="9454.0" />
+                  <point x="247.5999999999999" y="423.5" />
+                </edge>
+                <edge source="java.awt.Container.DropTargetEventTargetFilter" target="java.awt.Container">
+                  <point x="56.75" y="-49.0" />
+                  <point x="4617.242882987658" y="17636.0" />
+                  <point x="4593.242882987658" y="17636.0" />
+                  <point x="4593.242882987658" y="13453.0" />
+                  <point x="4319.766016508366" y="13453.0" />
+                  <point x="139.5" y="1974.5" />
+                </edge>
+                <edge source="javax.swing.JFrame.AccessibleJFrame" target="javax.swing.JFrame">
+                  <point x="-61.5" y="-48.5" />
+                  <point x="3364.7227062738248" y="19885.0" />
+                  <point x="1745.4714899528335" y="19885.0" />
+                  <point x="80.0" y="379.5" />
+                </edge>
+                <edge source="java.awt.Component.BltSubRegionBufferStrategy" target="java.awt.Component.BltBufferStrategy">
+                  <point x="84.25" y="-48.5" />
+                  <point x="5152.492882987658" y="13463.0" />
+                  <point x="5150.410206273825" y="13463.0" />
+                  <point x="0.0" y="214.5" />
+                </edge>
+                <edge source="javax.swing.JFrame" target="javax.swing.SwingContainer">
+                  <point x="-45.714285714285325" y="-379.5" />
+                  <point x="1619.7572042385482" y="19061.0" />
+                  <point x="1551.3678829876578" y="19061.0" />
+                  <point x="0.0" y="37.0" />
+                </edge>
+                <edge source="ba.unsa.etf.rpr.projekat.Subject" target="java.io.Serializable">
+                  <point x="0.0" y="-93.0" />
+                  <point x="2470.7227062738248" y="269.0" />
+                  <point x="1961.3678829876578" y="269.0" />
+                  <point x="33.125" y="15.0" />
+                </edge>
+                <edge source="java.awt.Component.FlipSubRegionBufferStrategy" target="java.awt.Component">
+                  <point x="85.5" y="-48.5" />
+                  <point x="5642.910206273825" y="9414.0" />
+                  <point x="4882.401973896749" y="9414.0" />
+                  <point x="210.90909090909122" y="4537.5" />
+                </edge>
+                <edge source="java.awt.Window.Type" target="java.awt.Window">
+                  <point x="26.0" y="-59.5" />
+                  <point x="2395.367882987658" y="17626.0" />
+                  <point x="3105.992882987658" y="17626.0" />
+                  <point x="-173.625" y="2051.5" />
+                </edge>
+                <edge source="javax.swing.JFrame" target="javax.swing.TransferHandler.HasGetTransferHandler">
+                  <point x="0.0" y="-379.5" />
+                  <point x="1665.4714899528335" y="19051.0" />
+                  <point x="1758.8678829876578" y="19051.0" />
+                  <point x="0.0" y="26.0" />
+                </edge>
+                <edge source="java.awt.Container" target="java.awt.Component">
+                  <point x="0.0" y="-1974.5" />
+                  <point x="4180.266016508366" y="9444.0" />
+                  <point x="4629.31106480584" y="9444.0" />
+                  <point x="-42.18181818181802" y="4537.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.02549107812265707" x="4152.0" y="9993.5" />
+              <SelectedNodes>
+                <node>java.awt.Container.WakingRunnable</node>
+                <node>java.awt.Container.MouseEventTargetFilter</node>
+                <node>java.awt.Component.DummyRequestFocusController</node>
+                <node>ba.unsa.etf.rpr.projekat.SubjectViewController</node>
+                <node>ba.unsa.etf.rpr.projekat.CourseListController</node>
+                <node>java.awt.image.ImageObserver</node>
+                <node>java.awt.Window.Type</node>
+                <node>java.lang.Throwable.SentinelHolder</node>
+                <node>javafx.application.Application</node>
+                <node>java.awt.Component.BltBufferStrategy</node>
+                <node>java.lang.Enum</node>
+                <node>java.awt.Component.FlipSubRegionBufferStrategy</node>
+                <node>ba.unsa.etf.rpr.projekat.MaterialType</node>
+                <node>java.awt.Container.AccessibleAWTContainer</node>
+                <node>java.awt.Component.SingleBufferStrategy</node>
+                <node>javax.swing.JFrame</node>
+                <node>java.lang.Throwable.PrintStreamOrWriter</node>
+                <node>ba.unsa.etf.rpr.projekat.TypeOfMaterialController</node>
+                <node>java.awt.Component.BltSubRegionBufferStrategy</node>
+                <node>java.awt.Frame</node>
+                <node>java.lang.Throwable.WrappedPrintWriter</node>
+                <node>javax.accessibility.Accessible</node>
+                <node>java.awt.Component</node>
+                <node>javafx.application.Application.Parameters</node>
+                <node>java.lang.Throwable.WrappedPrintStream</node>
+                <node>java.awt.Container.EventTargetFilter</node>
+                <node>java.io.Serializable</node>
+                <node>java.awt.Component.AccessibleAWTComponent.AccessibleAWTComponentHandler</node>
+                <node>ba.unsa.etf.rpr.projekat.Main</node>
+                <node>ba.unsa.etf.rpr.projekat.Material</node>
+                <node>ba.unsa.etf.rpr.projekat.Person</node>
+                <node>java.awt.Component.AccessibleAWTComponent.AccessibleAWTFocusHandler</node>
+                <node>javax.swing.WindowConstants</node>
+                <node>java.lang.Throwable</node>
+                <node>ba.unsa.etf.rpr.projekat.CourswareReport</node>
+                <node>java.awt.Component.BaselineResizeBehavior</node>
+                <node>ba.unsa.etf.rpr.projekat.Subject</node>
+                <node>ba.unsa.etf.rpr.projekat.WrongChoiceException</node>
+                <node>java.beans.JavaBean</node>
+                <node>ba.unsa.etf.rpr.projekat.LoginFormController</node>
+                <node>javax.swing.TransferHandler.HasGetTransferHandler</node>
+                <node>javax.swing.SwingContainer</node>
+                <node>java.awt.Component.FlipBufferStrategy</node>
+                <node>java.awt.Component.AccessibleAWTComponent</node>
+                <node>java.awt.Component.ProxyCapabilities</node>
+                <node>java.awt.Container</node>
+                <node>java.awt.Container.DropTargetEventTargetFilter</node>
+                <node>java.awt.Window.WindowDisposerRecord</node>
+                <node>ba.unsa.etf.rpr.projekat.Notification</node>
+                <node>ba.unsa.etf.rpr.projekat.About</node>
+                <node>java.awt.Window</node>
+                <node>java.awt.MenuContainer</node>
+                <node>javax.swing.RootPaneContainer</node>
+                <node>java.awt.Frame.AccessibleAWTFrame</node>
+                <node>java.awt.Container.AccessibleAWTContainer.AccessibleContainerHandler</node>
+                <node>java.awt.Component.AWTTreeLock</node>
+                <node>java.awt.Window.AccessibleAWTWindow</node>
+                <node>java.lang.Comparable</node>
+                <node>ba.unsa.etf.rpr.projekat.CoursewareDAO</node>
+                <node>javax.swing.JFrame.AccessibleJFrame</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Fields</Category>
+                <Category>Constructors</Category>
+                <Category>Methods</Category>
+                <Category>Properties</Category>
+                <Category>Inner Classes</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/TypeOfMaterialController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="318" column="59" lean-forward="true" selection-start-line="318" selection-start-column="59" selection-end-line="318" selection-end-column="59" />
+            <state relative-caret-position="309">
+              <caret line="20" selection-end-line="61" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#10927#11148#0" />
-                <element signature="e#11154#11319#0" />
-                <element signature="e#11388#11533#0" />
-                <element signature="e#11539#11671#0" />
+                <element signature="method#initialize#0;class#TypeOfMaterialController#0" />
+                <element signature="method#save#0;class#TypeOfMaterialController#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/WrongChoiceException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -187,10 +773,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Notification.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="11" column="9" selection-end-line="55" />
+            <state relative-caret-position="168">
+              <caret line="10" column="9" selection-end-line="54" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#Notification#0;class#Notification#0" />
+                <element signature="method#Notification#1;class#Notification#0" />
               </folding>
             </state>
           </provider>
@@ -199,10 +786,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Person.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+            <state relative-caret-position="206">
+              <caret line="14" selection-end-line="80" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#Person#0;class#Person#0" />
+                <element signature="method#Person#1;class#Person#0" />
               </folding>
             </state>
           </provider>
@@ -211,20 +800,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Subject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="441">
+              <caret line="55" selection-start-line="55" selection-end-line="55" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#Subject#0;class#Subject#0" />
+                <element signature="method#Subject#1;class#Subject#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/MaterialType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -232,36 +814,41 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Material.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+            <state relative-caret-position="153">
+              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+              <folding>
+                <element signature="method#Material#0;class#Material#0" />
+                <element signature="method#Material#1;class#Material#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projectDatabase.db.sql">
+        <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/LoginFormController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="40" column="60" selection-start-line="40" selection-start-column="60" selection-end-line="40" selection-end-column="60" />
+            <state relative-caret-position="224">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#initialize#0;class#LoginFormController#0" />
+                <element signature="method#Login#0;class#LoginFormController#0" />
+                <element signature="method#courseList#0;class#LoginFormController#0" />
+                <element signature="method#LoginGuest#0;class#LoginFormController#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/fxml/subjectView.fxml">
+        <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="43" column="91" selection-start-line="43" selection-start-column="91" selection-end-line="43" selection-end-column="91" />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/reports/courseware.jrxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1139">
-              <caret line="67" column="22" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
+            <state relative-caret-position="136">
+              <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+              <folding>
+                <element signature="method#start#0;class#Main#0" />
+                <element signature="method#main#0;class#Main#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -308,24 +895,24 @@
         <option value="$PROJECT_DIR$/resources/reports/courseware.jrxml.fxml" />
         <option value="$PROJECT_DIR$/resources/fxml/courseList.fxml" />
         <option value="$PROJECT_DIR$/resources/reports/courseware.jrxml" />
-        <option value="$PROJECT_DIR$/resources/fxml/subjectView.fxml" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CourswareReport.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/WrongChoiceException.java" />
         <option value="$PROJECT_DIR$/test/DatabaseTest.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Database.java" />
-        <option value="$PROJECT_DIR$/test/CoursewareDAOTest.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/TypeOfMaterialController.java" />
-        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CourseListController.java" />
-        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/LoginFormController.java" />
         <option value="$PROJECT_DIR$/resources/pom.fxml" />
         <option value="$PROJECT_DIR$/resources/xml/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Material.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Subject.java" />
-        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Person.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Notification.java" />
-        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/SubjectViewController.java" />
         <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CoursewareDAO.java" />
+        <option value="$PROJECT_DIR$/test/CoursewareDAOTest.java" />
+        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CourseListController.java" />
+        <option value="$PROJECT_DIR$/resources/fxml/subjectView.fxml" />
+        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/LoginFormController.java" />
+        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Person.java" />
+        <option value="$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/SubjectViewController.java" />
       </list>
     </option>
   </component>
@@ -380,6 +967,12 @@
             <path>
               <item name="rpr-projekat" type="b2602c69:ProjectViewProjectNode" />
               <item name="rpr-projekat" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="fxml" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rpr-projekat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rpr-projekat" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -393,6 +986,11 @@
               <item name="rpr-projekat" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rpr-projekat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rpr-projekat" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rpr-projekat" type="b2602c69:ProjectViewProjectNode" />
@@ -417,8 +1015,8 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551178072098" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551185758841" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -464,6 +1062,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CoursewareDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rpr-projekat" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CoursewareDAOTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CoursewareDAOTest.regenerateFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rpr-projekat" />
       <option name="PACKAGE_NAME" value="" />
@@ -487,10 +1093,12 @@
       <item itemvalue="JUnit.CoursewareDAOTest.regenerateFile" />
       <item itemvalue="JAR Application.rpr-projekat-1.0-SNAPSHOT.jar" />
       <item itemvalue="JAR Application.rpr-projekat-1.0-SNAPSHOT-jar-with-dependencies.jar" />
+      <item itemvalue="JUnit.CoursewareDAOTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.CoursewareDAOTest" />
         <item itemvalue="JAR Application.rpr-projekat-1.0-SNAPSHOT-jar-with-dependencies.jar" />
         <item itemvalue="JAR Application.rpr-projekat-1.0-SNAPSHOT.jar" />
         <item itemvalue="JUnit.CoursewareDAOTest.regenerateFile" />
@@ -519,7 +1127,7 @@
       <workItem from="1551093508769" duration="13014000" />
       <workItem from="1551108412323" duration="2977000" />
       <workItem from="1551171734623" duration="6371000" />
-      <workItem from="1551179220402" duration="4087000" />
+      <workItem from="1551179220402" duration="6397000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1550857919822</created>
@@ -843,16 +1451,50 @@
       <option name="project" value="LOCAL" />
       <updated>1551111138947</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="popravljene sitne greskice">
+      <created>1551183383375</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1551183383376</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DatabaseTest_regenerateFile - 2019.02.25 at 12h 32m 47s.xml">
-      <configuration name="DatabaseTest.regenerateFile" configurationId="JUnit" />
+    <history-entry file="CoursewareDAOTest - 2019.02.26 at 13h 33m 13s.xml">
+      <configuration name="CoursewareDAOTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CoursewareDAOTest - 2019.02.26 at 13h 33m 40s.xml">
+      <configuration name="CoursewareDAOTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CoursewareDAOTest - 2019.02.26 at 13h 34m 02s.xml">
+      <configuration name="CoursewareDAOTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CoursewareDAOTest - 2019.02.26 at 13h 34m 24s.xml">
+      <configuration name="CoursewareDAOTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CoursewareDAOTest - 2019.02.26 at 13h 34m 48s.xml">
+      <configuration name="CoursewareDAOTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CoursewareDAOTest - 2019.02.26 at 13h 35m 08s.xml">
+      <configuration name="CoursewareDAOTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CoursewareDAOTest - 2019.02.26 at 13h 36m 16s.xml">
+      <configuration name="CoursewareDAOTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CoursewareDAOTest - 2019.02.26 at 13h 36m 49s.xml">
+      <configuration name="CoursewareDAOTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CoursewareDAOTest - 2019.02.26 at 13h 37m 16s.xml">
+      <configuration name="CoursewareDAOTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CoursewareDAOTest - 2019.02.26 at 13h 37m 52s.xml">
+      <configuration name="CoursewareDAOTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117008000" />
+    <option name="totallyTimeSpent" value="119318000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="696" extended-state="6" />
@@ -864,19 +1506,19 @@
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.24757281" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.24757281" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49838188" weight="0.039007094" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8559871" visible="true" weight="0.33333334" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8543689" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49676377" weight="0.32978722" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32978722" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.14401294" side_tool="true" visible="true" weight="0.33333334" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.14563107" side_tool="true" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.48624596" weight="0.32978722" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.48462784" weight="0.32978722" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -886,7 +1528,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Database" order="7" weight="0.2249191" />
-      <window_info anchor="right" id="Maven Projects" order="8" visible="true" weight="0.008090615" />
+      <window_info anchor="right" id="Maven Projects" order="8" visible="true" weight="0.020226536" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -896,7 +1538,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updated materials, added choosers, added new options for professor" />
     <MESSAGE value="implement hide option for material" />
     <MESSAGE value="added delete button for professor" />
     <MESSAGE value="implement option for delete materials" />
@@ -921,7 +1562,8 @@
     <MESSAGE value="problem bio kod signOut , kada udje neko ko nije gost pa se odjavi pa udje kao gost pa izadje pa onda opet udje neko ko nije gost, ostane tekst dobrodoslice za gosta" />
     <MESSAGE value="kreiran target folder" />
     <MESSAGE value="kreiran jar, kada se pokrene on, otvara se main, sto je i trebalo" />
-    <option name="LAST_COMMIT_MESSAGE" value="kreiran jar, kada se pokrene on, otvara se main, sto je i trebalo" />
+    <MESSAGE value="popravljene sitne greskice" />
+    <option name="LAST_COMMIT_MESSAGE" value="popravljene sitne greskice" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -930,13 +1572,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/SubjectViewController.java</url>
-          <line>190</line>
+          <line>189</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/SubjectViewController.java</url>
-          <line>427</line>
+          <line>419</line>
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
@@ -1000,72 +1642,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/About.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CourswareReport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="37" column="18" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/WrongChoiceException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/LoginFormController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/TypeOfMaterialController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CourseListController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
-          <folding>
-            <element signature="method#sortSubjects#0;class#CourseListController#0" />
-            <element signature="method#loadUndergraduateItems#0;class#CourseListController#0" />
-            <element signature="method#loadMasterItems#0;class#CourseListController#0" />
-            <element signature="method#loadPhdItems#0;class#CourseListController#0" />
-            <element signature="method#onItemClickListener#0;class#CourseListController#0" />
-            <element signature="method#signOut#0;class#CourseListController#0" />
-            <element signature="method#about#0;class#CourseListController#0" />
-            <element signature="method#print#0;class#CourseListController#0" />
-            <element signature="method#saveAs#0;class#CourseListController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.fxml" />
     <entry file="file://$PROJECT_DIR$/resources/fxml/pom.tld" />
     <entry file="file://$PROJECT_DIR$/pom.tld" />
@@ -1079,46 +1655,6 @@
     <entry file="file://$PROJECT_DIR$/resources/xml/math.xml" />
     <entry file="file://$PROJECT_DIR$/resources/xml/RPR.xml" />
     <entry file="file://$PROJECT_DIR$/resources/xml/test.xml" />
-    <entry file="file://$PROJECT_DIR$/test/CoursewareDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Notification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="9" selection-end-line="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Subject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/MaterialType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1126,27 +1662,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Material.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projectDatabase.db.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="60" selection-start-line="40" selection-start-column="60" selection-end-line="40" selection-end-column="60" />
+        <state relative-caret-position="765">
+          <caret line="45" column="60" selection-start-line="45" selection-start-column="60" selection-end-line="45" selection-end-column="60" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/fxml/subjectView.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="91" selection-start-line="43" selection-start-column="91" selection-end-line="43" selection-end-column="91" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/reports/courseware.jrxml">
       <provider selected="true" editor-type-id="text-editor">
@@ -1155,27 +1676,767 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/SubjectViewController.java">
+    <entry file="file://$PROJECT_DIR$/test/CoursewareDAOTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="479" selection-start-line="479" selection-end-line="479" />
+        <state relative-caret-position="67">
+          <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/fxml/subjectView.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="43" column="91" selection-start-line="43" selection-start-column="91" selection-end-line="43" selection-end-column="91" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/About.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CourseListController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="157" column="21" selection-end-line="247" />
+          <folding>
+            <element signature="method#initialize#0;class#CourseListController#0" />
+            <element signature="method#sortSubjects#0;class#CourseListController#0" />
+            <element signature="method#loadUndergraduateItems#0;class#CourseListController#0" />
+            <element signature="method#loadMasterItems#0;class#CourseListController#0" />
+            <element signature="method#loadPhdItems#0;class#CourseListController#0" />
+            <element signature="method#signOut#0;class#CourseListController#0" />
+            <element signature="method#about#0;class#CourseListController#0" />
+            <element signature="method#print#0;class#CourseListController#0" />
+            <element signature="method#saveAs#0;class#CourseListController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CoursewareDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="318" column="59" lean-forward="true" selection-start-line="318" selection-start-column="59" selection-end-line="318" selection-end-column="59" />
+        <state relative-caret-position="193">
+          <caret line="85" column="26" selection-end-line="354" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#663#799#0" />
+            <element signature="e#805#1595#0" />
+            <element signature="e#1601#3444#0" />
+            <element signature="e#3450#3925#0" />
+            <element signature="e#3931#4121#0" />
+            <element signature="e#4127#4613#0" />
+            <element signature="e#4619#4877#0" />
+            <element signature="e#4883#5249#0" />
+            <element signature="e#5255#5622#0" />
+            <element signature="e#5628#5980#0" />
+            <element signature="e#5986#6483#0" />
+            <element signature="e#6489#7100#0" />
+            <element signature="e#7106#7297#0" />
+            <element signature="e#7303#7739#0" />
+            <element signature="e#7745#8161#0" />
+            <element signature="e#8167#8584#0" />
+            <element signature="e#8590#9284#0" />
+            <element signature="e#9290#9638#0" />
+            <element signature="e#9644#9931#0" />
+            <element signature="e#9937#10281#0" />
+            <element signature="e#10287#10512#0" />
+            <element signature="e#10518#10921#0" />
             <element signature="e#10927#11148#0" />
             <element signature="e#11154#11319#0" />
             <element signature="e#11388#11533#0" />
             <element signature="e#11539#11671#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/CourswareReport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="34" column="90" selection-end-line="61" />
+          <folding>
+            <element signature="method#showReport#0;class#CourswareReport#0" />
+            <element signature="method#saveAs#0;class#CourswareReport#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/LoginFormController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initialize#0;class#LoginFormController#0" />
+            <element signature="method#Login#0;class#LoginFormController#0" />
+            <element signature="method#courseList#0;class#LoginFormController#0" />
+            <element signature="method#LoginGuest#0;class#LoginFormController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+          <folding>
+            <element signature="method#start#0;class#Main#0" />
+            <element signature="method#main#0;class#Main#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Material.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+          <folding>
+            <element signature="method#Material#0;class#Material#0" />
+            <element signature="method#Material#1;class#Material#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Notification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="10" column="9" selection-end-line="54" />
+          <folding>
+            <element signature="method#Notification#0;class#Notification#0" />
+            <element signature="method#Notification#1;class#Notification#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="14" selection-end-line="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Person#0;class#Person#0" />
+            <element signature="method#Person#1;class#Person#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/Subject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Subject#0;class#Subject#0" />
+            <element signature="method#Subject#1;class#Subject#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/TypeOfMaterialController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="20" selection-end-line="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initialize#0;class#TypeOfMaterialController#0" />
+            <element signature="method#save#0;class#TypeOfMaterialController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/WrongChoiceException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/projekat/SubjectViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="415" column="42" selection-start-line="415" selection-start-column="42" selection-end-line="415" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1996#3113#0" />
+            <element signature="e#3119#3722#0" />
+            <element signature="e#3229#3380#0" />
+            <element signature="e#3728#4285#0" />
+            <element signature="e#4291#4898#0" />
+            <element signature="e#5185#5668#0" />
+            <element signature="e#5674#5977#0" />
+            <element signature="e#5983#6417#0" />
+            <element signature="e#6423#6777#0" />
+            <element signature="e#6783#7110#0" />
+            <element signature="e#7117#7716#0" />
+            <element signature="e#7816#8961#0" />
+            <element signature="e#8967#11061#0" />
+            <element signature="e#11067#13279#0" />
+            <element signature="e#13285#13575#0" />
+            <element signature="e#13581#14065#0" />
+            <element signature="e#14071#16588#0" />
+            <element signature="e#19910#20833#0" />
+            <element signature="e#20839#21366#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/ba.unsa.etf.rpr.projekat.About">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>ba.unsa.etf.rpr.projekat.About</OriginalElement>
+          <nodes>
+            <node x="4603.742882987658" y="15497.0">java.awt.Container.WakingRunnable</node>
+            <node x="4095.992882987658" y="18294.5">java.awt.Container.MouseEventTargetFilter</node>
+            <node x="3029.141016508366" y="11411.0">java.awt.Component.DummyRequestFocusController</node>
+            <node x="5773.410206273825" y="0.0">ba.unsa.etf.rpr.projekat.SubjectViewController</node>
+            <node x="6569.410206273825" y="0.0">ba.unsa.etf.rpr.projekat.CourseListController</node>
+            <node x="4663.659549654325" y="0.0">java.awt.image.ImageObserver</node>
+            <node x="2317.367882987658" y="18284.0">java.awt.Window.Type</node>
+            <node x="916.8250000000003" y="11400.0">java.lang.Throwable.SentinelHolder</node>
+            <node x="6947.410206273825" y="0.0">javafx.application.Application</node>
+            <node x="5010.410206273825" y="11234.0">java.awt.Component.BltBufferStrategy</node>
+            <node x="1541.2214899528335" y="15353.0">java.lang.Enum</node>
+            <node x="5386.410206273825" y="15486.0">java.awt.Component.FlipSubRegionBufferStrategy</node>
+            <node x="1126.3678829876578" y="18295.5">ba.unsa.etf.rpr.projekat.MaterialType</node>
+            <node x="3617.242882987658" y="15419.0">java.awt.Container.AccessibleAWTContainer</node>
+            <node x="4479.266016508366" y="11355.0">java.awt.Component.SingleBufferStrategy</node>
+            <node x="1505.4714899528335" y="19101.0">javax.swing.JFrame</node>
+            <node x="288.5964899528335" y="11400.0">java.lang.Throwable.PrintStreamOrWriter</node>
+            <node x="7633.410206273825" y="0.0">ba.unsa.etf.rpr.projekat.TypeOfMaterialController</node>
+            <node x="4899.742882987658" y="15486.0">java.awt.Component.BltSubRegionBufferStrategy</node>
+            <node x="2883.992882987658" y="17656.0">java.awt.Frame</node>
+            <node x="129.8464899528335" y="15474.5">java.lang.Throwable.WrappedPrintWriter</node>
+            <node x="1606.304823286167" y="11422.5">javax.accessibility.Accessible</node>
+            <node x="4439.492882987658" y="309.0">java.awt.Component</node>
+            <node x="6915.410206273825" y="413.0">javafx.application.Application.Parameters</node>
+            <node x="389.8464899528335" y="15474.5">java.lang.Throwable.WrappedPrintStream</node>
+            <node x="4216.867882987658" y="15508.5">java.awt.Container.EventTargetFilter</node>
+            <node x="1875.2428829876578" y="99.5">java.io.Serializable</node>
+            <node x="2072.2214899528335" y="15464.0">java.awt.Component.AccessibleAWTComponent.AccessibleAWTComponentHandler</node>
+            <node x="7134.410206273825" y="435.5">ba.unsa.etf.rpr.projekat.Main</node>
+            <node x="2061.2227062738248" y="4742.5">ba.unsa.etf.rpr.projekat.Material</node>
+            <node x="0.0" y="4731.5">ba.unsa.etf.rpr.projekat.Person</node>
+            <node x="1820.2214899528335" y="15486.0">java.awt.Component.AccessibleAWTComponent.AccessibleAWTFocusHandler</node>
+            <node x="2551.2227062738248" y="18284.5">javax.swing.WindowConstants</node>
+            <node x="308.0" y="4423.0">java.lang.Throwable</node>
+            <node x="1448.9714899528335" y="19921.5">ba.unsa.etf.rpr.projekat.CourswareReport</node>
+            <node x="2098.367882987658" y="18273.0">java.awt.Component.BaselineResizeBehavior</node>
+            <node x="2347.2227062738248" y="4753.5">ba.unsa.etf.rpr.projekat.Subject</node>
+            <node x="663.8250000000003" y="11422.5">ba.unsa.etf.rpr.projekat.WrongChoiceException</node>
+            <node x="1263.3678829876578" y="18295.5">java.beans.JavaBean</node>
+            <node x="7346.410206273825" y="0.0">ba.unsa.etf.rpr.projekat.LoginFormController</node>
+            <node x="1648.3678829876578" y="18317.5">javax.swing.TransferHandler.HasGetTransferHandler</node>
+            <node x="1474.3678829876578" y="18306.5">javax.swing.SwingContainer</node>
+            <node x="5310.410206273825" y="11179.0">java.awt.Component.FlipBufferStrategy</node>
+            <node x="1951.9727062738245" y="11047.0">java.awt.Component.AccessibleAWTComponent</node>
+            <node x="3548.141016508366" y="11411.0">java.awt.Component.ProxyCapabilities</node>
+            <node x="3901.266016508366" y="9474.0">java.awt.Container</node>
+            <node x="4446.992882987658" y="18294.5">java.awt.Container.DropTargetEventTargetFilter</node>
+            <node x="3178.992882987658" y="18261.5">java.awt.Window.WindowDisposerRecord</node>
+            <node x="1020.2428829876578" y="4765.0">ba.unsa.etf.rpr.projekat.Notification</node>
+            <node x="7882.410206273825" y="0.0">ba.unsa.etf.rpr.projekat.About</node>
+            <node x="3048.117882987658" y="13483.0">java.awt.Window</node>
+            <node x="2635.492882987658" y="66.0">java.awt.MenuContainer</node>
+            <node x="1889.3678829876578" y="18284.5">javax.swing.RootPaneContainer</node>
+            <node x="3364.7227062738248" y="19420.5">java.awt.Frame.AccessibleAWTFrame</node>
+            <node x="3781.992882987658" y="18295.0">java.awt.Container.AccessibleAWTContainer.AccessibleContainerHandler</node>
+            <node x="4777.266016508366" y="11422.5">java.awt.Component.AWTTreeLock</node>
+            <node x="3515.992882987658" y="18283.5">java.awt.Window.AccessibleAWTWindow</node>
+            <node x="1419.179823286167" y="11422.5">java.lang.Comparable</node>
+            <node x="6162.410206273825" y="0.0">ba.unsa.etf.rpr.projekat.CoursewareDAO</node>
+            <node x="3303.2227062738248" y="19910.0">javax.swing.JFrame.AccessibleJFrame</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="java.lang.Throwable" target="java.io.Serializable">
+              <point x="0.0" y="-423.5" />
+              <point x="617.5" y="269.0" />
+              <point x="1895.1178829876578" y="269.0" />
+              <point x="-33.125" y="15.0" />
+            </edge>
+            <edge source="javax.swing.JFrame.AccessibleJFrame" target="java.awt.Frame.AccessibleAWTFrame">
+              <point x="61.5" y="-48.5" />
+              <point x="0.0" y="60.0" />
+            </edge>
+            <edge source="ba.unsa.etf.rpr.projekat.CourswareReport" target="javax.swing.JFrame">
+              <point x="0.0" y="-37.0" />
+              <point x="-80.0" y="379.5" />
+            </edge>
+            <edge source="java.awt.Component" target="java.awt.image.ImageObserver">
+              <point x="154.66666666666697" y="-4537.5" />
+              <point x="0.0" y="114.5" />
+            </edge>
+            <edge source="java.awt.Container.WakingRunnable" target="java.awt.Container">
+              <point x="0.0" y="-37.5" />
+              <point x="4687.742882987658" y="13443.0" />
+              <point x="4412.766016508366" y="13443.0" />
+              <point x="232.5" y="1974.5" />
+            </edge>
+            <edge source="java.awt.Container.AccessibleAWTContainer.AccessibleContainerHandler" target="java.awt.Container.AccessibleAWTContainer">
+              <point x="0.0" y="-48.5" />
+              <point x="3928.992882987658" y="17636.0" />
+              <point x="3913.492882987658" y="17636.0" />
+              <point x="98.75" y="115.5" />
+            </edge>
+            <edge source="java.awt.Frame" target="java.awt.Window">
+              <point x="68.75" y="-687.5" />
+              <point x="3090.242882987658" y="17636.0" />
+              <point x="3221.742882987658" y="17636.0" />
+              <point x="-57.875" y="2051.5" />
+            </edge>
+            <edge source="java.awt.Window.Type" target="java.lang.Enum">
+              <point x="-26.0" y="-59.5" />
+              <point x="2343.367882987658" y="17606.0" />
+              <point x="1757.0548232861668" y="17606.0" />
+              <point x="86.33333333333326" y="181.5" />
+            </edge>
+            <edge source="java.awt.Frame" target="java.awt.MenuContainer">
+              <point x="-68.75" y="-687.5" />
+              <point x="2952.742882987658" y="17606.0" />
+              <point x="2604.7227062738248" y="17606.0" />
+              <point x="2604.7227062738248" y="289.0" />
+              <point x="2694.492882987658" y="289.0" />
+              <point x="-59.0" y="48.5" />
+            </edge>
+            <edge source="java.lang.Throwable.PrintStreamOrWriter" target="java.lang.Throwable">
+              <point x="0.0" y="-48.5" />
+              <point x="381.0964899528335" y="9454.0" />
+              <point x="493.6999999999998" y="9454.0" />
+              <point x="-123.79999999999995" y="423.5" />
+            </edge>
+            <edge source="java.lang.Throwable.WrappedPrintWriter" target="java.lang.Throwable">
+              <point x="-60.0" y="-60.0" />
+              <point x="189.8464899528335" y="13463.0" />
+              <point x="221.4714899528335" y="13463.0" />
+              <point x="221.4714899528335" y="9454.0" />
+              <point x="369.9000000000001" y="9454.0" />
+              <point x="-247.5999999999999" y="423.5" />
+            </edge>
+            <edge source="javax.swing.JFrame" target="javax.accessibility.Accessible">
+              <point x="-137.14285714285688" y="-379.5" />
+              <point x="1528.3286328099766" y="19081.0" />
+              <point x="1104.1178829876578" y="19081.0" />
+              <point x="1104.1178829876578" y="13463.0" />
+              <point x="1667.304823286167" y="13463.0" />
+              <point x="-61.0" y="26.0" />
+            </edge>
+            <edge source="java.awt.Component.FlipSubRegionBufferStrategy" target="java.awt.Component.FlipBufferStrategy">
+              <point x="-85.5" y="-48.5" />
+              <point x="0.0" y="269.5" />
+            </edge>
+            <edge source="java.awt.Window" target="javax.accessibility.Accessible">
+              <point x="-115.75" y="-2051.5" />
+              <point x="3163.867882987658" y="13453.0" />
+              <point x="1789.304823286167" y="13453.0" />
+              <point x="61.0" y="26.0" />
+            </edge>
+            <edge source="java.awt.Component.ProxyCapabilities" target="java.awt.Component">
+              <point x="0.0" y="-37.5" />
+              <point x="3678.641016508366" y="9434.0" />
+              <point x="4587.129246624022" y="9434.0" />
+              <point x="-84.36363636363603" y="4537.5" />
+            </edge>
+            <edge source="java.lang.Enum" target="java.lang.Comparable">
+              <point x="-64.75" y="-181.5" />
+              <point x="1605.9714899528335" y="13453.0" />
+              <point x="1499.179823286167" y="13453.0" />
+              <point x="0.0" y="26.0" />
+            </edge>
+            <edge source="java.awt.Window.AccessibleAWTWindow" target="java.awt.Container.AccessibleAWTContainer">
+              <point x="61.5" y="-60.0" />
+              <point x="3700.492882987658" y="17636.0" />
+              <point x="3715.992882987658" y="17636.0" />
+              <point x="-98.75" y="115.5" />
+            </edge>
+            <edge source="java.awt.Component.BltSubRegionBufferStrategy" target="java.awt.Component">
+              <point x="-84.25" y="-48.5" />
+              <point x="4983.992882987658" y="13463.0" />
+              <point x="4999.910206273825" y="13463.0" />
+              <point x="4999.910206273825" y="9444.0" />
+              <point x="4755.856519351294" y="9444.0" />
+              <point x="84.36363636363603" y="4537.5" />
+            </edge>
+            <edge source="java.awt.Component" target="java.io.Serializable">
+              <point x="-154.66666666666697" y="-4537.5" />
+              <point x="4516.826216320991" y="259.0" />
+              <point x="1974.6178829876578" y="259.0" />
+              <point x="46.375" y="15.0" />
+            </edge>
+            <edge source="java.awt.Window.WindowDisposerRecord" target="java.awt.Window">
+              <point x="0.0" y="-82.0" />
+              <point x="57.875" y="2051.5" />
+            </edge>
+            <edge source="java.awt.Container.DropTargetEventTargetFilter" target="java.awt.Container.EventTargetFilter">
+              <point x="-56.75" y="-49.0" />
+              <point x="4503.742882987658" y="17636.0" />
+              <point x="4381.867882987658" y="17636.0" />
+              <point x="55.0" y="26.0" />
+            </edge>
+            <edge source="java.awt.Component.AccessibleAWTComponent.AccessibleAWTFocusHandler" target="java.awt.Component.AccessibleAWTComponent">
+              <point x="0.0" y="-48.5" />
+              <point x="1936.2214899528335" y="13463.0" />
+              <point x="2017.8060396071578" y="13463.0" />
+              <point x="-131.66666666666674" y="401.5" />
+            </edge>
+            <edge source="java.awt.Container.AccessibleAWTContainer" target="java.awt.Component.AccessibleAWTComponent">
+              <point x="-98.75" y="-115.5" />
+              <point x="3715.992882987658" y="13443.0" />
+              <point x="2281.139372940491" y="13443.0" />
+              <point x="131.66666666666652" y="401.5" />
+            </edge>
+            <edge source="java.lang.Throwable.WrappedPrintStream" target="java.lang.Throwable">
+              <point x="62.5" y="-60.0" />
+              <point x="577.3464899528335" y="13463.0" />
+              <point x="543.2214899528335" y="13463.0" />
+              <point x="543.2214899528335" y="9454.0" />
+              <point x="617.5" y="9454.0" />
+              <point x="0.0" y="423.5" />
+            </edge>
+            <edge source="ba.unsa.etf.rpr.projekat.Main" target="javafx.application.Application">
+              <point x="0.0" y="-37.0" />
+              <point x="7217.910206273825" y="388.0" />
+              <point x="7200.910206273825" y="388.0" />
+              <point x="84.5" y="181.5" />
+            </edge>
+            <edge source="ba.unsa.etf.rpr.projekat.Notification" target="java.io.Serializable">
+              <point x="0.0" y="-81.5" />
+              <point x="1157.2428829876578" y="279.0" />
+              <point x="1908.3678829876578" y="279.0" />
+              <point x="-19.875" y="15.0" />
+            </edge>
+            <edge source="java.awt.Component.BltBufferStrategy" target="java.awt.Component">
+              <point x="0.0" y="-214.5" />
+              <point x="5150.410206273825" y="9434.0" />
+              <point x="4798.038337533113" y="9434.0" />
+              <point x="126.54545454545496" y="4537.5" />
+            </edge>
+            <edge source="javax.swing.JFrame" target="java.beans.JavaBean">
+              <point x="-91.42857142857156" y="-379.5" />
+              <point x="1574.042918524262" y="19071.0" />
+              <point x="1358.8678829876578" y="19071.0" />
+              <point x="0.0" y="48.0" />
+            </edge>
+            <edge source="ba.unsa.etf.rpr.projekat.Material" target="java.io.Serializable">
+              <point x="0.0" y="-104.0" />
+              <point x="2194.2227062738248" y="279.0" />
+              <point x="1948.1178829876578" y="279.0" />
+              <point x="19.875" y="15.0" />
+            </edge>
+            <edge source="java.awt.Component.AWTTreeLock" target="java.awt.Component">
+              <point x="0.0" y="-26.0" />
+              <point x="4853.266016508366" y="9454.0" />
+              <point x="4713.674701169476" y="9454.0" />
+              <point x="42.18181818181802" y="4537.5" />
+            </edge>
+            <edge source="java.lang.Throwable.WrappedPrintStream" target="java.lang.Throwable.PrintStreamOrWriter">
+              <point x="-62.5" y="-60.0" />
+              <point x="452.3464899528335" y="13463.0" />
+              <point x="427.3464899528335" y="13463.0" />
+              <point x="46.25" y="48.5" />
+            </edge>
+            <edge source="ba.unsa.etf.rpr.projekat.MaterialType" target="java.lang.Enum">
+              <point x="0.0" y="-48.0" />
+              <point x="1184.8678829876578" y="17636.0" />
+              <point x="1584.3881566195003" y="17636.0" />
+              <point x="-86.33333333333331" y="181.5" />
+            </edge>
+            <edge source="java.awt.Component.BaselineResizeBehavior" target="java.lang.Enum">
+              <point x="-49.75" y="-70.5" />
+              <point x="2148.117882987658" y="17636.0" />
+              <point x="1670.7214899528335" y="17636.0" />
+              <point x="0.0" y="181.5" />
+            </edge>
+            <edge source="java.awt.Component.AccessibleAWTComponent" target="java.awt.Component">
+              <point x="98.75" y="-401.5" />
+              <point x="2248.2227062738248" y="9404.0" />
+              <point x="4460.583792078567" y="9404.0" />
+              <point x="-210.909090909091" y="4537.5" />
+            </edge>
+            <edge source="java.awt.Container.AccessibleAWTContainer" target="java.awt.Container">
+              <point x="98.75" y="-115.5" />
+              <point x="3913.492882987658" y="13463.0" />
+              <point x="4040.766016508366" y="13463.0" />
+              <point x="-139.5" y="1974.5" />
+            </edge>
+            <edge source="javafx.application.Application.Parameters" target="javafx.application.Application">
+              <point x="0.0" y="-59.5" />
+              <point x="7014.910206273825" y="388.0" />
+              <point x="7031.910206273825" y="388.0" />
+              <point x="-84.5" y="181.5" />
+            </edge>
+            <edge source="java.awt.Component.BaselineResizeBehavior" target="java.awt.Component">
+              <point x="49.75" y="-70.5" />
+              <point x="2247.617882987658" y="17616.0" />
+              <point x="2756.3250000000003" y="17616.0" />
+              <point x="2756.3250000000003" y="9414.0" />
+              <point x="4502.765610260385" y="9414.0" />
+              <point x="-168.72727272727298" y="4537.5" />
+            </edge>
+            <edge source="java.awt.Container.MouseEventTargetFilter" target="java.awt.Container">
+              <point x="-55.0" y="-49.0" />
+              <point x="4150.992882987658" y="17636.0" />
+              <point x="4173.242882987658" y="17636.0" />
+              <point x="4173.242882987658" y="13463.0" />
+              <point x="4133.766016508366" y="13463.0" />
+              <point x="-46.5" y="1974.5" />
+            </edge>
+            <edge source="java.awt.Frame.AccessibleAWTFrame" target="java.awt.Frame">
+              <point x="-61.5" y="-60.0" />
+              <point x="3426.2227062738248" y="19081.0" />
+              <point x="3090.242882987658" y="19081.0" />
+              <point x="68.75" y="687.5" />
+            </edge>
+            <edge source="java.awt.Component.AccessibleAWTComponent" target="java.io.Serializable">
+              <point x="-98.75" y="-401.5" />
+              <point x="2050.7227062738248" y="289.0" />
+              <point x="1934.8678829876578" y="289.0" />
+              <point x="6.625" y="15.0" />
+            </edge>
+            <edge source="java.awt.Container.EventTargetFilter" target="java.awt.Container">
+              <point x="0.0" y="-26.0" />
+              <point x="4326.867882987658" y="13463.0" />
+              <point x="4226.766016508366" y="13463.0" />
+              <point x="46.5" y="1974.5" />
+            </edge>
+            <edge source="java.lang.Enum" target="java.io.Serializable">
+              <point x="64.75" y="-181.5" />
+              <point x="1735.4714899528335" y="13443.0" />
+              <point x="1589.679823286167" y="13443.0" />
+              <point x="1589.679823286167" y="289.0" />
+              <point x="1921.6178829876578" y="289.0" />
+              <point x="-6.625" y="15.0" />
+            </edge>
+            <edge source="javax.swing.JFrame" target="javax.swing.RootPaneContainer">
+              <point x="45.714285714285325" y="-379.5" />
+              <point x="1711.1857756671188" y="19061.0" />
+              <point x="1983.8678829876578" y="19061.0" />
+              <point x="0.0" y="59.0" />
+            </edge>
+            <edge source="java.awt.Container.MouseEventTargetFilter" target="java.awt.Container.EventTargetFilter">
+              <point x="55.0" y="-49.0" />
+              <point x="4260.992882987658" y="17636.0" />
+              <point x="4271.867882987658" y="17636.0" />
+              <point x="-55.0" y="26.0" />
+            </edge>
+            <edge source="java.awt.Component.AccessibleAWTComponent.AccessibleAWTComponentHandler" target="java.awt.Component.AccessibleAWTComponent">
+              <point x="0.0" y="-70.5" />
+              <point x="2219.7214899528335" y="13463.0" />
+              <point x="2149.4727062738248" y="13463.0" />
+              <point x="0.0" y="401.5" />
+            </edge>
+            <edge source="java.awt.Component.DummyRequestFocusController" target="java.awt.Component">
+              <point x="0.0" y="-37.5" />
+              <point x="3278.641016508366" y="9424.0" />
+              <point x="4544.947428442203" y="9424.0" />
+              <point x="-126.54545454545496" y="4537.5" />
+            </edge>
+            <edge source="java.awt.Window.AccessibleAWTWindow" target="java.awt.Window">
+              <point x="-61.5" y="-60.0" />
+              <point x="3577.492882987658" y="17636.0" />
+              <point x="3453.242882987658" y="17636.0" />
+              <point x="173.625" y="2051.5" />
+            </edge>
+            <edge source="ba.unsa.etf.rpr.projekat.WrongChoiceException" target="java.lang.Throwable">
+              <point x="0.0" y="-26.0" />
+              <point x="780.3250000000003" y="9454.0" />
+              <point x="741.3" y="9454.0" />
+              <point x="123.79999999999995" y="423.5" />
+            </edge>
+            <edge source="ba.unsa.etf.rpr.projekat.Person" target="java.io.Serializable">
+              <point x="0.0" y="-115.0" />
+              <point x="144.0" y="259.0" />
+              <point x="1881.8678829876578" y="259.0" />
+              <point x="-46.375" y="15.0" />
+            </edge>
+            <edge source="java.lang.Throwable.WrappedPrintWriter" target="java.lang.Throwable.PrintStreamOrWriter">
+              <point x="60.0" y="-60.0" />
+              <point x="309.8464899528335" y="13463.0" />
+              <point x="334.8464899528335" y="13463.0" />
+              <point x="-46.25" y="48.5" />
+            </edge>
+            <edge source="java.awt.Window" target="java.awt.Container">
+              <point x="115.75" y="-2051.5" />
+              <point x="3395.367882987658" y="13453.0" />
+              <point x="3947.766016508366" y="13453.0" />
+              <point x="-232.5" y="1974.5" />
+            </edge>
+            <edge source="java.awt.Frame.AccessibleAWTFrame" target="java.awt.Window.AccessibleAWTWindow">
+              <point x="61.5" y="-60.0" />
+              <point x="3549.2227062738248" y="19081.0" />
+              <point x="3638.992882987658" y="19081.0" />
+              <point x="0.0" y="60.0" />
+            </edge>
+            <edge source="java.awt.Component" target="java.awt.MenuContainer">
+              <point x="0.0" y="-4537.5" />
+              <point x="4671.492882987658" y="249.0" />
+              <point x="2812.492882987658" y="249.0" />
+              <point x="59.0" y="48.5" />
+            </edge>
+            <edge source="javax.swing.JFrame" target="java.awt.Frame">
+              <point x="137.14285714285688" y="-379.5" />
+              <point x="1802.6143470956904" y="19081.0" />
+              <point x="2952.742882987658" y="19081.0" />
+              <point x="-68.75" y="687.5" />
+            </edge>
+            <edge source="java.awt.Component.SingleBufferStrategy" target="java.awt.Component">
+              <point x="0.0" y="-93.5" />
+              <point x="4618.266016508366" y="9454.0" />
+              <point x="4671.492882987658" y="9454.0" />
+              <point x="0.0" y="4537.5" />
+            </edge>
+            <edge source="javax.swing.JFrame" target="javax.swing.WindowConstants">
+              <point x="91.42857142857156" y="-379.5" />
+              <point x="1756.900061381405" y="19071.0" />
+              <point x="2662.7227062738248" y="19071.0" />
+              <point x="0.0" y="59.0" />
+            </edge>
+            <edge source="java.awt.Component.FlipBufferStrategy" target="java.awt.Component">
+              <point x="0.0" y="-269.5" />
+              <point x="5471.410206273825" y="9424.0" />
+              <point x="4840.220155714931" y="9424.0" />
+              <point x="168.72727272727298" y="4537.5" />
+            </edge>
+            <edge source="java.lang.Throwable.SentinelHolder" target="java.lang.Throwable">
+              <point x="0.0" y="-48.5" />
+              <point x="1096.8250000000003" y="9454.0" />
+              <point x="865.0999999999999" y="9454.0" />
+              <point x="247.5999999999999" y="423.5" />
+            </edge>
+            <edge source="java.awt.Container.DropTargetEventTargetFilter" target="java.awt.Container">
+              <point x="56.75" y="-49.0" />
+              <point x="4617.242882987658" y="17636.0" />
+              <point x="4593.242882987658" y="17636.0" />
+              <point x="4593.242882987658" y="13453.0" />
+              <point x="4319.766016508366" y="13453.0" />
+              <point x="139.5" y="1974.5" />
+            </edge>
+            <edge source="javax.swing.JFrame.AccessibleJFrame" target="javax.swing.JFrame">
+              <point x="-61.5" y="-48.5" />
+              <point x="3364.7227062738248" y="19885.0" />
+              <point x="1745.4714899528335" y="19885.0" />
+              <point x="80.0" y="379.5" />
+            </edge>
+            <edge source="java.awt.Component.BltSubRegionBufferStrategy" target="java.awt.Component.BltBufferStrategy">
+              <point x="84.25" y="-48.5" />
+              <point x="5152.492882987658" y="13463.0" />
+              <point x="5150.410206273825" y="13463.0" />
+              <point x="0.0" y="214.5" />
+            </edge>
+            <edge source="javax.swing.JFrame" target="javax.swing.SwingContainer">
+              <point x="-45.714285714285325" y="-379.5" />
+              <point x="1619.7572042385482" y="19061.0" />
+              <point x="1551.3678829876578" y="19061.0" />
+              <point x="0.0" y="37.0" />
+            </edge>
+            <edge source="ba.unsa.etf.rpr.projekat.Subject" target="java.io.Serializable">
+              <point x="0.0" y="-93.0" />
+              <point x="2470.7227062738248" y="269.0" />
+              <point x="1961.3678829876578" y="269.0" />
+              <point x="33.125" y="15.0" />
+            </edge>
+            <edge source="java.awt.Component.FlipSubRegionBufferStrategy" target="java.awt.Component">
+              <point x="85.5" y="-48.5" />
+              <point x="5642.910206273825" y="9414.0" />
+              <point x="4882.401973896749" y="9414.0" />
+              <point x="210.90909090909122" y="4537.5" />
+            </edge>
+            <edge source="java.awt.Window.Type" target="java.awt.Window">
+              <point x="26.0" y="-59.5" />
+              <point x="2395.367882987658" y="17626.0" />
+              <point x="3105.992882987658" y="17626.0" />
+              <point x="-173.625" y="2051.5" />
+            </edge>
+            <edge source="javax.swing.JFrame" target="javax.swing.TransferHandler.HasGetTransferHandler">
+              <point x="0.0" y="-379.5" />
+              <point x="1665.4714899528335" y="19051.0" />
+              <point x="1758.8678829876578" y="19051.0" />
+              <point x="0.0" y="26.0" />
+            </edge>
+            <edge source="java.awt.Container" target="java.awt.Component">
+              <point x="0.0" y="-1974.5" />
+              <point x="4180.266016508366" y="9444.0" />
+              <point x="4629.31106480584" y="9444.0" />
+              <point x="-42.18181818181802" y="4537.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.02549107812265707" x="4152.0" y="9993.5" />
+          <SelectedNodes>
+            <node>java.awt.Container.WakingRunnable</node>
+            <node>java.awt.Container.MouseEventTargetFilter</node>
+            <node>java.awt.Component.DummyRequestFocusController</node>
+            <node>ba.unsa.etf.rpr.projekat.SubjectViewController</node>
+            <node>ba.unsa.etf.rpr.projekat.CourseListController</node>
+            <node>java.awt.image.ImageObserver</node>
+            <node>java.awt.Window.Type</node>
+            <node>java.lang.Throwable.SentinelHolder</node>
+            <node>javafx.application.Application</node>
+            <node>java.awt.Component.BltBufferStrategy</node>
+            <node>java.lang.Enum</node>
+            <node>java.awt.Component.FlipSubRegionBufferStrategy</node>
+            <node>ba.unsa.etf.rpr.projekat.MaterialType</node>
+            <node>java.awt.Container.AccessibleAWTContainer</node>
+            <node>java.awt.Component.SingleBufferStrategy</node>
+            <node>javax.swing.JFrame</node>
+            <node>java.lang.Throwable.PrintStreamOrWriter</node>
+            <node>ba.unsa.etf.rpr.projekat.TypeOfMaterialController</node>
+            <node>java.awt.Component.BltSubRegionBufferStrategy</node>
+            <node>java.awt.Frame</node>
+            <node>java.lang.Throwable.WrappedPrintWriter</node>
+            <node>javax.accessibility.Accessible</node>
+            <node>java.awt.Component</node>
+            <node>javafx.application.Application.Parameters</node>
+            <node>java.lang.Throwable.WrappedPrintStream</node>
+            <node>java.awt.Container.EventTargetFilter</node>
+            <node>java.io.Serializable</node>
+            <node>java.awt.Component.AccessibleAWTComponent.AccessibleAWTComponentHandler</node>
+            <node>ba.unsa.etf.rpr.projekat.Main</node>
+            <node>ba.unsa.etf.rpr.projekat.Material</node>
+            <node>ba.unsa.etf.rpr.projekat.Person</node>
+            <node>java.awt.Component.AccessibleAWTComponent.AccessibleAWTFocusHandler</node>
+            <node>javax.swing.WindowConstants</node>
+            <node>java.lang.Throwable</node>
+            <node>ba.unsa.etf.rpr.projekat.CourswareReport</node>
+            <node>java.awt.Component.BaselineResizeBehavior</node>
+            <node>ba.unsa.etf.rpr.projekat.Subject</node>
+            <node>ba.unsa.etf.rpr.projekat.WrongChoiceException</node>
+            <node>java.beans.JavaBean</node>
+            <node>ba.unsa.etf.rpr.projekat.LoginFormController</node>
+            <node>javax.swing.TransferHandler.HasGetTransferHandler</node>
+            <node>javax.swing.SwingContainer</node>
+            <node>java.awt.Component.FlipBufferStrategy</node>
+            <node>java.awt.Component.AccessibleAWTComponent</node>
+            <node>java.awt.Component.ProxyCapabilities</node>
+            <node>java.awt.Container</node>
+            <node>java.awt.Container.DropTargetEventTargetFilter</node>
+            <node>java.awt.Window.WindowDisposerRecord</node>
+            <node>ba.unsa.etf.rpr.projekat.Notification</node>
+            <node>ba.unsa.etf.rpr.projekat.About</node>
+            <node>java.awt.Window</node>
+            <node>java.awt.MenuContainer</node>
+            <node>javax.swing.RootPaneContainer</node>
+            <node>java.awt.Frame.AccessibleAWTFrame</node>
+            <node>java.awt.Container.AccessibleAWTContainer.AccessibleContainerHandler</node>
+            <node>java.awt.Component.AWTTreeLock</node>
+            <node>java.awt.Window.AccessibleAWTWindow</node>
+            <node>java.lang.Comparable</node>
+            <node>ba.unsa.etf.rpr.projekat.CoursewareDAO</node>
+            <node>javax.swing.JFrame.AccessibleJFrame</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>

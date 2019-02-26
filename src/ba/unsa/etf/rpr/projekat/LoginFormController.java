@@ -30,8 +30,6 @@ public class LoginFormController {
     public void initialize() {
         isGuest = false;
         usernameField.setEditable(true);
-        //usernameField.selectHome();
-        //usernameField.setFocusTraversable(true);
         coursewareDAO = coursewareDAO.getInstance();
         statusMsg.setVisible(false);
     }

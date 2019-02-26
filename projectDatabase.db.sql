@@ -31,20 +31,25 @@ CREATE TABLE IF NOT EXISTS "person" (
 	"is_professor"	INTEGER,
 	PRIMARY KEY("id")
 );
-INSERT INTO "materials" VALUES (1,'lab1','RPR','lab',0);
-INSERT INTO "materials" VALUES (2,'lecture1','RPR','lecture',0);
-INSERT INTO "materials" VALUES (3,'group1','RPR','group',1);
-INSERT INTO "materials" VALUES (4,'lab1','OR','lab',1);
-INSERT INTO "materials" VALUES (5,'lecture1','OR','lecture',1);
-INSERT INTO "materials" VALUES (6,'group1','OR','group',1);
-INSERT INTO "materials" VALUES (7,'lab2','OR','lab',0);
+INSERT INTO "materials" VALUES (1,'izvjestaj','RPR','group',1);
+INSERT INTO "materials" VALUES (2,'main.pdf','RPR','lecture',1);
+INSERT INTO "materials" VALUES (3,'otk.pdf','RPR','lab',1);
+INSERT INTO "materials" VALUES (4,'group1.pdf','RPR','group',1);
+INSERT INTO "materials" VALUES (5,'IOt.pdf','RPR','lecture',1);
+INSERT INTO "notifications" VALUES (1,49,'No class today','12.02.2018.');
+INSERT INTO "notifications" VALUES (2,49,'Tomorrow starts quiz1','21.02.2018.');
+INSERT INTO "notifications" VALUES (3,49,'Tomorrow starts quiz2','27.03.2018.');
+INSERT INTO "notifications" VALUES (4,49,'Results of exam are on courseware','30.04.2018.');
+INSERT INTO "notifications" VALUES (5,152,'No class today','17.12.2018.');
+INSERT INTO "notifications" VALUES (6,182,'No class today','23.08.2018.');
+INSERT INTO "notifications" VALUES (7,152,'Happy New Year','31.12.2018.');
 INSERT INTO "subjects" VALUES (49,'RPR','undergraduate',49);
 INSERT INTO "subjects" VALUES (152,'Database','master',6);
 INSERT INTO "subjects" VALUES (182,'DOS','master',7);
 INSERT INTO "subjects" VALUES (241,'Multivariable systems','phd',7);
+INSERT INTO "person" VALUES (1,'student','student','student',0);
+INSERT INTO "person" VALUES (2,'lfazlija1','lamija','Lamija Fazlija',0);
 INSERT INTO "person" VALUES (6,'professor','professor','professor',1);
 INSERT INTO "person" VALUES (7,'mzukic','mediha','Mediha Zukic',1);
-INSERT INTO "person" VALUES (8,'bdzanko1','benjamin','Benjamin Dzanko',0);
-INSERT INTO "person" VALUES (9,'hsarajlic1','habib','Habib Sarajlic',0);
 INSERT INTO "person" VALUES (49,'vljubovic','vedran','Vedran Ljubovic',1);
 COMMIT;

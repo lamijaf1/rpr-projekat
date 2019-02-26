@@ -227,7 +227,6 @@ public class SubjectViewController {
             coursewareDAO = coursewareDAO.getInstance();
 
 
-
         }
 
     }
@@ -349,16 +348,10 @@ public class SubjectViewController {
 
     public void browser(ActionEvent actionEvent) throws IOException, URISyntaxException {
         int courseId = coursewareDAO.getSubjectByName(subjectName).getId(); //main page of c2 courseware
-        //if (coursewareDAO.getSubjectByName(subjectName).getId()!=1) courseId = LoginFormController.getCurrentUser().getId();
-        //   if(LoginFormController.getCurrentUser().getId())
-        //  if(CourseListController.getSubjectTitle().toLowerCase().equals("rpr"))courseId=49;
-
         URL url = new URL("https://c2.etf.unsa.ba/course/view.php?id=" + courseId);
         Desktop d = Desktop.getDesktop();
-
         // Browse a URL, C2 courseware, id of subject is id of subject on c2
         d.browse(new URI("https://c2.etf.unsa.ba/course/view.php?id=" + courseId));
-
 
     }
 
@@ -410,14 +403,14 @@ public class SubjectViewController {
         }
     }
 
-    public void openXml(File file) {
+    public void openXml(File file) throws WrongChoiceException {
         try {
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(file);
             NodeList nodelist = doc.getDocumentElement().getChildNodes();
-            /*if (!doc.getDocumentElement().getTagName().equals(CourseListController.getSubjectTitle()))
-                throw new WrongChoiceException("ERROR!");*/
+            if (!doc.getDocumentElement().getTagName().equals("professor"))
+                throw new WrongChoiceException("ERROR!");
             for (int i = 0; i < nodelist.getLength(); i++) {
                 Material material = new Material();
                 Node d = nodelist.item(i);
@@ -465,7 +458,7 @@ public class SubjectViewController {
 
     }
 
-    public void doOpen(ActionEvent actionEvent) throws SQLException {
+    public void doOpen(ActionEvent actionEvent) throws SQLException, WrongChoiceException {
         JFileChooser chooser = new JFileChooser();
         //JFileChooser chooser = new JFileChooser(this.getClass().getClassLoader().getResource("").getPath() + "/xml");
         chooser.setDialogType(JFileChooser.OPEN_DIALOG);
