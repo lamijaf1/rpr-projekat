@@ -1,13 +1,15 @@
 package ba.unsa.etf.rpr.projekat;
 
-import java.time.LocalDate;
+import java.io.Serializable;
 
-public class Notification {
+public class Notification implements Serializable {
     private int id;
     private Subject subject;
     private String text;
     private String date;
 
+    public Notification() {
+    }
 
     public Notification(int id, Subject subject, String text, String date) {
         this.id = id;

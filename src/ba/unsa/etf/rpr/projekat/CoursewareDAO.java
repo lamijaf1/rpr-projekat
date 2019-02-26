@@ -309,7 +309,12 @@ public class CoursewareDAO {
     }
 
     public void addNewMaterial(Material material) throws SQLException {
-        addNewMaterial.setInt(1, material.getId());
+        int id = 1;
+        ResultSet resultSet = findMaxIdOfMaterials.executeQuery();
+        id = resultSet.getInt(1);
+        System.out.println(id + " hhaaha");
+        //findMaxIdOfMaterials.close();
+        addNewMaterial.setInt(1, id);
         addNewMaterial.setString(2, material.getNameMaterial());
         addNewMaterial.setString(3, material.getSubject());
         addNewMaterial.setString(4, material.getType());

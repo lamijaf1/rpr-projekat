@@ -1,6 +1,8 @@
 package ba.unsa.etf.rpr.projekat;
 
-public class Material {
+import java.io.Serializable;
+
+public class Material implements Serializable {
     private int id;
     private String nameMaterial;
     private String subject;

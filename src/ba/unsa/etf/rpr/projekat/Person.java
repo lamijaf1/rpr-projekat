@@ -1,14 +1,17 @@
 package ba.unsa.etf.rpr.projekat;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Person {
+public class Person implements Serializable {
     private int id;
     private String username;
     private String password;
     private String fullName;
     private boolean isProfessor;
 
+    public Person() {
+    }
     public Person(int id, String username, String password, String fullName, boolean isProfessor) {
         this.id = id;
         this.username = username;

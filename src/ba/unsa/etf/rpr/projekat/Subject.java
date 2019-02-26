@@ -1,6 +1,9 @@
 package ba.unsa.etf.rpr.projekat;
 
-public class Subject {
+import java.io.Serializable;
+import java.util.Objects;
+
+public class Subject implements Serializable {
     private int id;
     private String subjectName;
     private String program;
@@ -46,5 +49,11 @@ public class Subject {
 
     public void setProfessor(Person professor) {
         this.professor = professor;
+    }
+
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, subjectName, program, professor);
     }
 }

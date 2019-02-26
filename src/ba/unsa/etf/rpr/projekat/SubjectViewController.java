@@ -20,7 +20,6 @@ import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
@@ -34,7 +33,7 @@ import java.net.URL;
 import java.nio.file.*;
 import java.sql.SQLException;
 
-import static javafx.scene.layout.Region.USE_COMPUTED_SIZE;
+import static javafx.scene.control.PopupControl.USE_COMPUTED_SIZE;
 
 public class SubjectViewController {
 
@@ -46,6 +45,7 @@ public class SubjectViewController {
     private static String subjectName;
     private static String subjectType;
     private static Button tbBack;
+    private Material novi;
     public Button tbAdd, tbHide, tbUnhide, tbDelete, tbOpen, tbClear, tbHome;
     private boolean youAreProfessorOnSubject = CourseListController.isEditOnSelectSubject();
     ObservableList<Material> groupsForGuest = FXCollections.observableArrayList();
@@ -160,9 +160,12 @@ public class SubjectViewController {
     }
 
     public void openMaterial(ActionEvent actionEvent) throws IOException {
-        File file = new File("./resources/pdfs/" + currentMaterial.getNameMaterial() + ".pdf");
+        File file = null;
+        if (currentMaterial == null) return;
+        if (currentMaterial.getNameMaterial().contains(".pdf"))
+            file = new File("./resources/pdfs/" + currentMaterial.getNameMaterial());
+        else file = new File("./resources/pdfs/" + currentMaterial.getNameMaterial() + ".pdf");
         Desktop.getDesktop().open(file);
-
     }
 
     public void hideMaterial(ActionEvent actionEvent) throws IOException, SQLException {
@@ -260,16 +263,17 @@ public class SubjectViewController {
                 );
             }
 
-            if (currentMaterial.getType() == "group") {
+            if (currentMaterial.getType().equals("group")) {
                 coursewareDAO.deleteMaterial(currentMaterial);
                 //System.out.println("Da li si ovdje bio?");
                 coursewareDAO = coursewareDAO.getInstance();
                 fillGroupTable();
-                tableOfGroups.setItems(coursewareDAO.getGroups(subjectName));
                 columnNameGroup.setCellValueFactory(
                         new PropertyValueFactory<Material, String>("nameMaterial")
                 );
+
             }
+            //  tableOfGroups.setItems(coursewareDAO.getGroups(subjectName));
 
 
         } else {
@@ -365,43 +369,38 @@ public class SubjectViewController {
             DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder documentBuilder = documentFactory.newDocumentBuilder();
             Document document = documentBuilder.newDocument();
-            Element root = ((org.w3c.dom.Document) document).createElement(CourseListController.getSubjectTitle());
+            Element root = ((org.w3c.dom.Document) document).createElement("professor");
             ((org.w3c.dom.Document) document).appendChild(root);
             Element izdvojeni = null;
             Element elementi = null;
-            for (Material m : coursewareDAO.getMaterialsBySubject(CourseListController.getSubjectTitle())) {
-                elementi = document.createElement("id");
+            for (Material m : coursewareDAO.getMaterialsBySubject(subjectName)) {
+                System.out.println(m.getNameMaterial());
+                elementi = document.createElement("subjects");
                 root.appendChild(elementi);
-                Attr attr = document.createAttribute("nameMaterial");
+                Attr attr = document.createAttribute("id");
                 elementi.setAttributeNode(attr);
-                Element firstColumn = document.createElement("subject");
+                Element firstColumn = document.createElement("nameMaterial");
                 elementi.appendChild(firstColumn);
-                Element secondColumn = document.createElement("type");
+                Element secondColumn = document.createElement("subject");
                 elementi.appendChild(secondColumn);
+                Element isbn = document.createElement("type");
+                elementi.appendChild(isbn);
                 Element thirdColumn = document.createElement("visible");
                 elementi.appendChild(thirdColumn);
+                elementi.appendChild(thirdColumn);
                 attr.setValue(m.getId() + "");
-                firstColumn.setTextContent(m.getSubject());
-                secondColumn.setTextContent(m.getType());
+                firstColumn.setTextContent(m.getNameMaterial());
+                secondColumn.setTextContent(m.getSubject());
+                isbn.setTextContent(m.getType());
                 thirdColumn.setTextContent(m.isVisible() + "");
             }
             // create the xml file
             //transform the DOM Object to an XML File
-
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
-
-            //disable 'INDENT' and set the indent amount for the transformer
-            // transformer.setOutputProperty(OutputPropertiesFactory.S_KEY_INDENT_AMOUNT, "3");
-            transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "no");
-            transformer.setOutputProperty(OutputKeys.STANDALONE, "no");
-            // disable 'INDENT' for testSave2
-            transformer.setOutputProperty(OutputKeys.INDENT, "no");
             DOMSource domSource = new DOMSource(document);
             StreamResult streamResult = new StreamResult(file);
             transformer.transform(domSource, streamResult);
-
-
         } catch (Exception e) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("");
@@ -412,19 +411,19 @@ public class SubjectViewController {
     }
 
     public void openXml(File file) {
-        Subject subject = new Subject();
         try {
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(file);
             NodeList nodelist = doc.getDocumentElement().getChildNodes();
-            if (!doc.getDocumentElement().getTagName().equals(CourseListController.getSubjectTitle()))
-                throw new WrongChoiceException("ERROR!");
+            /*if (!doc.getDocumentElement().getTagName().equals(CourseListController.getSubjectTitle()))
+                throw new WrongChoiceException("ERROR!");*/
             for (int i = 0; i < nodelist.getLength(); i++) {
                 Material material = new Material();
                 Node d = nodelist.item(i);
                 if (d instanceof Element) {
                     Element e = (Element) d;
+                    System.out.println(e.getAttribute("id"));
                     material.setId(Integer.parseInt(e.getAttribute("id")));
                     NodeList podaci = e.getChildNodes();
                     for (int j = 0; j < podaci.getLength(); j++) {
@@ -450,10 +449,12 @@ public class SubjectViewController {
                     }
 
                 }
-                coursewareDAO.addNewMaterial(material);
+
+                novi = material;
+                //coursewareDAO.addNewMaterial(material);
 
             }
-        } catch (Exception | WrongChoiceException e) {
+        } catch (Exception e) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("");
             alert.setHeaderText("Wrong format!");
@@ -464,8 +465,9 @@ public class SubjectViewController {
 
     }
 
-    public void doOpen(ActionEvent actionEvent) {
-        JFileChooser chooser = new JFileChooser(this.getClass().getClassLoader().getResource("").getPath() + "/xml");
+    public void doOpen(ActionEvent actionEvent) throws SQLException {
+        JFileChooser chooser = new JFileChooser();
+        //JFileChooser chooser = new JFileChooser(this.getClass().getClassLoader().getResource("").getPath() + "/xml");
         chooser.setDialogType(JFileChooser.OPEN_DIALOG);
         chooser.setSelectedFile(new File(CourseListController.getSubjectTitle() + ".xml"));
         chooser.setFileFilter(new FileNameExtensionFilter("xml file", "xml"));
@@ -474,18 +476,20 @@ public class SubjectViewController {
             if (!filename.endsWith(".xml"))
                 filename += ".xml";
             openXml(chooser.getSelectedFile());
+            coursewareDAO.addNewMaterial(novi);
+
         }
 
     }
 
     public void doSave(ActionEvent actionEvent) {
         Platform.runLater(() -> {
-            // JFileChooser chooser= new JFileChooser();
-            JFileChooser chooser = new JFileChooser(this.getClass().getClassLoader().getResource("").getPath() + "/xml");
+            JFileChooser chooser = new JFileChooser();
+            //JFileChooser chooser = new JFileChooser(this.getClass().getClassLoader().getResource("").getPath() + "/xml");
             chooser.setDialogType(JFileChooser.OPEN_DIALOG);
             chooser.setSelectedFile(new File(CourseListController.getSubjectTitle() + ".xml"));
             chooser.setFileFilter(new FileNameExtensionFilter("xml file", "xml"));
-            //chooser.setCurrentDirectory(new File(String.valueOf(getClass().getResource("xml"))));
+            chooser.setCurrentDirectory(new File(String.valueOf(getClass().getResource("xml"))));
             if (chooser.showSaveDialog(chooser) == JFileChooser.APPROVE_OPTION) {
                 String filename = chooser.getSelectedFile().toString();
                 if (!filename.endsWith(".xml"))
